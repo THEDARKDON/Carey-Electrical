@@ -359,27 +359,103 @@ export const PROJECTS: ProjectImage[] = [
   },
   {
     id: 'p13',
-    url: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
+    url: '/img_0366.jpeg',
+    slug: 'ground-mount-gravel',
     category: 'Solar PV',
-    description: 'All-Black Panels on Concrete Tiles',
+    description: 'Ground Mount on Gravel Base',
     location: 'Hungerford',
-    systemSize: '5.2kW Array'
+    systemSize: '2.6kW Array',
+    title: "Compact Ground Mount Installation",
+    client: "Rural Property Owner",
+    date: "July 2024",
+    challenge: `<p>The property had a north-facing roof unsuitable for solar, but the homeowner had unused garden space perfect for a ground-mounted system.</p>`,
+    solution: `<p>We installed a <strong>compact 6-panel ground mount</strong> on a prepared gravel base. The all-black panels sit at optimal angle for maximum generation, with clean cable routing underground to the house.</p>`,
+    outcome: `<p>A neat, professional installation that generates power even when the main roof cannot. The gravel surround keeps maintenance minimal.</p>`,
+    stats: [
+      { label: "System Size", value: "2.6 kW" },
+      { label: "Panels", value: "6x 440W" },
+      { label: "Mount Type", value: "Ground" }
+    ]
   },
   {
     id: 'p14',
-    url: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
+    url: '/img_0493.jpeg',
+    slug: 'dramatic-roof-install',
     category: 'Solar PV',
-    description: 'Multi-Section In-Roof Array',
+    description: 'All-Black Array with Dramatic Skies',
     location: 'Winchester',
-    systemSize: '12kW System'
+    systemSize: '5.7kW System',
+    title: "Premium Roof Installation",
+    client: "Private Homeowner",
+    date: "June 2024",
+    challenge: `<p>The client wanted a high-performance system that would look premium on their concrete tile roof. Aesthetics were as important as energy generation.</p>`,
+    solution: `<p>We installed <strong>all-black Jinko Tiger Neo panels</strong> with black mounting rails and trim. The system uses SolarEdge optimizers to maximize output from each panel independently.</p>`,
+    outcome: `<p>A stunning installation that generates over 5,500 kWh annually while enhancing the property's appearance.</p>`,
+    stats: [
+      { label: "System Size", value: "5.7 kW" },
+      { label: "Annual Output", value: "5,500 kWh" },
+      { label: "Aesthetic", value: "All-Black" }
+    ]
   },
   {
     id: 'p15',
+    url: '/img_0494.jpeg',
+    category: 'Solar PV',
+    description: 'Residential Installation with View',
+    location: 'Reading',
+    systemSize: '6.2kW Array'
+  },
+  {
+    id: 'p16',
+    url: '/img_0875.jpeg',
+    slug: 'heritage-slate-install',
+    category: 'Solar PV',
+    description: 'Heritage Slate Roof Installation',
+    location: 'Newbury',
+    systemSize: '4.4kW System',
+    title: "Period Property Solar Solution",
+    client: "Conservation Area Resident",
+    date: "May 2024",
+    challenge: `<p>Installing solar on a period property with slate roof tiles in a semi-conservation area required careful consideration of aesthetics and planning requirements.</p>`,
+    solution: `<p>We used <strong>premium all-black panels</strong> with low-profile mounting to maintain the character of the period property. The installation sits neatly alongside the original chimney stack.</p>`,
+    outcome: `<p>A sympathetic installation that respects the property's heritage while delivering modern energy savings. No planning objections received.</p>`,
+    stats: [
+      { label: "System Size", value: "4.4 kW" },
+      { label: "Roof Type", value: "Slate" },
+      { label: "Planning", value: "Approved" }
+    ]
+  },
+  {
+    id: 'p17',
+    url: '/img_0876.jpeg',
+    category: 'Solar PV',
+    description: 'Period Property Array',
+    location: 'Oxford',
+    systemSize: '4.8kW System'
+  },
+  {
+    id: 'p18',
     url: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     category: 'Battery Storage',
     description: 'Myenergi Ecosystem Integration',
     location: 'Andover',
     systemSize: '5kW Hybrid'
+  },
+  {
+    id: 'p19',
+    url: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
+    category: 'Solar PV',
+    description: 'Multi-Section In-Roof Array',
+    location: 'Ascot',
+    systemSize: '12kW System'
+  },
+  {
+    id: 'p20',
+    url: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
+    category: 'Solar PV',
+    description: 'All-Black Panels on Concrete Tiles',
+    location: 'Basingstoke',
+    systemSize: '5.2kW Array'
   }
 ];
 
@@ -437,19 +513,19 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
 };
 
 export const BLOG_POSTS: BlogPost[] = [
-  { id: '1', slug: 'is-solar-worth-it-berkshire', title: 'Is Solar Worth It in Berkshire & Hampshire? (2025 Guide)', excerpt: 'With energy prices fluctuating, we analyze the real ROI for homeowners in Reading, Newbury and Basingstoke.', date: 'Jan 28, 2025', image: '/img_8048.jpeg', category: 'Market Analysis', readTime: '8 min read', featured: true },
-  { id: '2', slug: 'solar-power-reading-guide', title: 'Why Reading is Leading the Solar Revolution in 2025', excerpt: 'Reading is becoming a hub for smart energy. From Caversham to Earley, discover how urban homeowners are beating grid prices.', date: 'Feb 2, 2025', image: '/img_8715.jpeg', category: 'Local Projects', readTime: '6 min read' },
+  { id: '1', slug: 'is-solar-worth-it-berkshire', title: 'Is Solar Worth It in Berkshire & Hampshire? (2025 Guide)', excerpt: 'With energy prices fluctuating, we analyze the real ROI for homeowners in Reading, Newbury and Basingstoke.', date: 'Jan 28, 2025', image: '/img_0493.jpeg', category: 'Market Analysis', readTime: '8 min read', featured: true },
+  { id: '2', slug: 'solar-power-reading-guide', title: 'Why Reading is Leading the Solar Revolution in 2025', excerpt: 'Reading is becoming a hub for smart energy. From Caversham to Earley, discover how urban homeowners are beating grid prices.', date: 'Feb 2, 2025', image: '/img_0494.jpeg', category: 'Local Projects', readTime: '6 min read' },
   { id: '3', slug: 'best-solar-batteries-2025', title: 'Best Solar Batteries 2025: Tesla Powerwall 3 vs Libbi', excerpt: 'We compare the leading battery storage systems available in the UK. Which one is right for your home?', date: 'Feb 10, 2025', image: '/img_8050.jpeg', category: 'Technology', readTime: '10 min read' },
-  { id: '4', slug: 'bird-proofing-cost-guide', title: 'Solar Panel Bird Proofing Cost Guide 2025', excerpt: 'Pigeons nesting under your solar panels? Learn about the costs of removal, cleaning, and mesh installation to protect your roof.', date: 'Feb 12, 2025', image: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', category: 'Maintenance', readTime: '6 min read' },
-  { id: '5', slug: 'solar-carports-vs-roof', title: 'Solar Carports vs Roof Solar: Which is Better?', excerpt: 'Running out of roof space? Discover why solar carports are becoming the premium choice for homeowners in Ascot and Wokingham.', date: 'Feb 18, 2025', image: '/baea77fd-a9df-488b-9759-39748439a29a.jpg', category: 'Technology', readTime: '7 min read' },
-  { id: '6', slug: 'in-roof-solar-guide', title: 'In-Roof vs On-Roof Solar: Aesthetics & Cost', excerpt: 'Building a new home or re-roofing? Integrated solar panels (GSE) offer a stunning flush finish. We compare the costs and benefits.', date: 'Feb 22, 2025', image: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', category: 'Technology', readTime: '8 min read' },
-  { id: '7', slug: 'solar-panels-winchester-heritage', title: 'Installing Solar in Winchester Conservation Areas', excerpt: 'Living in a historic city doesn\'t mean you can\'t have solar. Learn about our heritage-compliant all-black systems.', date: 'Dec 20, 2024', image: '/img_8048.jpeg', category: 'Planning', readTime: '7 min read' },
-  { id: '8', slug: 'oxford-solar-net-zero', title: 'Oxford\'s Path to Net Zero: How Homeowners Can Help', excerpt: 'Oxford City Council has ambitious climate goals. See how residential solar arrays are contributing to a greener city.', date: 'Dec 5, 2024', image: '/img_8716.jpeg', category: 'Local Projects', readTime: '6 min read' },
+  { id: '4', slug: 'bird-proofing-cost-guide', title: 'Solar Panel Bird Proofing Cost Guide 2025', excerpt: 'Pigeons nesting under your solar panels? Learn about the costs of removal, cleaning, and mesh installation to protect your roof.', date: 'Feb 12, 2025', image: '/img_8048.jpeg', category: 'Maintenance', readTime: '6 min read' },
+  { id: '5', slug: 'solar-carports-vs-roof', title: 'Solar Carports vs Roof Solar: Which is Better?', excerpt: 'Running out of roof space? Discover why solar carports are becoming the premium choice for homeowners in Ascot and Wokingham.', date: 'Feb 18, 2025', image: '/img_0366.jpeg', category: 'Technology', readTime: '7 min read' },
+  { id: '6', slug: 'in-roof-solar-guide', title: 'In-Roof vs On-Roof Solar: Aesthetics & Cost', excerpt: 'Building a new home or re-roofing? Integrated solar panels (GSE) offer a stunning flush finish. We compare the costs and benefits.', date: 'Feb 22, 2025', image: '/img_8715.jpeg', category: 'Technology', readTime: '8 min read' },
+  { id: '7', slug: 'solar-panels-winchester-heritage', title: 'Installing Solar in Winchester Conservation Areas', excerpt: 'Living in a historic city doesn\'t mean you can\'t have solar. Learn about our heritage-compliant all-black systems.', date: 'Dec 20, 2024', image: '/img_0875.jpeg', category: 'Planning', readTime: '7 min read' },
+  { id: '8', slug: 'oxford-solar-net-zero', title: 'Oxford\'s Path to Net Zero: How Homeowners Can Help', excerpt: 'Oxford City Council has ambitious climate goals. See how residential solar arrays are contributing to a greener city.', date: 'Dec 5, 2024', image: '/img_0876.jpeg', category: 'Local Projects', readTime: '6 min read' },
   { id: '9', slug: '0-vat-battery-storage', title: '0% VAT on Battery Storage Extended', excerpt: 'Great news for homeowners! The government has extended the 0% VAT relief to include standalone battery storage systems.', date: 'Feb 15, 2024', image: '/img_9312.jpeg', category: 'Finance', readTime: '3 min read' }
 ];
 
 export const BLOG_CONTENT: Record<string, BlogPostData> = {
-  'is-solar-worth-it-berkshire': { id: '1', title: 'Is Solar Worth It in Berkshire & Hampshire? (2025 Guide)', date: 'Jan 28, 2025', category: 'Market Analysis', author: 'James Carey, Lead Engineer', heroImage: '/img_8048.jpeg', content: `<h2>The Financial Reality...</h2>` },
+  'is-solar-worth-it-berkshire': { id: '1', title: 'Is Solar Worth It in Berkshire & Hampshire? (2025 Guide)', date: 'Jan 28, 2025', category: 'Market Analysis', author: 'James Carey, Lead Engineer', heroImage: '/img_0493.jpeg', content: `<h2>The Financial Reality...</h2>` },
   'in-roof-solar-guide': {
     id: '6',
     title: 'In-Roof vs On-Roof Solar: Aesthetics & Cost',
@@ -587,7 +663,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'newbury',
     name: 'Newbury',
     metaDescription: 'Solar Panel Installers Newbury. MCS Certified electricians for RG14 & RG20. Experts in Tesla Powerwall, Zappi EV Chargers & Battery Storage.',
-    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
+    heroImage: '/img_0875.jpeg',
     introTitle: 'Local Solar Experts for West Berkshire',
     introText: [
       'Newbury is our home turf. From the historic streets of Donnington to the modern developments at the Racecourse, we understand the specific energy needs of Newbury homeowners.',
@@ -687,7 +763,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'hungerford',
     name: 'Hungerford',
     metaDescription: 'Solar Panel Installers Hungerford. Heritage specialists for RG17. Listed building experience and rural solar experts.',
-    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
+    heroImage: '/img_0366.jpeg',
     introTitle: 'Solar for the Kennet Valley',
     introText: [
       'Hungerford is a beautiful market town with many period properties. We specialize in sympathetic solar installations that respect the town conservation area.',
@@ -735,7 +811,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'andover',
     name: 'Andover',
     metaDescription: 'Solar Panel Installation Andover. MCS certified installers for SP10-SP11. Battery storage and EV charging experts.',
-    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
+    heroImage: '/img_0493.jpeg',
     introTitle: 'Solar Solutions for Test Valley',
     introText: [
       'Andover offers a mix of modern housing estates and charming villages. We install solar systems across SP10 and SP11 postcodes.',
@@ -759,7 +835,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'oxford',
     name: 'Oxford',
     metaDescription: 'Solar Panel Installers Oxford. MCS certified experts for OX1-OX4. University city solar specialists with heritage experience.',
-    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
+    heroImage: '/img_0876.jpeg',
     introTitle: 'Solar Energy for the City of Dreaming Spires',
     introText: [
       'Oxford presents unique challenges and opportunities for solar installation. We have the expertise to install systems that complement the city diverse architecture.',
@@ -783,7 +859,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'didcot',
     name: 'Didcot',
     metaDescription: 'Solar Panels Didcot. MCS certified installers for OX11. New build specialists and battery storage experts.',
-    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
+    heroImage: '/img_0494.jpeg',
     introTitle: 'Solar for South Oxfordshire',
     introText: [
       'Didcot is one of the fastest-growing towns in the UK. Its modern housing stock makes it ideal for solar installation.',
@@ -1009,7 +1085,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do I need planning permission?', answer: 'Most domestic installations are Permitted Development, so no planning is required unless you live in a listed building.' },
       { question: 'How long does installation take?', answer: 'A typical residential system takes 1-2 days to install.' }
     ],
-    galleryImages: ['/img_8048.jpeg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
+    galleryImages: ['/img_0493.jpeg', '/img_8048.jpeg', '/img_0494.jpeg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg']
   },
   'integrated-solar': {
     id: 'integrated-solar',
@@ -1067,7 +1143,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do you work with 3-phase?', answer: 'Yes, almost all our agricultural installs are 3-phase, ranging from 20kW to 200kW+.' },
       { question: 'Can you ground mount in a field?', answer: 'Yes, we offer pile-driven ground mount systems that don\'t require concrete foundations, preserving soil health.' }
     ],
-    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/baea77fd-a9df-488b-9759-39748439a29a.jpg']
+    galleryImages: ['/img_0366.jpeg', '/img_8716.jpeg', '/baea77fd-a9df-488b-9759-39748439a29a.jpg']
   },
   'solar-carports': {
     id: 'solar-carports',
@@ -1358,7 +1434,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
     id: 'ground-mount',
     title: 'Ground Mount Systems',
     subtitle: 'Utilize your land for maximum energy generation.',
-    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
+    heroImage: '/img_0366.jpeg',
     overview: 'If roof space is limited but you have land, a ground mount system is an excellent alternative. We offer various mounting solutions including screw piles and concrete ballasts.',
     benefits: [
       { title: 'Perfect Angle', desc: 'Oriented for maximum yield.', icon: 'Compass' },

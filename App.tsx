@@ -188,13 +188,15 @@ function App() {
 
   const Hero = () => {
     const heroImages = [
+      '/img_0493.jpeg',
       '/img_8048.jpeg',
+      '/img_0875.jpeg',
       '/img_8715.jpeg',
+      '/img_0366.jpeg',
       '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
+      '/img_0494.jpeg',
       '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
-      '/img_8050.jpeg',
-      '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
-      '/img_9312.jpeg'
+      '/img_0876.jpeg'
     ];
     
     const [currentImageIdx, setCurrentImageIdx] = useState(0);
