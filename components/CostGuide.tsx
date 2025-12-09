@@ -47,9 +47,16 @@ export const CostGuide: React.FC<CostGuideProps> = ({ onBack, onNavigate }) => {
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6">
               <span className="text-brand-green">Cost</span> Guide
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
               Transparent pricing for Solar PV and Battery Storage installations in Berkshire and Hampshire.
             </p>
+            <div className="grid grid-cols-3 gap-3 max-w-3xl mx-auto">
+              {['/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg', '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg'].map((img, idx) => (
+                <div key={idx} className="aspect-video overflow-hidden rounded-xl border border-slate-800">
+                  <img src={img} alt={`Solar Installation ${idx + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                </div>
+              ))}
+            </div>
           </div>
         </Reveal>
 

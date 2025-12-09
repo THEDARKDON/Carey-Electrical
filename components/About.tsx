@@ -108,6 +108,32 @@ export const About: React.FC<AboutProps> = ({ onBack, onNavigate }) => {
           </div>
         </div>
 
+        <div className="mt-20">
+          <SectionTitle subtitle="Our Work" title="Recent Installations" center />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg',
+              '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg',
+              '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg',
+              '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg',
+              '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg',
+              '/img_8048.jpeg',
+              '/img_0493.jpeg',
+              '/img_8715.jpeg'
+            ].map((img, idx) => (
+              <Reveal key={idx} delay={idx * 75}>
+                <div className="aspect-square overflow-hidden rounded-xl border border-slate-800 group">
+                  <img
+                    src={img}
+                    alt={`Carey Electrical Installation ${idx + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-20 text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Join the Renewable Revolution</h2>
           <Button onClick={() => { onNavigate('home'); setTimeout(() => document.getElementById('contact')?.scrollIntoView(), 100); }} className="px-12 py-4 text-lg">

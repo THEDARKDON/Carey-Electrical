@@ -456,6 +456,94 @@ export const PROJECTS: ProjectImage[] = [
     description: 'All-Black Panels on Concrete Tiles',
     location: 'Basingstoke',
     systemSize: '5.2kW Array'
+  },
+  {
+    id: 'p21',
+    slug: 'heritage-multi-roof',
+    url: '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg',
+    category: 'Solar PV',
+    description: 'Multi-Section Heritage Roof Installation',
+    location: 'Berkshire',
+    systemSize: '6.6kW Array',
+    title: "Complex Heritage Roof Solar",
+    client: "Private Estate",
+    date: "February 2025",
+    challenge: `<p>A challenging multi-section clay tile roof required careful planning to maximize panel coverage while respecting the property's character. Multiple roof angles and orientations needed to work together.</p>`,
+    solution: `<p>We deployed <strong>all-black panels</strong> across three roof sections, each optimized for its specific angle. The system was designed to blend seamlessly with the traditional clay tiles while maximizing annual generation.</p>`,
+    outcome: `<p>A sophisticated 6.6kW system spread across multiple roof sections, achieving excellent generation through intelligent panel placement and optimizers.</p>`,
+    stats: [
+      { label: "System Size", value: "6.6 kW" },
+      { label: "Roof Sections", value: "3" },
+      { label: "Annual Output", value: "6,200 kWh" }
+    ]
+  },
+  {
+    id: 'p22',
+    slug: 'large-array-estate',
+    url: '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg',
+    category: 'Solar PV',
+    description: 'Large Scale Residential Array',
+    location: 'Hampshire',
+    systemSize: '9.6kW System',
+    title: "Premium Large Array Installation",
+    client: "Country Estate",
+    date: "January 2025",
+    challenge: `<p>The estate owners wanted to maximize their solar generation with a large array that would provide substantial energy independence while maintaining a clean, professional appearance.</p>`,
+    solution: `<p>We installed a <strong>24-panel all-black array</strong> using premium N-type panels. The installation features professional edge trim and careful cable routing for a sleek finish.</p>`,
+    outcome: `<p>An impressive 9.6kW system generating over 9,000 kWh annually. The clean installation showcases modern solar at its best.</p>`,
+    stats: [
+      { label: "System Size", value: "9.6 kW" },
+      { label: "Panels", value: "24x 400W" },
+      { label: "Annual Savings", value: "£2,100" }
+    ]
+  },
+  {
+    id: 'p23',
+    slug: 'new-build-construction',
+    url: '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg',
+    category: 'Commercial',
+    description: 'New Build Construction Solar',
+    location: 'Berkshire',
+    systemSize: '18kW System',
+    title: "Construction Phase Installation",
+    client: "Property Developer",
+    date: "December 2024",
+    challenge: `<p>Working on an active construction site required careful coordination with builders. The solar system needed to be installed during the roofing phase for seamless integration.</p>`,
+    solution: `<p>Our team coordinated with the construction crew to install <strong>in-roof integrated panels</strong> during the build. The system spans multiple roof sections for comprehensive coverage.</p>`,
+    outcome: `<p>Multiple new homes delivered with pre-installed solar, ready for immediate energy savings when the new owners move in.</p>`,
+    stats: [
+      { label: "Total Capacity", value: "18 kW" },
+      { label: "Integration", value: "In-Roof" },
+      { label: "Build Phase", value: "During" }
+    ]
+  },
+  {
+    id: 'p24',
+    url: '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg',
+    category: 'Solar PV',
+    description: 'Premium Roof Array with Edge Trim',
+    location: 'Reading',
+    systemSize: '5.4kW Array'
+  },
+  {
+    id: 'p25',
+    slug: 'outbuilding-workshop',
+    url: '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg',
+    category: 'Solar PV',
+    description: 'Outbuilding Solar Installation',
+    location: 'Newbury',
+    systemSize: '3.2kW Array',
+    title: "Workshop Solar Power",
+    client: "Home Workshop Owner",
+    date: "November 2024",
+    challenge: `<p>The client needed power for their workshop but the main house roof was unsuitable. The wooden outbuilding provided an excellent alternative location.</p>`,
+    solution: `<p>We installed a <strong>compact 8-panel array</strong> on the workshop's south-facing roof. The system includes full cable routing back to the main house distribution board.</p>`,
+    outcome: `<p>The workshop now runs entirely on solar during daylight hours, powering tools and equipment at zero cost.</p>`,
+    stats: [
+      { label: "System Size", value: "3.2 kW" },
+      { label: "Panels", value: "8x 400W" },
+      { label: "Application", value: "Workshop" }
+    ]
   }
 ];
 
@@ -521,7 +609,10 @@ export const BLOG_POSTS: BlogPost[] = [
   { id: '6', slug: 'in-roof-solar-guide', title: 'In-Roof vs On-Roof Solar: Aesthetics & Cost', excerpt: 'Building a new home or re-roofing? Integrated solar panels (GSE) offer a stunning flush finish. We compare the costs and benefits.', date: 'Feb 22, 2025', image: '/img_8715.jpeg', category: 'Technology', readTime: '8 min read' },
   { id: '7', slug: 'solar-panels-winchester-heritage', title: 'Installing Solar in Winchester Conservation Areas', excerpt: 'Living in a historic city doesn\'t mean you can\'t have solar. Learn about our heritage-compliant all-black systems.', date: 'Dec 20, 2024', image: '/img_0875.jpeg', category: 'Planning', readTime: '7 min read' },
   { id: '8', slug: 'oxford-solar-net-zero', title: 'Oxford\'s Path to Net Zero: How Homeowners Can Help', excerpt: 'Oxford City Council has ambitious climate goals. See how residential solar arrays are contributing to a greener city.', date: 'Dec 5, 2024', image: '/img_0876.jpeg', category: 'Local Projects', readTime: '6 min read' },
-  { id: '9', slug: '0-vat-battery-storage', title: '0% VAT on Battery Storage Extended', excerpt: 'Great news for homeowners! The government has extended the 0% VAT relief to include standalone battery storage systems.', date: 'Feb 15, 2024', image: '/img_9312.jpeg', category: 'Finance', readTime: '3 min read' }
+  { id: '9', slug: '0-vat-battery-storage', title: '0% VAT on Battery Storage Extended', excerpt: 'Great news for homeowners! The government has extended the 0% VAT relief to include standalone battery storage systems.', date: 'Feb 15, 2024', image: '/img_9312.jpeg', category: 'Finance', readTime: '3 min read' },
+  { id: '10', slug: 'heritage-roof-solar-tips', title: 'Installing Solar on Heritage & Clay Tile Roofs', excerpt: 'Period properties need extra care. Learn how we install solar on traditional clay tile roofs without compromising character.', date: 'Mar 1, 2025', image: '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', category: 'Planning', readTime: '6 min read' },
+  { id: '11', slug: 'large-array-guide', title: 'Maximizing Solar: Guide to Large Residential Arrays', excerpt: 'Got lots of roof space? Discover how to maximize your solar investment with larger arrays and smart battery pairing.', date: 'Mar 5, 2025', image: '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg', category: 'Technology', readTime: '7 min read' },
+  { id: '12', slug: 'new-build-solar-planning', title: 'Planning Solar for New Build Properties', excerpt: 'Building a new home? Here\'s everything you need to know about integrating solar during the construction phase.', date: 'Mar 8, 2025', image: '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg', category: 'Planning', readTime: '8 min read' }
 ];
 
 export const BLOG_CONTENT: Record<string, BlogPostData> = {
@@ -1034,7 +1125,7 @@ export const COST_GUIDE_CONTENT: CostGuideData = {
 
 export const ABOUT_CONTENT: AboutPageData = {
   title: "About Carey Electrical",
-  heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
+  heroImage: '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg',
   story: [],
   values: [],
   teamStats: []
@@ -1085,7 +1176,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do I need planning permission?', answer: 'Most domestic installations are Permitted Development, so no planning is required unless you live in a listed building.' },
       { question: 'How long does installation take?', answer: 'A typical residential system takes 1-2 days to install.' }
     ],
-    galleryImages: ['/img_0493.jpeg', '/img_8048.jpeg', '/img_0494.jpeg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg']
+    galleryImages: ['/img_0493.jpeg', '/img_8048.jpeg', '/img_0494.jpeg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg']
   },
   'integrated-solar': {
     id: 'integrated-solar',
@@ -1111,7 +1202,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Does it overheat?', answer: 'No, modern in-roof systems have engineered airflow channels to ensure panels stay cool and efficient.' },
       { question: 'Is it waterproof?', answer: 'Yes, the interlocking flashing kits are designed to be 100% weather-tight, tested to extreme conditions.' }
     ],
-    galleryImages: ['/img_8715.jpeg', '/img_8716.jpeg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
+    galleryImages: ['/img_8715.jpeg', '/img_8716.jpeg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg']
   },
   'agricultural-solar': {
     id: 'agricultural-solar',
@@ -1143,7 +1234,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do you work with 3-phase?', answer: 'Yes, almost all our agricultural installs are 3-phase, ranging from 20kW to 200kW+.' },
       { question: 'Can you ground mount in a field?', answer: 'Yes, we offer pile-driven ground mount systems that don\'t require concrete foundations, preserving soil health.' }
     ],
-    galleryImages: ['/img_0366.jpeg', '/img_8716.jpeg', '/baea77fd-a9df-488b-9759-39748439a29a.jpg']
+    galleryImages: ['/img_0366.jpeg', '/img_8716.jpeg', '/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg']
   },
   'solar-carports': {
     id: 'solar-carports',
@@ -1169,7 +1260,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do I need planning permission?', answer: 'Often yes, as it is a permanent structure. We can provide elevation drawings to assist with your application.' },
       { question: 'How many panels fit?', answer: 'A double carport typically fits 12-15 panels, generating around 5-6kW.' }
     ],
-    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg']
+    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg']
   },
   'flat-roof-solar': {
     id: 'flat-roof-solar',
@@ -1195,7 +1286,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Is my roof strong enough?', answer: 'We perform a structural calculation to ensure your roof can take the weight of the ballast (typically 20-30kg/m²).' },
       { question: 'Can I see the panels?', answer: 'Usually not from the garden, as the low profile keeps them below the parapet wall.' }
     ],
-    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
+    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg', '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg']
   },
   'solar-repairs': {
     id: 'solar-repairs',

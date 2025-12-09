@@ -196,7 +196,12 @@ function App() {
       '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
       '/img_0494.jpeg',
       '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
-      '/img_0876.jpeg'
+      '/img_0876.jpeg',
+      '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg',
+      '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg',
+      '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg',
+      '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg',
+      '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg'
     ];
     
     const [currentImageIdx, setCurrentImageIdx] = useState(0);
