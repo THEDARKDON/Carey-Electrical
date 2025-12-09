@@ -539,6 +539,342 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
       { question: 'Can you fix broken panels?', answer: 'Yes, we can source replacements for damaged panels or upgrade your system.' }
     ]
   },
+  'thatcham': {
+    slug: 'thatcham',
+    name: 'Thatcham',
+    metaDescription: 'Solar Panel Installers Thatcham. Local MCS certified experts for RG18 & RG19. Battery storage & EV charging specialists.',
+    heroImage: 'IMG_0758.jpeg',
+    introTitle: 'Your Local Solar Installers',
+    introText: [
+      'Thatcham is home to Carey Electrical. As your neighbours, we take pride in delivering exceptional solar installations to the community we live and work in.',
+      'From Cold Ash to Midgham, we have installed systems on every type of property in the RG18 and RG19 postcodes.'
+    ],
+    extendedContent: `
+      <h2>Why Choose Your Local Installer</h2>
+      <p>Being based in Thatcham means we can respond quickly to any service calls and provide ongoing support to our local customers. We are invested in our community and our reputation here matters to us.</p>
+      <h3>Battery Storage Solutions</h3>
+      <p>Thatcham homeowners are increasingly pairing solar with battery storage. The <strong>Tesla Powerwall 3</strong> and <strong>Myenergi Libbi</strong> are popular choices for whole-home backup and energy independence.</p>
+    `,
+    localLandmarks: ['Thatcham Nature Discovery Centre', 'Bucklebury Common', 'Kennet & Avon Canal'],
+    solarPotential: 'Excellent. Thatcham benefits from good solar irradiance and many south-facing properties.',
+    planningAdvice: 'Most installations fall under Permitted Development. We handle any planning requirements.',
+    faq: [
+      { question: 'How quickly can you respond to issues?', answer: 'Being local, we can usually attend within 24-48 hours for urgent issues.' },
+      { question: 'Do you offer maintenance plans?', answer: 'Yes, we offer annual maintenance packages for local customers.' }
+    ]
+  },
+  'reading': {
+    slug: 'reading',
+    name: 'Reading',
+    metaDescription: 'Solar Panel Installation Reading. MCS certified installers for RG1-RG6. Commercial and residential solar experts.',
+    heroImage: 'IMG_3254.jpeg',
+    introTitle: 'Solar Solutions for Reading & Surrounding Areas',
+    introText: [
+      'Reading is a thriving hub for both residential and commercial solar installations. From Victorian terraces in Caversham to modern developments in Green Park, we design systems for every property type.',
+      'We serve all Reading postcodes including RG1 through RG6, Tilehurst, Earley, and Woodley.'
+    ],
+    extendedContent: `
+      <h2>Commercial Solar in Reading</h2>
+      <p>Reading's business parks offer excellent opportunities for commercial solar. We have installed systems on warehouses in Winnersh Triangle and offices in Thames Valley Park.</p>
+      <h3>Residential Installations</h3>
+      <p>From period properties in Sonning to new builds in Shinfield, we design solar systems that complement your home's architecture while maximizing energy generation.</p>
+    `,
+    localLandmarks: ['Reading Festival Site', 'Madejski Stadium', 'Forbury Gardens'],
+    solarPotential: 'Good to Excellent. Urban shading can be a factor but many properties have excellent roof exposure.',
+    planningAdvice: 'Reading Borough Council generally supports solar installations. We assist with any conservation area requirements.',
+    faq: [
+      { question: 'Do you install on flats?', answer: 'We can assess apartment buildings for communal solar installations.' },
+      { question: 'What about terraced houses?', answer: 'Yes, terraced houses are often ideal candidates with their consistent roof lines.' }
+    ]
+  },
+  'basingstoke': {
+    slug: 'basingstoke',
+    name: 'Basingstoke',
+    metaDescription: 'Solar Panels Basingstoke. MCS certified solar installers for RG21-RG24. Battery storage and EV charging specialists.',
+    heroImage: 'IMG_1023.jpeg',
+    introTitle: 'Solar Energy for North Hampshire',
+    introText: [
+      'Basingstoke combines modern town centre living with beautiful Hampshire villages. We install solar systems across all RG21-RG24 postcodes.',
+      'From executive homes in Chineham to rural properties in Old Basing, we deliver tailored energy solutions.'
+    ],
+    extendedContent: `
+      <h2>Modern Homes, Modern Energy</h2>
+      <p>Basingstoke's many newer developments are ideal for solar. Properties built since the 1980s typically have excellent roof structures for panel installation.</p>
+      <h3>Rural Properties</h3>
+      <p>For farms and rural estates around Basingstoke, we offer <a href="#/services/ground-mount">ground-mounted solar</a> and agricultural installations that can transform unused land into clean energy generators.</p>
+    `,
+    localLandmarks: ['The Malls', 'Basing House', 'The Anvil'],
+    solarPotential: 'Excellent. Basingstoke receives strong solar irradiance with many properties having ideal roof orientations.',
+    planningAdvice: 'Basingstoke & Deane Council supports renewable energy. Most residential installs are Permitted Development.',
+    faq: [
+      { question: 'Do you cover Hook and Fleet?', answer: 'Yes, we cover the wider Basingstoke area including Hook, Fleet, and Odiham.' },
+      { question: 'Can you install on new builds?', answer: 'Yes, we work with developers and new homeowners to install solar on new properties.' }
+    ]
+  },
+  'hungerford': {
+    slug: 'hungerford',
+    name: 'Hungerford',
+    metaDescription: 'Solar Panel Installers Hungerford. Heritage specialists for RG17. Listed building experience and rural solar experts.',
+    heroImage: 'IMG_0692.jpeg',
+    introTitle: 'Solar for the Kennet Valley',
+    introText: [
+      'Hungerford is a beautiful market town with many period properties. We specialize in sympathetic solar installations that respect the town conservation area.',
+      'From Hungerford Common to Kintbury, we provide expert solar installation services throughout RG17.'
+    ],
+    extendedContent: `
+      <h2>Heritage Solar Specialists</h2>
+      <p>Hungerford High Street features many listed and historic buildings. We offer <strong>integrated in-roof solar</strong> that maintains the character of period properties.</p>
+      <h3>Rural & Agricultural</h3>
+      <p>The farmland surrounding Hungerford is perfect for larger solar installations. We offer ground-mounted systems and barn roof installations for rural properties.</p>
+    `,
+    localLandmarks: ['Hungerford Common', 'Kennet & Avon Canal', 'Littlecote House'],
+    solarPotential: 'Excellent. Rural locations benefit from minimal shading and clean air for optimal panel performance.',
+    planningAdvice: 'We have experience with West Berkshire conservation areas and can guide you through any planning requirements.',
+    faq: [
+      { question: 'Can solar be installed on thatched roofs?', answer: 'We recommend ground-mounted systems for thatched properties due to fire safety considerations.' },
+      { question: 'Do you work on listed buildings?', answer: 'Yes, we have extensive experience and can assist with Listed Building Consent applications.' }
+    ]
+  },
+  'winchester': {
+    slug: 'winchester',
+    name: 'Winchester',
+    metaDescription: 'Solar Panels Winchester. Heritage solar installers for SO22-SO23. MCS certified with conservation area expertise.',
+    heroImage: 'IMG_3256.jpeg',
+    introTitle: 'Solar Energy for Historic Winchester',
+    introText: [
+      'Winchester combines ancient history with modern living. We specialize in solar installations that respect the city unique heritage while delivering clean energy.',
+      'From the cathedral quarter to Oliver Battery and Stanmore, we serve all Winchester postcodes.'
+    ],
+    extendedContent: `
+      <h2>Solar in a World Heritage Setting</h2>
+      <p>Winchester requires careful consideration when installing solar. We use <strong>all-black panels</strong> and <strong>integrated in-roof systems</strong> to minimize visual impact in sensitive areas.</p>
+      <h3>Modern Winchester</h3>
+      <p>Areas like Kings Worthy and Weeke offer excellent opportunities for conventional solar installations. These properties often have ideal south-facing roofs.</p>
+    `,
+    localLandmarks: ['Winchester Cathedral', 'Winchester College', 'Hospital of St Cross'],
+    solarPotential: 'Good. Winchester has a mix of historic and modern properties with varying solar potential.',
+    planningAdvice: 'We have extensive experience with Winchester City Council planning requirements and conservation area guidelines.',
+    faq: [
+      { question: 'Can I install solar near the cathedral?', answer: 'Properties in the conservation area may need planning permission. We can advise on the best approach.' },
+      { question: 'Do you cover the surrounding villages?', answer: 'Yes, we serve Alresford, Kings Worthy, Micheldever, and surrounding villages.' }
+    ]
+  },
+  'andover': {
+    slug: 'andover',
+    name: 'Andover',
+    metaDescription: 'Solar Panel Installation Andover. MCS certified installers for SP10-SP11. Battery storage and EV charging experts.',
+    heroImage: 'IMG_0758.jpeg',
+    introTitle: 'Solar Solutions for Test Valley',
+    introText: [
+      'Andover offers a mix of modern housing estates and charming villages. We install solar systems across SP10 and SP11 postcodes.',
+      'From the town centre to Charlton, Anna Valley, and the surrounding villages, we deliver professional solar installations.'
+    ],
+    extendedContent: `
+      <h2>Growing Community, Growing Demand</h2>
+      <p>Andover's expanding housing developments are perfect for solar. New estates in Picket Twenty and East Anton feature many suitable properties.</p>
+      <h3>Rural Properties</h3>
+      <p>The Test Valley countryside surrounding Andover offers excellent opportunities for ground-mounted solar on larger properties and farms.</p>
+    `,
+    localLandmarks: ['Hawk Conservancy Trust', 'Museum of the Iron Age', 'Finkley Down Farm'],
+    solarPotential: 'Excellent. Andover receives strong solar irradiance with minimal urban shading.',
+    planningAdvice: 'Test Valley Borough Council is supportive of renewable energy. Most installations are Permitted Development.',
+    faq: [
+      { question: 'Do you cover Whitchurch?', answer: 'Yes, we serve Andover, Whitchurch, Stockbridge, and all surrounding areas.' },
+      { question: 'Can you install on agricultural buildings?', answer: 'Yes, farm buildings often make excellent candidates for large solar installations.' }
+    ]
+  },
+  'oxford': {
+    slug: 'oxford',
+    name: 'Oxford',
+    metaDescription: 'Solar Panel Installers Oxford. MCS certified experts for OX1-OX4. University city solar specialists with heritage experience.',
+    heroImage: 'IMG_3254.jpeg',
+    introTitle: 'Solar Energy for the City of Dreaming Spires',
+    introText: [
+      'Oxford presents unique challenges and opportunities for solar installation. We have the expertise to install systems that complement the city diverse architecture.',
+      'From Summertown to Headington, Cowley to Botley, we serve all Oxford postcodes.'
+    ],
+    extendedContent: `
+      <h2>Heritage and Innovation</h2>
+      <p>Oxford is a city where history meets innovation. We offer solar solutions that respect the architectural heritage while embracing clean energy technology.</p>
+      <h3>Suburban Oxford</h3>
+      <p>Areas like Kidlington, Botley, and Headington offer excellent opportunities for conventional solar installations with many suitable 1930s-1980s properties.</p>
+    `,
+    localLandmarks: ['Bodleian Library', 'Radcliffe Camera', 'University Parks'],
+    solarPotential: 'Good. Oxford has varied potential depending on property age and location.',
+    planningAdvice: 'Oxford City Council has strong sustainability goals. We navigate conservation area requirements expertly.',
+    faq: [
+      { question: 'Can college buildings have solar?', answer: 'We work with institutional clients to assess heritage buildings for appropriate solar solutions.' },
+      { question: 'Do you cover Abingdon?', answer: 'Yes, we serve Oxford and all surrounding towns including Abingdon, Witney, and Bicester.' }
+    ]
+  },
+  'didcot': {
+    slug: 'didcot',
+    name: 'Didcot',
+    metaDescription: 'Solar Panels Didcot. MCS certified installers for OX11. New build specialists and battery storage experts.',
+    heroImage: 'IMG_1023.jpeg',
+    introTitle: 'Solar for South Oxfordshire',
+    introText: [
+      'Didcot is one of the fastest-growing towns in the UK. Its modern housing stock makes it ideal for solar installation.',
+      'We serve Didcot and surrounding villages including Harwell, Blewbury, and Cholsey.'
+    ],
+    extendedContent: `
+      <h2>Modern Homes, Clean Energy</h2>
+      <p>Didcot's numerous new developments are perfect for solar. Properties on Great Western Park and other new estates typically have excellent roof structures.</p>
+      <h3>Science Vale</h3>
+      <p>The growing tech and science community in Didcot increasingly values energy independence and sustainability.</p>
+    `,
+    localLandmarks: ['Didcot Railway Centre', 'Harwell Campus', 'Wittenham Clumps'],
+    solarPotential: 'Excellent. New builds often have optimal roof orientations for solar.',
+    planningAdvice: 'South Oxfordshire District Council supports renewable energy. Most installations are straightforward.',
+    faq: [
+      { question: 'Is my new build suitable for solar?', answer: 'Most new builds in Didcot are excellent candidates. We provide free assessments.' },
+      { question: 'Can you add solar to new build warranties?', answer: 'We work carefully to maintain your new build warranty when installing solar.' }
+    ]
+  },
+  'wantage': {
+    slug: 'wantage',
+    name: 'Wantage',
+    metaDescription: 'Solar Panel Installation Wantage. MCS certified solar experts for OX12. Rural and heritage solar specialists.',
+    heroImage: 'IMG_0692.jpeg',
+    introTitle: 'Solar Energy for the Vale of White Horse',
+    introText: [
+      'Wantage sits at the heart of the beautiful Vale of White Horse. We install solar systems that suit both the market town and surrounding rural properties.',
+      'From Grove to East Hendred, we serve all of the OX12 postcode area.'
+    ],
+    extendedContent: `
+      <h2>Market Town Solar</h2>
+      <p>Wantage town centre has many period properties that benefit from our heritage solar expertise. We use sympathetic installation methods for older buildings.</p>
+      <h3>Rural Installations</h3>
+      <p>The surrounding villages and farms offer excellent opportunities for larger solar installations and ground-mounted systems.</p>
+    `,
+    localLandmarks: ['Uffington White Horse', 'Vale & Downland Museum', 'Ridgeway National Trail'],
+    solarPotential: 'Excellent. The Vale benefits from good solar exposure and many properties have ideal orientations.',
+    planningAdvice: 'Vale of White Horse District Council supports renewables. We handle all planning requirements.',
+    faq: [
+      { question: 'Can I install solar on a barn conversion?', answer: 'Yes, barn conversions often have excellent roof space for solar installations.' },
+      { question: 'Do you cover Faringdon?', answer: 'Yes, we serve Wantage, Grove, Faringdon, and all surrounding villages.' }
+    ]
+  },
+  'marlborough': {
+    slug: 'marlborough',
+    name: 'Marlborough',
+    metaDescription: 'Solar Panels Marlborough. Heritage solar specialists for SN8. MCS certified with conservation area expertise.',
+    heroImage: 'IMG_3256.jpeg',
+    introTitle: 'Solar for Historic Marlborough',
+    introText: [
+      'Marlborough is a historic market town requiring sensitive approaches to solar installation. We specialize in heritage-friendly solutions.',
+      'We serve Marlborough and surrounding villages including Pewsey, Aldbourne, and Ramsbury.'
+    ],
+    extendedContent: `
+      <h2>Conservation Area Expertise</h2>
+      <p>Marlborough High Street and surrounding areas are protected. We offer <strong>in-roof solar systems</strong> and rear-of-property installations that respect the town's character.</p>
+      <h3>North Wessex Downs</h3>
+      <p>Properties in the AONB require careful consideration. We design systems that complement the landscape while delivering clean energy.</p>
+    `,
+    localLandmarks: ['Marlborough College', 'Savernake Forest', 'Avebury Stone Circle'],
+    solarPotential: 'Good to Excellent. Rural properties often have minimal shading and excellent exposure.',
+    planningAdvice: 'We have extensive experience with Wiltshire Council and AONB planning requirements.',
+    faq: [
+      { question: 'Can I install solar in the AONB?', answer: 'Yes, with appropriate design. We specialize in sympathetic installations.' },
+      { question: 'Do you work on listed buildings?', answer: 'Yes, we can assist with Listed Building Consent applications and appropriate solutions.' }
+    ]
+  },
+  'wokingham': {
+    slug: 'wokingham',
+    name: 'Wokingham',
+    metaDescription: 'Solar Panel Installers Wokingham. MCS certified for RG40-RG41. Premium solar and battery storage specialists.',
+    heroImage: 'IMG_0758.jpeg',
+    introTitle: 'Solar Solutions for Wokingham Borough',
+    introText: [
+      'Wokingham offers a mix of historic town centre properties and modern executive homes. We install solar across all property types.',
+      'From Wokingham Without to Finchampstead, we serve RG40 and RG41 postcodes.'
+    ],
+    extendedContent: `
+      <h2>Executive Homes</h2>
+      <p>Wokingham's many executive properties are ideal for premium solar installations. We offer <strong>all-black systems</strong> and <strong>solar carports</strong> for discerning homeowners.</p>
+      <h3>Town Centre Properties</h3>
+      <p>The historic town centre requires careful installation approaches. We have experience with Wokingham's conservation areas.</p>
+    `,
+    localLandmarks: ['California Country Park', 'Dinton Pastures', 'Wokingham Town Hall'],
+    solarPotential: 'Excellent. Many properties have large, unshaded roofs ideal for solar.',
+    planningAdvice: 'Wokingham Borough Council supports solar installations. We handle conservation area requirements.',
+    faq: [
+      { question: 'Do you cover Crowthorne?', answer: 'Yes, we serve Wokingham, Crowthorne, Finchampstead, and surrounding areas.' },
+      { question: 'Can you install solar carports?', answer: 'Yes, solar carports are popular with Wokingham homeowners who have large driveways.' }
+    ]
+  },
+  'bracknell': {
+    slug: 'bracknell',
+    name: 'Bracknell',
+    metaDescription: 'Solar Panels Bracknell. MCS certified installers for RG12 & RG42. New town solar specialists.',
+    heroImage: 'IMG_1023.jpeg',
+    introTitle: 'Solar Energy for Bracknell Forest',
+    introText: [
+      'Bracknell new town planning means many properties have excellent roof orientations for solar. We serve all Bracknell Forest areas.',
+      'From Sandhurst to Binfield, Warfield to Crowthorne, we install across RG12 and RG42.'
+    ],
+    extendedContent: `
+      <h2>New Town Advantage</h2>
+      <p>Bracknell's planned layout means many homes have ideal south-facing roofs. Properties from the 1950s onwards are typically well-suited to solar.</p>
+      <h3>Commercial Opportunities</h3>
+      <p>Bracknell's business parks offer excellent commercial solar potential. We work with businesses to reduce energy costs and carbon footprints.</p>
+    `,
+    localLandmarks: ['The Lexicon', 'Coral Reef Waterworld', 'South Hill Park'],
+    solarPotential: 'Excellent. Many properties have unobstructed, well-oriented roofs.',
+    planningAdvice: 'Bracknell Forest Council is supportive of renewables. Most residential installs are Permitted Development.',
+    faq: [
+      { question: 'Are 1960s houses suitable for solar?', answer: 'Yes, many Bracknell properties from this era have excellent roof structures for solar.' },
+      { question: 'Do you install on commercial properties?', answer: 'Yes, we offer commercial solar installations for businesses in Bracknell.' }
+    ]
+  },
+  'abingdon': {
+    slug: 'abingdon',
+    name: 'Abingdon',
+    metaDescription: 'Solar Panel Installation Abingdon. MCS certified experts for OX14. Heritage and modern solar specialists.',
+    heroImage: 'IMG_3254.jpeg',
+    introTitle: 'Solar for Abingdon-on-Thames',
+    introText: [
+      'Abingdon-on-Thames combines historic charm with modern development. We offer solar solutions for all property types across OX14.',
+      'From the town centre to Radley, Drayton, and Marcham, we serve the wider Abingdon area.'
+    ],
+    extendedContent: `
+      <h2>Historic Town Centre</h2>
+      <p>Abingdon's Abbey area and town centre require sensitive installation approaches. We offer heritage-friendly solutions for period properties.</p>
+      <h3>Modern Developments</h3>
+      <p>New housing in areas like North Abingdon offers excellent opportunities for conventional solar installations.</p>
+    `,
+    localLandmarks: ['Abingdon Abbey', 'Abingdon County Hall Museum', 'River Thames'],
+    solarPotential: 'Good to Excellent. Varied depending on property type and location.',
+    planningAdvice: 'Vale of White Horse District Council supports solar. We handle conservation area requirements.',
+    faq: [
+      { question: 'Can I install solar on a riverside property?', answer: 'Yes, we can install on properties near the Thames with appropriate consideration for views.' },
+      { question: 'Do you work in Culham?', answer: 'Yes, we serve Abingdon and all surrounding villages including Culham, Sutton Courtenay, and Milton.' }
+    ]
+  },
+  'maidenhead': {
+    slug: 'maidenhead',
+    name: 'Maidenhead',
+    metaDescription: 'Solar Panels Maidenhead. MCS certified installers for SL6. Premium solar and EV charging specialists.',
+    heroImage: 'IMG_3256.jpeg',
+    introTitle: 'Solar Solutions for Maidenhead',
+    introText: [
+      'Maidenhead offers excellent opportunities for residential and commercial solar. We serve all SL6 postcodes from Cookham to Cox Green.',
+      'With the Elizabeth Line improving London connections, Maidenhead homeowners are investing in their properties with solar installations.'
+    ],
+    extendedContent: `
+      <h2>Riverside Properties</h2>
+      <p>Maidenhead's Thames-side properties often have excellent roof exposure. We design systems that complement riverside homes.</p>
+      <h3>Executive Solar</h3>
+      <p>Areas like Pinkneys Green and Cookham Rise feature many executive homes ideal for premium solar installations and solar carports.</p>
+    `,
+    localLandmarks: ['Boulters Lock', 'Maidenhead Heritage Centre', 'Cliveden'],
+    solarPotential: 'Excellent. Many properties have large, unshaded roofs.',
+    planningAdvice: 'RBWM supports solar installations. We have experience with the borough conservation areas.',
+    faq: [
+      { question: 'Do you cover Cookham?', answer: 'Yes, we serve Maidenhead, Cookham, Bourne End, and surrounding areas.' },
+      { question: 'Can you install EV chargers too?', answer: 'Yes, we offer combined solar and EV charging packages.' }
+    ]
+  },
 };
 
 export const COST_GUIDE_CONTENT: CostGuideData = {
