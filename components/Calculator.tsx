@@ -109,12 +109,12 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
           {/* --- LEFT COLUMN: INPUTS --- */}
           <div className="xl:col-span-5 space-y-6">
             <Reveal delay={100}>
-              <div className="p-6 md:p-8 rounded-2xl bg-zinc-900/80 border border-zinc-700 shadow-xl backdrop-blur-md relative overflow-hidden group">
+              <div className="p-6 md:p-8 rounded-2xl bg-slate-900/80 border border-slate-700 shadow-xl backdrop-blur-md relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-1 h-full bg-brand-green group-hover:w-2 transition-all duration-300" />
                 
                 <div className="flex justify-between items-end mb-6">
                   <label className="flex items-center gap-3 text-white font-bold text-lg">
-                    <div className="p-2.5 bg-zinc-800 rounded-xl text-brand-green shadow-lg">
+                    <div className="p-2.5 bg-slate-800 rounded-xl text-brand-green shadow-lg">
                       <PoundSterling size={22} />
                     </div>
                     Current Monthly Bill
@@ -130,10 +130,10 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
                   value={bill} 
                   onChange={(e) => setBill(Number(e.target.value))} 
                   style={getBackgroundSize(bill, 50, 600)}
-                  className="w-full mb-4 h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer"
+                  className="w-full mb-4 h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer"
                 />
                 
-                <div className="flex justify-between text-xs font-medium text-zinc-500 uppercase tracking-wide">
+                <div className="flex justify-between text-xs font-medium text-slate-500 uppercase tracking-wide">
                   <span>£50</span>
                   <span>High Usage (£600+)</span>
                 </div>
@@ -148,12 +148,12 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
             </Reveal>
 
             <Reveal delay={200}>
-              <div className="p-6 md:p-8 rounded-2xl bg-zinc-900/80 border border-zinc-700 shadow-xl backdrop-blur-md relative overflow-hidden group">
+              <div className="p-6 md:p-8 rounded-2xl bg-slate-900/80 border border-slate-700 shadow-xl backdrop-blur-md relative overflow-hidden group">
                  <div className="absolute top-0 left-0 w-1 h-full bg-brand-glow group-hover:w-2 transition-all duration-300" />
                  
                 <div className="flex justify-between items-end mb-6">
                   <label className="flex items-center gap-3 text-white font-bold text-lg">
-                    <div className="p-2.5 bg-zinc-800 rounded-xl text-brand-glow shadow-lg">
+                    <div className="p-2.5 bg-slate-800 rounded-xl text-brand-glow shadow-lg">
                       <Sun size={22} />
                     </div>
                     Solar System Size
@@ -173,7 +173,7 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
                 />
                 
                 <div className="flex justify-between items-center">
-                  <div className="flex justify-between text-xs font-medium text-zinc-500 uppercase tracking-wide w-full">
+                  <div className="flex justify-between text-xs font-medium text-slate-500 uppercase tracking-wide w-full">
                     <span>2kW</span>
                     <span>16kW (Large)</span>
                   </div>
@@ -195,12 +195,12 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
             </Reveal>
 
             <Reveal delay={300}>
-              <div className="p-6 md:p-8 rounded-2xl bg-zinc-900/80 border border-zinc-700 shadow-xl backdrop-blur-md relative overflow-hidden group">
+              <div className="p-6 md:p-8 rounded-2xl bg-slate-900/80 border border-slate-700 shadow-xl backdrop-blur-md relative overflow-hidden group">
                  <div className="absolute top-0 left-0 w-1 h-full bg-emerald-600 group-hover:w-2 transition-all duration-300" />
                  
                 <div className="flex justify-between items-end mb-6">
                   <label className="flex items-center gap-3 text-white font-bold text-lg">
-                    <div className="p-2.5 bg-zinc-800 rounded-xl text-emerald-500 shadow-lg">
+                    <div className="p-2.5 bg-slate-800 rounded-xl text-emerald-500 shadow-lg">
                       <Battery size={22} />
                     </div>
                     Battery Storage
@@ -218,7 +218,7 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
                   style={getBackgroundSize(batterySize, 0, 20)}
                   className="w-full mb-4"
                 />
-                 <div className="flex justify-between text-xs font-medium text-zinc-500 uppercase tracking-wide">
+                 <div className="flex justify-between text-xs font-medium text-slate-500 uppercase tracking-wide">
                   <span>No Battery</span>
                   <span>20kWh</span>
                 </div>
@@ -239,33 +239,33 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
                 {/* Glow Behind */}
                 <div className="absolute -inset-2 bg-gradient-to-r from-brand-green via-teal-500 to-brand-glow rounded-3xl blur-xl opacity-20" />
                 
-                <div className="bg-zinc-950/90 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-3xl relative shadow-2xl">
+                <div className="bg-slate-950/90 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-3xl relative shadow-2xl">
                   
                   {/* Header */}
-                  <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 pb-8 border-b border-zinc-800 gap-6">
+                  <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 pb-8 border-b border-slate-800 gap-6">
                     <div>
                       <h3 className="text-3xl font-extrabold text-white mb-2">Projected Returns</h3>
                       <div className="flex items-center gap-4 text-sm">
-                        <span className={`cursor-pointer transition-colors ${activeTab === 'breakdown' ? 'text-brand-green font-bold' : 'text-zinc-500 hover:text-white'}`} onClick={() => setActiveTab('breakdown')}>
+                        <span className={`cursor-pointer transition-colors ${activeTab === 'breakdown' ? 'text-brand-green font-bold' : 'text-slate-500 hover:text-white'}`} onClick={() => setActiveTab('breakdown')}>
                           Financial Breakdown
                         </span>
-                        <div className="h-4 w-[1px] bg-zinc-700" />
-                        <span className={`cursor-pointer transition-colors ${activeTab === 'environment' ? 'text-brand-green font-bold' : 'text-zinc-500 hover:text-white'}`} onClick={() => setActiveTab('environment')}>
+                        <div className="h-4 w-[1px] bg-slate-700" />
+                        <span className={`cursor-pointer transition-colors ${activeTab === 'environment' ? 'text-brand-green font-bold' : 'text-slate-500 hover:text-white'}`} onClick={() => setActiveTab('environment')}>
                           Environmental Impact
                         </span>
                       </div>
                     </div>
                     
                     {/* Finance Toggle */}
-                    <div className="flex items-center gap-3 bg-zinc-900 p-2 rounded-lg border border-zinc-700">
-                      <span className={`text-xs font-bold uppercase tracking-wider ${!showFinance ? 'text-white' : 'text-zinc-500'}`}>Cash</span>
+                    <div className="flex items-center gap-3 bg-slate-900 p-2 rounded-lg border border-slate-700">
+                      <span className={`text-xs font-bold uppercase tracking-wider ${!showFinance ? 'text-white' : 'text-slate-500'}`}>Cash</span>
                       <button 
                         onClick={() => setShowFinance(!showFinance)}
-                        className={`w-12 h-6 rounded-full p-1 transition-colors ${showFinance ? 'bg-brand-green' : 'bg-zinc-700'}`}
+                        className={`w-12 h-6 rounded-full p-1 transition-colors ${showFinance ? 'bg-brand-green' : 'bg-slate-700'}`}
                       >
                         <div className={`w-4 h-4 bg-white rounded-full shadow-md transform transition-transform ${showFinance ? 'translate-x-6' : 'translate-x-0'}`} />
                       </button>
-                      <span className={`text-xs font-bold uppercase tracking-wider ${showFinance ? 'text-white' : 'text-zinc-500'}`}>Finance</span>
+                      <span className={`text-xs font-bold uppercase tracking-wider ${showFinance ? 'text-white' : 'text-slate-500'}`}>Finance</span>
                     </div>
                   </div>
                   
@@ -273,23 +273,23 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
                       
                       {/* Total Annual Benefit */}
-                      <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-6 rounded-2xl border border-zinc-700 hover:border-brand-green/40 transition-all group">
+                      <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-brand-green/40 transition-all group">
                         <div className="flex justify-between items-start mb-4">
                            <div className="p-3 bg-brand-green/20 rounded-lg text-brand-green">
                              <PoundSterling size={24} />
                            </div>
                            <span className="text-xs font-bold text-brand-green bg-brand-green/10 px-2 py-1 rounded">YEAR 1</span>
                         </div>
-                        <p className="text-zinc-400 text-sm font-medium uppercase tracking-wider mb-1">
+                        <p className="text-slate-400 text-sm font-medium uppercase tracking-wider mb-1">
                           {showFinance ? 'Monthly Cashflow' : 'Total Annual Benefit'}
                         </p>
                         <div className="flex items-baseline gap-1">
                           {showFinance ? (
                             <div className="flex flex-col">
                               <span className={`text-4xl font-extrabold tracking-tight ${cashflow >= 0 ? 'text-brand-green' : 'text-amber-400'}`}>
-                                {cashflow >= 0 ? '+' : '-'}£{Math.abs(cashflow).toFixed(0)}<span className="text-lg text-zinc-400">/mo</span>
+                                {cashflow >= 0 ? '+' : '-'}£{Math.abs(cashflow).toFixed(0)}<span className="text-lg text-slate-400">/mo</span>
                               </span>
-                              <span className="text-xs text-zinc-500 mt-1">Savings (£{monthlyBenefit.toFixed(0)}) vs Loan (£{monthlyFinanceCost.toFixed(0)})</span>
+                              <span className="text-xs text-slate-500 mt-1">Savings (£{monthlyBenefit.toFixed(0)}) vs Loan (£{monthlyFinanceCost.toFixed(0)})</span>
                             </div>
                           ) : (
                             <span className="text-5xl font-extrabold text-white tracking-tight">
@@ -300,18 +300,18 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
                         
                         {!showFinance && (
                           <div className="mt-4 space-y-2">
-                             <div className="flex justify-between text-xs text-zinc-400">
+                             <div className="flex justify-between text-xs text-slate-400">
                                <span>Bill Savings</span>
                                <span className="text-white">£{annualBillSavings.toFixed(0)}</span>
                              </div>
-                             <div className="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
+                             <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
                                <div className="bg-white h-full" style={{ width: `${(annualBillSavings/totalAnnualBenefit)*100}%` }} />
                              </div>
-                             <div className="flex justify-between text-xs text-zinc-400">
+                             <div className="flex justify-between text-xs text-slate-400">
                                <span>Export Income</span>
                                <span className="text-brand-green">£{annualExportIncome.toFixed(0)}</span>
                              </div>
-                             <div className="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
+                             <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
                                <div className="bg-brand-green h-full" style={{ width: `${(annualExportIncome/totalAnnualBenefit)*100}%` }} />
                              </div>
                           </div>
@@ -319,20 +319,20 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
                       </div>
 
                       {/* Break Even / 20 Year / Chart */}
-                      <div className="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-700 hover:border-brand-green/40 transition-all flex flex-col justify-between">
+                      <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-700 hover:border-brand-green/40 transition-all flex flex-col justify-between">
                          <div>
                             <div className="flex justify-between items-center mb-2">
-                              <p className="text-zinc-400 text-sm font-medium uppercase tracking-wider">10-Year Cashflow</p>
-                              <BarChart3 size={16} className="text-zinc-500" />
+                              <p className="text-slate-400 text-sm font-medium uppercase tracking-wider">10-Year Cashflow</p>
+                              <BarChart3 size={16} className="text-slate-500" />
                             </div>
                             
                             {/* NEW: Simple Bar Chart Visualization */}
                             <SimpleBarChart data={cumulativeData} />
                             
                          </div>
-                         <div className="mt-4 pt-4 border-t border-zinc-800">
+                         <div className="mt-4 pt-4 border-t border-slate-800">
                             <div className="flex justify-between items-center">
-                              <span className="text-zinc-400 font-medium">{showFinance ? 'Estimated Install Cost' : 'Break Even'}</span>
+                              <span className="text-slate-400 font-medium">{showFinance ? 'Estimated Install Cost' : 'Break Even'}</span>
                               <span className="text-xl font-bold text-white">{showFinance ? `£${estimatedSystemCost.toLocaleString()}` : `${roiYears.toFixed(1)} Years`}</span>
                             </div>
                             <div className="text-right text-xs text-brand-green mt-1">{showFinance ? 'Subject to survey' : `Profit start: ${breakEvenYear}`}</div>
@@ -340,17 +340,17 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
                       </div>
 
                       {/* Generation Stats */}
-                      <div className="md:col-span-2 bg-zinc-900/30 p-6 rounded-2xl border border-zinc-800 flex flex-wrap gap-8 items-center justify-between">
+                      <div className="md:col-span-2 bg-slate-900/30 p-6 rounded-2xl border border-slate-800 flex flex-wrap gap-8 items-center justify-between">
                          <div>
-                            <p className="text-zinc-500 text-xs font-bold uppercase mb-1">Total Generation</p>
+                            <p className="text-slate-500 text-xs font-bold uppercase mb-1">Total Generation</p>
                             <p className="text-2xl font-bold text-white">{Math.round(annualGenerationkWh).toLocaleString()} kWh</p>
                          </div>
                          <div>
-                            <p className="text-zinc-500 text-xs font-bold uppercase mb-1">Self Consumed</p>
+                            <p className="text-slate-500 text-xs font-bold uppercase mb-1">Self Consumed</p>
                             <p className="text-2xl font-bold text-brand-green">{Math.round(totalSelfConsumedkWh).toLocaleString()} kWh</p>
                          </div>
                          <div>
-                            <p className="text-zinc-500 text-xs font-bold uppercase mb-1">Energy Independence</p>
+                            <p className="text-slate-500 text-xs font-bold uppercase mb-1">Energy Independence</p>
                             <p className="text-2xl font-bold text-white">{independencePercentage}%</p>
                          </div>
                       </div>
@@ -360,23 +360,23 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
                     <div className="bg-brand-green/10 p-8 rounded-2xl border border-brand-green/20 text-center animate-in fade-in zoom-in duration-300">
                        <Leaf className="w-16 h-16 text-brand-green mx-auto mb-4 animate-bounce" />
                        <h4 className="text-2xl font-bold text-white mb-2">Significant Carbon Reduction</h4>
-                       <p className="text-zinc-300 mb-8 max-w-md mx-auto">By installing this system, you are directly contributing to a cleaner future.</p>
+                       <p className="text-slate-300 mb-8 max-w-md mx-auto">By installing this system, you are directly contributing to a cleaner future.</p>
                        
                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-zinc-900 p-4 rounded-xl">
+                          <div className="bg-slate-900 p-4 rounded-xl">
                              <p className="text-3xl font-bold text-white">{(annualGenerationkWh * 0.233 / 1000).toFixed(2)}</p>
-                             <p className="text-xs text-zinc-500 uppercase tracking-wide mt-1">Tonnes CO2 Saved / Yr</p>
+                             <p className="text-xs text-slate-500 uppercase tracking-wide mt-1">Tonnes CO2 Saved / Yr</p>
                           </div>
-                          <div className="bg-zinc-900 p-4 rounded-xl">
+                          <div className="bg-slate-900 p-4 rounded-xl">
                              <p className="text-3xl font-bold text-white">{Math.round((annualGenerationkWh * 0.233) / 22)}</p>
-                             <p className="text-xs text-zinc-500 uppercase tracking-wide mt-1">Trees Planted Equiv.</p>
+                             <p className="text-xs text-slate-500 uppercase tracking-wide mt-1">Trees Planted Equiv.</p>
                           </div>
                        </div>
                     </div>
                   )}
 
-                  <div className="mt-10 pt-8 border-t border-zinc-800 flex flex-col md:flex-row gap-6 items-center justify-between">
-                     <p className="text-zinc-500 text-sm italic max-w-sm">
+                  <div className="mt-10 pt-8 border-t border-slate-800 flex flex-col md:flex-row gap-6 items-center justify-between">
+                     <p className="text-slate-500 text-sm italic max-w-sm">
                        *Estimates only. Returns vary based on roof angle, orientation, and shading.
                      </p>
                      <button 

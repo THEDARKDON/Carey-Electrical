@@ -44,7 +44,7 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
       <div className="fixed top-24 left-6 z-50">
         <button 
           onClick={onBack}
-          className="flex items-center gap-2 px-4 py-2 bg-zinc-900/80 backdrop-blur-md border border-zinc-700 rounded-full text-white hover:text-brand-green hover:border-brand-green transition-all shadow-lg group"
+          className="flex items-center gap-2 px-4 py-2 bg-slate-900/80 backdrop-blur-md border border-slate-700 rounded-full text-white hover:text-brand-green hover:border-brand-green transition-all shadow-lg group"
         >
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           <span className="font-medium">Back to News</span>
@@ -71,7 +71,7 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
               <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 max-w-4xl leading-tight">
                 {data.title}
               </h1>
-              <div className="flex items-center gap-6 text-zinc-300 text-sm font-medium">
+              <div className="flex items-center gap-6 text-slate-300 text-sm font-medium">
                 <div className="flex items-center gap-2">
                   <User size={16} className="text-brand-green" />
                   {data.author}
@@ -95,19 +95,19 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
                 <div 
                   className="prose prose-invert prose-lg max-w-none 
                     prose-headings:font-bold prose-headings:text-white prose-a:text-brand-green prose-a:no-underline hover:prose-a:underline
-                    prose-strong:text-white prose-li:text-zinc-300 prose-p:text-zinc-300 prose-p:leading-relaxed"
+                    prose-strong:text-white prose-li:text-slate-300 prose-p:text-slate-300 prose-p:leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: data.content }}
                 />
               </Reveal>
 
               {/* Author Bio Box */}
-              <div className="mt-16 p-8 bg-zinc-900 rounded-2xl border border-zinc-800 flex items-center gap-6">
+              <div className="mt-16 p-8 bg-slate-900 rounded-2xl border border-slate-800 flex items-center gap-6">
                 <div className="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center text-brand-black font-bold text-2xl">
                   {data.author.charAt(0)}
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-lg">Written by {data.author}</h4>
-                  <p className="text-zinc-400 text-sm mt-1">
+                  <p className="text-slate-400 text-sm mt-1">
                     Senior Renewable Engineer at Carey Electrical. Certified MCS Installer specializing in battery integration and hybrid systems.
                   </p>
                 </div>
@@ -133,7 +133,7 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
                 {/* Related Links / CTA */}
                 <div className="bg-gradient-to-br from-slate-900 to-brand-black p-8 rounded-2xl border border-brand-green/30 shadow-neon">
                   <h3 className="text-xl font-bold text-white mb-4">Want to know more?</h3>
-                  <p className="text-zinc-400 text-sm mb-6">
+                  <p className="text-slate-400 text-sm mb-6">
                     See how much you could save with a custom solar design for your home.
                   </p>
                   

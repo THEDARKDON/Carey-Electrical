@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#2D2D2D" />
+    <meta name="theme-color" content="#020617" />
     <meta name="description" content="Carey Electrical: Expert Solar Panel Installation & Battery Storage Solutions. Calculate your savings today." />
     <title>Carey Electrical | Power Your Future</title>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
@@ -14,12 +14,12 @@
           extend: {
             colors: {
               brand: {
-                black: '#2D2D2D',
-                dark: '#3A3A3A',
-                grey: '#4A4A4A',
-                green: '#4CAF50',
-                glow: '#66BB6A',
-                accent: '#388E3C',
+                black: '#020617', // slate-950
+                dark: '#0f172a',  // slate-900
+                grey: '#1e293b',  // slate-800
+                green: '#10b981', // emerald-500
+                glow: '#34d399',  // emerald-400
+                accent: '#059669', // emerald-600
               }
             },
             boxShadow: {
@@ -54,36 +54,36 @@
     </script>
     <style>
       body {
-        background-color: #2D2D2D;
+        background-color: #020617;
         color: #f8fafc;
         overflow-x: hidden;
       }
-
+      
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 10px;
       }
       ::-webkit-scrollbar-track {
-        background: #2D2D2D;
+        background: #020617;
       }
       ::-webkit-scrollbar-thumb {
-        background: #4A4A4A;
+        background: #1e293b;
         border-radius: 5px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #4CAF50;
+        background: #10b981;
       }
 
       .glass-panel {
-        background: rgba(58, 58, 58, 0.65);
+        background: rgba(15, 23, 42, 0.65);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(76, 175, 80, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.1);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       }
-
+      
       .text-glow {
-        text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
       }
 
       /* Mask for Marquee */
@@ -94,8 +94,8 @@
 
       /* Custom Range Input Styling */
       input[type=range] {
-        -webkit-appearance: none;
-        background: transparent;
+        -webkit-appearance: none; 
+        background: transparent; 
         height: 28px; /* Hit area */
       }
       input[type=range]::-webkit-slider-thumb {
@@ -103,10 +103,10 @@
         height: 24px;
         width: 24px;
         border-radius: 50%;
-        background: #4CAF50;
+        background: #10b981;
         cursor: pointer;
-        margin-top: -10px;
-        box-shadow: 0 0 15px rgba(76, 175, 80, 0.8);
+        margin-top: -10px; 
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.8);
         border: 2px solid #fff;
         transition: transform 0.2s;
       }
@@ -117,21 +117,21 @@
         width: 100%;
         height: 6px;
         cursor: pointer;
-        background: #4A4A4A;
+        background: #334155;
         border-radius: 3px;
-        background-image: linear-gradient(#4CAF50, #4CAF50);
+        background-image: linear-gradient(#10b981, #10b981);
         background-size: 0% 100%;
         background-repeat: no-repeat;
       }
 
       /* Leaflet Custom Overrides for Dark Theme */
       .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-        background: #3A3A3A;
+        background: #0f172a;
         color: #fff;
-        border: 1px solid #4CAF50;
+        border: 1px solid #10b981;
       }
       .leaflet-container {
-        background: #2D2D2D;
+        background: #020617;
       }
     </style>
   <script type="importmap">
