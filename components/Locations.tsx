@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SectionTitle, Reveal, Card, Button, useSEO } from './UIComponents';
 import { LOCATIONS, BRAND } from '../constants';
 import { MapPin, ArrowRight, CheckCircle2, Search } from 'lucide-react';
@@ -31,13 +31,9 @@ interface LocationsProps {
 export const Locations: React.FC<LocationsProps> = ({ onBack, onNavigate }) => {
   const [postcode, setPostcode] = useState('');
   const [checkResult, setCheckResult] = useState<null | string>(null);
-  const [mapReady, setMapReady] = useState(false);
-  const mapKey = useRef(Date.now());
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const timer = setTimeout(() => setMapReady(true), 100);
-    return () => clearTimeout(timer);
   }, []);
 
   useSEO(
@@ -116,9 +112,7 @@ export const Locations: React.FC<LocationsProps> = ({ onBack, onNavigate }) => {
             {/* Left: Interactive Map */}
             <Reveal delay={200}>
                <div className="relative h-[500px] bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl z-0">
-                  {mapReady && (
                   <MapContainer
-                    key={mapKey.current}
                     center={centerPosition}
                     zoom={9}
                     scrollWheelZoom={false}
@@ -168,7 +162,6 @@ export const Locations: React.FC<LocationsProps> = ({ onBack, onNavigate }) => {
                       )
                     ))}
                   </MapContainer>
-                  )}
                   <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur border border-brand-green/30 px-4 py-2 rounded-lg z-[400] shadow-lg">
                     <div className="flex items-center gap-2">
                        <div className="w-3 h-3 rounded-full bg-brand-green animate-pulse"></div>
