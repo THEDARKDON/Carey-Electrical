@@ -172,7 +172,7 @@ export const LiveMonitor: React.FC = () => {
     const earningsPerHour = currentGridExport * EXPORT_RATE;
     setMoneyEarned(earningsPerHour);
 
-  }, [timeOfDay, batteryLevel, isAutoPlay, weather]);
+  }, [timeOfDay, isAutoPlay, weather]);
 
   // --- VISUAL HELPERS ---
 
