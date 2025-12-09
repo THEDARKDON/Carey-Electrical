@@ -47,7 +47,7 @@ export const About: React.FC<AboutProps> = ({ onBack, onNavigate }) => {
             <img 
               src={ABOUT_CONTENT.heroImage} 
               alt="Carey Electrical Team / Installation" 
-              className="w-full h-[400px] object-cover rounded-3xl shadow-2xl border border-slate-800 mb-12"
+              className="w-full h-[400px] object-cover rounded-3xl shadow-2xl border border-zinc-800 mb-12"
             />
           </div>
         </Reveal>
@@ -55,7 +55,7 @@ export const About: React.FC<AboutProps> = ({ onBack, onNavigate }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
           <div className="space-y-6">
             <SectionTitle subtitle="Our Story" title="Who We Are" />
-            <div className="text-slate-300 text-lg leading-relaxed space-y-6">
+            <div className="text-zinc-300 text-lg leading-relaxed space-y-6">
               {ABOUT_CONTENT.story.map((para, idx) => (
                 <Reveal key={idx} delay={idx * 100}>
                   <p>{para}</p>
@@ -74,11 +74,11 @@ export const About: React.FC<AboutProps> = ({ onBack, onNavigate }) => {
             </div>
             
             <Reveal delay={400}>
-              <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+              <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl">
                 <h3 className="text-xl font-bold text-white mb-6">Our Accreditations</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {ACCREDITATIONS.map((acc, i) => (
-                    <div key={i} className="flex items-center gap-3 text-slate-400">
+                    <div key={i} className="flex items-center gap-3 text-zinc-400">
                       <ShieldCheck className="text-brand-green shrink-0" size={20} />
                       <span className="text-sm font-medium">{acc.name}</span>
                     </div>
@@ -89,18 +89,18 @@ export const About: React.FC<AboutProps> = ({ onBack, onNavigate }) => {
           </div>
         </div>
 
-        <div className="bg-slate-950 border-y border-slate-900 py-20 -mx-6 px-6">
+        <div className="bg-zinc-950 border-y border-zinc-900 py-20 -mx-6 px-6">
           <div className="container mx-auto">
             <SectionTitle subtitle="Core Values" title="The Carey Promise" center />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {ABOUT_CONTENT.values.map((val, idx) => (
                 <Reveal key={idx} delay={idx * 150}>
                   <Card className="text-center h-full hover:border-brand-green/30">
-                    <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center text-brand-green mx-auto mb-6 shadow-neon">
+                    <div className="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center text-brand-green mx-auto mb-6 shadow-neon">
                       {getIcon(val.icon)}
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4">{val.title}</h3>
-                    <p className="text-slate-400">{val.desc}</p>
+                    <p className="text-zinc-400">{val.desc}</p>
                   </Card>
                 </Reveal>
               ))}

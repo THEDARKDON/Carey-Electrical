@@ -47,7 +47,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
       <div className="fixed top-24 left-6 z-50">
         <button 
           onClick={onBack}
-          className="flex items-center gap-2 px-4 py-2 bg-slate-900/80 backdrop-blur-md border border-slate-700 rounded-full text-white hover:text-brand-green hover:border-brand-green transition-all shadow-lg group"
+          className="flex items-center gap-2 px-4 py-2 bg-zinc-900/80 backdrop-blur-md border border-zinc-700 rounded-full text-white hover:text-brand-green hover:border-brand-green transition-all shadow-lg group"
         >
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           <span className="font-medium">Back to Projects</span>
@@ -70,12 +70,12 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
             <div className="flex flex-wrap gap-3 mb-6">
               <Badge className="bg-brand-green text-black border-none">{data.category}</Badge>
               {data.location && (
-                <Badge className="bg-slate-900/80 backdrop-blur text-white border-slate-600 flex items-center gap-1">
+                <Badge className="bg-zinc-900/80 backdrop-blur text-white border-zinc-600 flex items-center gap-1">
                   <MapPin size={12} /> {data.location}
                 </Badge>
               )}
               {data.systemSize && (
-                <Badge className="bg-slate-900/80 backdrop-blur text-brand-green border-brand-green/50 flex items-center gap-1">
+                <Badge className="bg-zinc-900/80 backdrop-blur text-brand-green border-brand-green/50 flex items-center gap-1">
                   <Zap size={12} /> {data.systemSize}
                 </Badge>
               )}
@@ -83,7 +83,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 max-w-4xl leading-tight">
               {data.title}
             </h1>
-            <div className="flex items-center gap-6 text-slate-300 text-sm font-medium">
+            <div className="flex items-center gap-6 text-zinc-300 text-sm font-medium">
               <div className="flex items-center gap-2">
                 <User size={16} className="text-brand-green" />
                 Client: {data.client}
@@ -106,7 +106,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
             <Reveal delay={100}>
               <div className="prose prose-invert prose-lg max-w-none">
                 <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 text-sm font-bold">01</span>
+                  <span className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-zinc-400 text-sm font-bold">01</span>
                   The Challenge
                 </h2>
                 <div dangerouslySetInnerHTML={{ __html: data.challenge || '' }} />
@@ -116,7 +116,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
             <Reveal delay={200}>
               <div className="prose prose-invert prose-lg max-w-none">
                 <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-brand-green text-sm font-bold">02</span>
+                  <span className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-brand-green text-sm font-bold">02</span>
                   Our Solution
                 </h2>
                 <div dangerouslySetInnerHTML={{ __html: data.solution || '' }} />
@@ -124,7 +124,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
             </Reveal>
 
             <Reveal delay={300}>
-              <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+              <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl">
                 <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
                   <span className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center text-black text-sm font-bold">03</span>
                   The Outcome
@@ -133,11 +133,11 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
                 
                 {/* Stats Grid */}
                 {data.stats && (
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-slate-800">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-zinc-800">
                     {data.stats.map((stat, i) => (
                       <div key={i} className="text-center sm:text-left">
                         <p className="text-brand-green font-bold text-2xl mb-1">{stat.value}</p>
-                        <p className="text-slate-500 text-xs uppercase tracking-wider font-bold">{stat.label}</p>
+                        <p className="text-zinc-500 text-xs uppercase tracking-wider font-bold">{stat.label}</p>
                       </div>
                     ))}
                   </div>
@@ -151,7 +151,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
                 <h3 className="text-2xl font-bold text-white mb-6">Gallery</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {data.gallery.map((img, idx) => (
-                    <img key={idx} src={img} alt={`Installation photo ${idx + 1}`} className="rounded-xl border border-slate-800 w-full h-64 object-cover" />
+                    <img key={idx} src={img} alt={`Installation photo ${idx + 1}`} className="rounded-xl border border-zinc-800 w-full h-64 object-cover" />
                   ))}
                 </div>
               </Reveal>
@@ -162,10 +162,10 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
           {/* Sidebar */}
           <div className="lg:col-span-4 space-y-8">
             <div className="sticky top-32">
-              <div className="bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-3xl border border-slate-800 shadow-2xl">
+              <div className="bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-3xl border border-zinc-800 shadow-2xl">
                 <Zap className="w-12 h-12 text-brand-green mb-6" />
                 <h3 className="text-2xl font-bold text-white mb-4">Inspired by this project?</h3>
-                <p className="text-slate-400 mb-8 leading-relaxed">
+                <p className="text-zinc-400 mb-8 leading-relaxed">
                   We can design a similar high-performance system tailored to your property in {data.location}.
                 </p>
                 <div className="space-y-4">

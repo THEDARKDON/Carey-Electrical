@@ -55,7 +55,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
       <div className="fixed top-24 left-6 z-50">
         <button 
           onClick={onBack}
-          className="flex items-center gap-2 px-4 py-2 bg-slate-900/80 backdrop-blur-md border border-slate-700 rounded-full text-white hover:text-brand-green hover:border-brand-green transition-all shadow-lg group"
+          className="flex items-center gap-2 px-4 py-2 bg-zinc-900/80 backdrop-blur-md border border-zinc-700 rounded-full text-white hover:text-brand-green hover:border-brand-green transition-all shadow-lg group"
         >
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           <span className="font-medium">Back to Home</span>
@@ -84,13 +84,13 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
                <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-2xl">{data.title}</h1>
             </Reveal>
             <Reveal delay={200}>
-               <p className="text-xl md:text-3xl text-slate-200 font-light">{data.subtitle}</p>
+               <p className="text-xl md:text-3xl text-zinc-200 font-light">{data.subtitle}</p>
             </Reveal>
           </div>
         </div>
         
         {/* Scroll hint */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-400 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-zinc-400 animate-bounce">
           <ChevronDown size={32} />
         </div>
       </div>
@@ -102,7 +102,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                <span className="text-brand-green">Why Choose</span> {data.title}?
              </h2>
-             <p className="text-slate-300 text-lg leading-relaxed mb-8">
+             <p className="text-zinc-300 text-lg leading-relaxed mb-8">
                {data.overview}
              </p>
              
@@ -111,9 +111,9 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
                 <div 
                   className="prose prose-invert prose-lg max-w-none mb-10
                     prose-headings:text-white prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-h3:text-brand-green
-                    prose-p:text-slate-300 prose-p:leading-relaxed prose-p:mb-6
+                    prose-p:text-zinc-300 prose-p:leading-relaxed prose-p:mb-6
                     prose-a:text-brand-green prose-a:no-underline hover:prose-a:underline
-                    prose-ul:text-slate-300 prose-ul:mb-6 prose-li:mb-2
+                    prose-ul:text-zinc-300 prose-ul:mb-6 prose-li:mb-2
                     prose-strong:text-white"
                   dangerouslySetInnerHTML={{ __html: data.extendedContent }}
                 />
@@ -125,12 +125,12 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sticky top-32">
             {data.benefits.map((benefit, idx) => (
               <Reveal key={idx} delay={idx * 100}>
-                <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-brand-green/30 transition-all hover:bg-slate-800 group h-full">
-                  <div className="w-12 h-12 bg-slate-950 rounded-lg flex items-center justify-center text-brand-green mb-4 group-hover:scale-110 transition-transform shadow-inner">
+                <div className="bg-zinc-900/50 p-6 rounded-xl border border-zinc-800 hover:border-brand-green/30 transition-all hover:bg-zinc-800 group h-full">
+                  <div className="w-12 h-12 bg-zinc-950 rounded-lg flex items-center justify-center text-brand-green mb-4 group-hover:scale-110 transition-transform shadow-inner">
                     {getIcon(benefit.icon)}
                   </div>
                   <h3 className="text-white font-bold text-lg mb-2">{benefit.title}</h3>
-                  <p className="text-slate-400 text-sm">{benefit.desc}</p>
+                  <p className="text-zinc-400 text-sm">{benefit.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -139,7 +139,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
       </section>
 
       {/* Products Showcase with Technical Specs */}
-      <section className="py-20 bg-slate-900 border-y border-slate-800 relative overflow-hidden">
+      <section className="py-20 bg-zinc-900 border-y border-zinc-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2" />
         
         <div className="container mx-auto px-6 relative z-10">
@@ -149,7 +149,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
             {data.products.map((product, idx) => (
               <Reveal key={idx} delay={idx * 200}>
                 <div 
-                  className={`bg-brand-black rounded-2xl overflow-hidden border border-slate-700 shadow-2xl group hover:shadow-neon-hover transition-all duration-500 h-full flex flex-col ${onProductClick ? 'cursor-pointer' : ''}`}
+                  className={`bg-brand-black rounded-2xl overflow-hidden border border-zinc-700 shadow-2xl group hover:shadow-neon-hover transition-all duration-500 h-full flex flex-col ${onProductClick ? 'cursor-pointer' : ''}`}
                   onClick={() => onProductClick && onProductClick(product.id)}
                 >
                   {/* Product Image */}
@@ -169,12 +169,12 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
                   <div className="p-8 flex flex-col flex-grow">
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
-                      <p className="text-slate-400 text-sm">{product.description}</p>
+                      <p className="text-zinc-400 text-sm">{product.description}</p>
                     </div>
                     
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       {product.features.map((feature, fIdx) => (
-                        <div key={fIdx} className="flex items-center gap-2 text-slate-300">
+                        <div key={fIdx} className="flex items-center gap-2 text-zinc-300">
                            <Zap size={14} className="text-brand-green shrink-0" />
                            <span className="text-sm font-medium">{feature}</span>
                         </div>
@@ -183,16 +183,16 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
 
                     {/* Technical Specification Table */}
                     {product.techSpecs && (
-                      <div className="mt-auto bg-slate-900/50 rounded-xl border border-slate-800 overflow-hidden">
-                        <div className="px-4 py-2 bg-slate-800/80 border-b border-slate-700 flex items-center gap-2">
+                      <div className="mt-auto bg-zinc-900/50 rounded-xl border border-zinc-800 overflow-hidden">
+                        <div className="px-4 py-2 bg-zinc-800/80 border-b border-zinc-700 flex items-center gap-2">
                           <FileText size={14} className="text-brand-green" />
-                          <span className="text-xs font-bold text-slate-300 uppercase tracking-wider">Technical Specifications</span>
+                          <span className="text-xs font-bold text-zinc-300 uppercase tracking-wider">Technical Specifications</span>
                         </div>
                         <div className="p-4 grid grid-cols-2 gap-y-3 gap-x-4">
                           {Object.entries(product.techSpecs).map(([key, value], i) => (
                             <div key={i} className="flex flex-col">
-                              <span className="text-xs text-slate-500">{key}</span>
-                              <span className="text-sm font-semibold text-slate-200">{value}</span>
+                              <span className="text-xs text-zinc-500">{key}</span>
+                              <span className="text-sm font-semibold text-zinc-200">{value}</span>
                             </div>
                           ))}
                         </div>
@@ -214,7 +214,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {data.galleryImages.map((img, idx) => (
                 <Reveal key={idx} delay={idx * 100}>
-                  <div className="rounded-xl overflow-hidden border border-slate-800 h-64 group relative cursor-pointer hover:border-brand-green/50 transition-all">
+                  <div className="rounded-xl overflow-hidden border border-zinc-800 h-64 group relative cursor-pointer hover:border-brand-green/50 transition-all">
                     <img src={img} alt={`${data.title} installation example`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-brand-black/20 group-hover:bg-transparent transition-colors" />
                     <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur px-3 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -244,13 +244,13 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
               { title: 'Support', desc: 'Monitoring setup & handover pack.', icon: 'Headphones' },
             ].map((step, idx) => (
                <Reveal key={idx} delay={idx * 150}>
-                 <div className="bg-brand-black p-6 rounded-2xl border border-slate-800 text-center md:text-left shadow-xl hover:-translate-y-2 transition-transform duration-300">
-                   <div className="w-16 h-16 mx-auto md:mx-0 bg-slate-900 rounded-full flex items-center justify-center text-brand-green border-2 border-slate-800 mb-4 shadow-[0_0_15px_rgba(0,0,0,0.5)] z-20 relative">
+                 <div className="bg-brand-black p-6 rounded-2xl border border-zinc-800 text-center md:text-left shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                   <div className="w-16 h-16 mx-auto md:mx-0 bg-zinc-900 rounded-full flex items-center justify-center text-brand-green border-2 border-zinc-800 mb-4 shadow-[0_0_15px_rgba(0,0,0,0.5)] z-20 relative">
                      {getIcon(step.icon)}
                    </div>
-                   <div className="text-5xl font-extrabold text-slate-800 absolute top-4 right-6 pointer-events-none opacity-50">0{idx + 1}</div>
+                   <div className="text-5xl font-extrabold text-zinc-800 absolute top-4 right-6 pointer-events-none opacity-50">0{idx + 1}</div>
                    <h4 className="text-xl font-bold text-white mb-2">{step.title}</h4>
-                   <p className="text-slate-400 text-sm">{step.desc}</p>
+                   <p className="text-zinc-400 text-sm">{step.desc}</p>
                  </div>
                </Reveal>
             ))}
@@ -265,9 +265,9 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
            <div className="space-y-4 mb-20">
              {data.faqs.map((faq, idx) => (
                <Reveal key={idx}>
-                 <div className="bg-slate-950 border border-slate-800 p-6 rounded-lg hover:border-brand-green/40 transition-colors">
+                 <div className="bg-zinc-950 border border-zinc-800 p-6 rounded-lg hover:border-brand-green/40 transition-colors">
                    <p className="text-brand-green font-bold mb-2">{faq.question}</p>
-                   <p className="text-slate-400 text-sm">{faq.answer}</p>
+                   <p className="text-zinc-400 text-sm">{faq.answer}</p>
                  </div>
                </Reveal>
              ))}
@@ -276,22 +276,22 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
       </section>
 
       {/* SEO Cross-Links (Hub & Spoke) */}
-      <section className="py-16 bg-brand-black border-t border-slate-900">
+      <section className="py-16 bg-brand-black border-t border-zinc-900">
         <div className="container mx-auto px-6">
-          <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest mb-8 text-center">{data.title} Available In:</h3>
+          <h3 className="text-sm font-bold text-zinc-500 uppercase tracking-widest mb-8 text-center">{data.title} Available In:</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {servingLocations.map((loc, idx) => (
               <a 
                 key={idx}
                 href={`#`} 
-                className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 text-xs font-medium hover:text-brand-green hover:border-brand-green transition-all"
+                className="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 text-xs font-medium hover:text-brand-green hover:border-brand-green transition-all"
                 onClick={(e) => { e.preventDefault(); window.location.hash = `/location/${loc.slug}`; }}
               >
                 <MapPin size={12} className="inline mr-1" />
                 {data.title.split(' ')[0]} in {loc.name}
               </a>
             ))}
-            <a href="#" onClick={(e) => { e.preventDefault(); window.location.hash = '/locations'; }} className="px-4 py-2 rounded-lg bg-slate-800 text-white text-xs font-bold hover:bg-slate-700">
+            <a href="#" onClick={(e) => { e.preventDefault(); window.location.hash = '/locations'; }} className="px-4 py-2 rounded-lg bg-zinc-800 text-white text-xs font-bold hover:bg-zinc-700">
               View All Locations
             </a>
           </div>
@@ -305,7 +305,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
               <div className="absolute inset-0 bg-brand-green/5 animate-pulse-slow" />
               <Reveal>
                 <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">Ready to Switch?</h2>
-                <p className="text-slate-300 mb-8 max-w-lg mx-auto">Get a custom quote for your {data.title} installation today. No hidden fees, just honest energy advice.</p>
+                <p className="text-zinc-300 mb-8 max-w-lg mx-auto">Get a custom quote for your {data.title} installation today. No hidden fees, just honest energy advice.</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                    <Button onClick={onCtaClick} className="text-lg px-8">Get Quote Now</Button>
                    <Button variant="outline" className="text-lg px-8" onClick={() => window.location.href = `tel:${"01635783887"}`}>

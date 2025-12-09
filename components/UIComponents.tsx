@@ -18,7 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
   
   const variants = {
     primary: "bg-brand-green text-brand-black shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-neon border border-transparent hover:border-brand-glow/50",
-    secondary: "bg-brand-grey text-white hover:bg-slate-700 border border-slate-600",
+    secondary: "bg-brand-grey text-white hover:bg-zinc-700 border border-zinc-600",
     outline: "bg-transparent border-2 border-brand-green text-brand-green hover:bg-brand-green/10 hover:shadow-neon shadow-[inset_0_0_10px_rgba(16,185,129,0.1)]"
   };
 
@@ -64,16 +64,16 @@ export const Card: React.FC<{ children: React.ReactNode; className?: string; hov
 );
 
 export const Badge: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
-  <span className={`inline-block px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-bold uppercase tracking-wider text-brand-green ${className}`}>
+  <span className={`inline-block px-3 py-1 rounded-full bg-zinc-800 border border-zinc-700 text-xs font-bold uppercase tracking-wider text-brand-green ${className}`}>
     {children}
   </span>
 );
 
 export const StatCard: React.FC<{ value: string; label: string; subtext?: string }> = ({ value, label, subtext }) => (
-  <div className="p-6 rounded-2xl bg-slate-900/50 border border-slate-800 text-center group hover:border-brand-green/30 transition-all">
+  <div className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 text-center group hover:border-brand-green/30 transition-all">
     <div className="text-4xl md:text-5xl font-extrabold text-brand-green mb-2 group-hover:scale-110 transition-transform duration-300">{value}</div>
     <div className="text-white font-bold text-lg uppercase tracking-wide mb-1">{label}</div>
-    {subtext && <div className="text-slate-500 text-sm">{subtext}</div>}
+    {subtext && <div className="text-zinc-500 text-sm">{subtext}</div>}
   </div>
 );
 
@@ -83,13 +83,13 @@ export const TestimonialCard: React.FC<{ name: string; location: string; quote: 
       <div className="flex text-amber-400 gap-1">
         {[...Array(rating)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
       </div>
-      <Quote className="text-slate-700 w-8 h-8" />
+      <Quote className="text-zinc-700 w-8 h-8" />
     </div>
-    <p className="text-slate-300 italic mb-6 leading-relaxed">"{quote}"</p>
-    <div className="mt-auto border-t border-slate-800 pt-4">
+    <p className="text-zinc-300 italic mb-6 leading-relaxed">"{quote}"</p>
+    <div className="mt-auto border-t border-zinc-800 pt-4">
       <p className="text-white font-bold">{name}</p>
       <p className="text-brand-green text-xs uppercase tracking-wider mb-1">{location}</p>
-      <p className="text-slate-500 text-xs flex items-center gap-1">
+      <p className="text-zinc-500 text-xs flex items-center gap-1">
         <span className="w-2 h-2 rounded-full bg-brand-green" /> {system}
       </p>
     </div>
@@ -201,7 +201,7 @@ export const ParticleBackground: React.FC = () => {
 
 // Breadcrumbs for SEO Structure
 export const Breadcrumbs: React.FC<{ items: { label: string; action?: () => void }[] }> = ({ items }) => (
-  <nav className="flex text-sm text-slate-500 mb-6 font-medium animate-in fade-in slide-in-from-left-2">
+  <nav className="flex text-sm text-zinc-500 mb-6 font-medium animate-in fade-in slide-in-from-left-2">
     <ol className="flex items-center space-x-2">
       <li>
         <button onClick={items[0].action} className="hover:text-brand-green transition-colors flex items-center">
@@ -210,13 +210,13 @@ export const Breadcrumbs: React.FC<{ items: { label: string; action?: () => void
       </li>
       {items.slice(1).map((item, index) => (
         <li key={index} className="flex items-center">
-          <ChevronRight size={14} className="mx-2 text-slate-700" />
+          <ChevronRight size={14} className="mx-2 text-zinc-700" />
           {item.action ? (
             <button onClick={item.action} className="hover:text-brand-green transition-colors">
               {item.label}
             </button>
           ) : (
-            <span className="text-slate-300">{item.label}</span>
+            <span className="text-zinc-300">{item.label}</span>
           )}
         </li>
       ))}
@@ -256,11 +256,11 @@ export const SimpleBarChart: React.FC<{ data: number[] }> = ({ data }) => {
               style={{ height: `${height}%` }} 
               className={`w-full rounded-t-sm transition-all duration-500 ${val >= 0 ? 'bg-brand-green' : 'bg-red-500/50'}`}
             >
-              <div className="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-xs px-2 py-1 rounded border border-slate-700 whitespace-nowrap z-10">
+              <div className="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-zinc-900 text-xs px-2 py-1 rounded border border-zinc-700 whitespace-nowrap z-10">
                 Yr {i+1}: £{val.toLocaleString()}
               </div>
             </div>
-            <div className="h-[1px] bg-slate-700 w-full mt-1"></div>
+            <div className="h-[1px] bg-zinc-700 w-full mt-1"></div>
           </div>
         )
       })}

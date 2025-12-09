@@ -56,7 +56,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
       <div className="fixed top-24 left-6 z-50">
         <button 
           onClick={onBack}
-          className="flex items-center gap-2 px-4 py-2 bg-slate-900/80 backdrop-blur-md border border-slate-700 rounded-full text-white hover:text-brand-green hover:border-brand-green transition-all shadow-lg group"
+          className="flex items-center gap-2 px-4 py-2 bg-zinc-900/80 backdrop-blur-md border border-zinc-700 rounded-full text-white hover:text-brand-green hover:border-brand-green transition-all shadow-lg group"
         >
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           <span className="font-medium">Back</span>
@@ -77,7 +77,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
               <h1 className="text-6xl md:text-8xl font-extrabold text-white tracking-tight leading-none">
                 {data.name}
               </h1>
-              <p className="text-2xl md:text-3xl text-slate-400 font-light tracking-wide">
+              <p className="text-2xl md:text-3xl text-zinc-400 font-light tracking-wide">
                 {data.tagline}
               </p>
               <div className="pt-8 flex flex-col sm:flex-row gap-4">
@@ -105,10 +105,10 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
       </section>
 
       {/* Overview & Features */}
-      <section className="py-24 bg-slate-950">
+      <section className="py-24 bg-zinc-950">
         <div className="container mx-auto px-6">
           <Reveal>
-            <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto text-center mb-20 font-light">
+            <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed max-w-4xl mx-auto text-center mb-20 font-light">
               {data.description}
             </p>
           </Reveal>
@@ -116,12 +116,12 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {data.features.map((feature, idx) => (
               <Reveal key={idx} delay={idx * 150}>
-                <Card className="h-full bg-slate-900/50 border-slate-800 hover:border-brand-green/30">
-                  <div className="w-14 h-14 bg-slate-950 rounded-2xl flex items-center justify-center text-brand-green border border-slate-800 mb-6 shadow-lg">
+                <Card className="h-full bg-zinc-900/50 border-zinc-800 hover:border-brand-green/30">
+                  <div className="w-14 h-14 bg-zinc-950 rounded-2xl flex items-center justify-center text-brand-green border border-zinc-800 mb-6 shadow-lg">
                     {getIcon(feature.icon)}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{feature.desc}</p>
+                  <p className="text-zinc-400 leading-relaxed">{feature.desc}</p>
                 </Card>
               </Reveal>
             ))}
@@ -130,16 +130,16 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
       </section>
 
       {/* Technical Specs */}
-      <section id="specs" className="py-24 bg-brand-black border-t border-slate-900">
+      <section id="specs" className="py-24 bg-brand-black border-t border-zinc-900">
         <div className="container mx-auto px-6 max-w-5xl">
           <SectionTitle subtitle="Data Sheet" title="Technical Specifications" center />
           
           <Reveal>
-            <div className="bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl">
+            <div className="bg-zinc-900 rounded-3xl border border-zinc-800 overflow-hidden shadow-2xl">
               <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-800">
                 {Object.entries(data.specs).map(([key, value], idx) => (
-                  <div key={key} className="p-6 md:p-8 flex flex-col hover:bg-slate-800/50 transition-colors">
-                    <span className="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">{key}</span>
+                  <div key={key} className="p-6 md:p-8 flex flex-col hover:bg-zinc-800/50 transition-colors">
+                    <span className="text-sm font-bold text-zinc-500 uppercase tracking-widest mb-1">{key}</span>
                     <span className="text-xl md:text-2xl font-bold text-white">{value}</span>
                   </div>
                 ))}
@@ -154,7 +154,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
         <div className="container mx-auto px-6">
           <Reveal>
             <h2 className="text-4xl font-bold text-white mb-6">Install {data.name} with Confidence</h2>
-            <p className="text-slate-400 mb-8 max-w-xl mx-auto">
+            <p className="text-zinc-400 mb-8 max-w-xl mx-auto">
               We are certified {data.brand} installers. Contact us for a precise quote including installation and commissioning.
             </p>
             <Button onClick={() => { onNavigate('home'); setTimeout(() => document.getElementById('contact')?.scrollIntoView(), 100); }} className="px-10 py-4 text-lg">

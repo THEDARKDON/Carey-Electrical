@@ -141,16 +141,16 @@ function App() {
         </div>
 
         <div className="hidden md:flex items-center gap-8 bg-brand-black/30 px-8 py-3 rounded-full border border-white/5 backdrop-blur-sm">
-          <a onClick={() => navigate('/')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'home' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`}>Home</a>
+          <a onClick={() => navigate('/')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'home' ? 'text-brand-green' : 'text-zinc-300 hover:text-white'}`}>Home</a>
           
           <div className="relative group">
-            <button className="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1">
+            <button className="text-sm font-medium text-zinc-300 hover:text-white transition-colors flex items-center gap-1">
               Services <ChevronRight size={14} className="rotate-90" />
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-64">
-              <div className="bg-brand-black border border-slate-700 rounded-xl p-2 shadow-2xl flex flex-col gap-1 max-h-80 overflow-y-auto custom-scrollbar">
+              <div className="bg-brand-black border border-zinc-700 rounded-xl p-2 shadow-2xl flex flex-col gap-1 max-h-80 overflow-y-auto custom-scrollbar">
                 {SERVICES.map(s => (
-                  <button key={s.id} onClick={() => navigate(`/services/${s.id}`)} className="text-left px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-brand-green rounded-lg transition-colors flex items-center gap-3 w-full">
+                  <button key={s.id} onClick={() => navigate(`/services/${s.id}`)} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-brand-green rounded-lg transition-colors flex items-center gap-3 w-full">
                     {s.title}
                   </button>
                 ))}
@@ -158,10 +158,10 @@ function App() {
             </div>
           </div>
 
-          <a onClick={() => navigate('/projects')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'portfolio' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`}>Projects</a>
-          <a onClick={() => navigate('/cost-guide')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'cost-guide' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`}>Costs</a>
-          <a onClick={() => navigate('/locations')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'locations' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`}>Locations</a>
-          <a onClick={() => navigate('/news')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'blog' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`}>News</a>
+          <a onClick={() => navigate('/projects')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'portfolio' ? 'text-brand-green' : 'text-zinc-300 hover:text-white'}`}>Projects</a>
+          <a onClick={() => navigate('/cost-guide')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'cost-guide' ? 'text-brand-green' : 'text-zinc-300 hover:text-white'}`}>Costs</a>
+          <a onClick={() => navigate('/locations')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'locations' ? 'text-brand-green' : 'text-zinc-300 hover:text-white'}`}>Locations</a>
+          <a onClick={() => navigate('/news')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'blog' ? 'text-brand-green' : 'text-zinc-300 hover:text-white'}`}>News</a>
         </div>
 
         <div className="hidden md:block">
@@ -174,13 +174,13 @@ function App() {
       </div>
 
       <div className={`fixed inset-0 bg-brand-black z-40 flex flex-col items-center justify-center gap-6 transition-transform duration-500 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <a onClick={() => navigate('/')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Home</a>
-        <a onClick={() => navigate('/about')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">About Us</a>
-        <a onClick={() => navigate('/projects')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Projects</a>
-        <a onClick={() => navigate('/cost-guide')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Pricing Guide</a>
-        <a onClick={() => navigate('/news')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">News</a>
-        <a onClick={() => navigate('/grants')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Grants</a>
-        <div className="h-px w-20 bg-slate-800" />
+        <a onClick={() => navigate('/')} className="text-2xl font-bold text-zinc-300 hover:text-brand-green cursor-pointer">Home</a>
+        <a onClick={() => navigate('/about')} className="text-2xl font-bold text-zinc-300 hover:text-brand-green cursor-pointer">About Us</a>
+        <a onClick={() => navigate('/projects')} className="text-2xl font-bold text-zinc-300 hover:text-brand-green cursor-pointer">Projects</a>
+        <a onClick={() => navigate('/cost-guide')} className="text-2xl font-bold text-zinc-300 hover:text-brand-green cursor-pointer">Pricing Guide</a>
+        <a onClick={() => navigate('/news')} className="text-2xl font-bold text-zinc-300 hover:text-brand-green cursor-pointer">News</a>
+        <a onClick={() => navigate('/grants')} className="text-2xl font-bold text-zinc-300 hover:text-brand-green cursor-pointer">Grants</a>
+        <div className="h-px w-20 bg-zinc-800" />
         <Button onClick={() => { navigate('/'); setTimeout(() => document.getElementById('contact')?.scrollIntoView(), 100); }}>Get Quote</Button>
       </div>
     </nav>
@@ -236,7 +236,7 @@ function App() {
           <div className="max-w-5xl mx-auto flex flex-col items-center">
             
             <Reveal>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 border border-brand-green/30 text-brand-green text-sm font-bold mb-8 backdrop-blur-md shadow-neon hover:scale-105 transition-transform cursor-default">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/50 border border-brand-green/30 text-brand-green text-sm font-bold mb-8 backdrop-blur-md shadow-neon hover:scale-105 transition-transform cursor-default">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
@@ -252,7 +252,7 @@ function App() {
             </Reveal>
             
             <Reveal delay={200}>
-              <p className="text-lg md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+              <p className="text-lg md:text-2xl text-zinc-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
                 We design and install high-performance Solar PV & Battery Storage systems. 
                 Certified experts serving {BRAND.location}. 
                 <span className="text-white font-medium"> Reduce bills. Gain independence.</span>
@@ -278,7 +278,7 @@ function App() {
                       <ShieldCheck className="text-brand-green" size={24} />
                       <div className="text-left">
                         <p className="text-white font-bold text-sm leading-none">{acc.name}</p>
-                        <p className="text-slate-500 text-sm uppercase tracking-wide">{acc.sub}</p>
+                        <p className="text-zinc-500 text-sm uppercase tracking-wide">{acc.sub}</p>
                       </div>
                     </div>
                   ))}
@@ -327,7 +327,7 @@ function App() {
       return (
         <div 
           onClick={() => navigate(`/services/${service.id}`)}
-          className={`group relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-green/30 transition-all duration-300 cursor-pointer ${className}`}
+          className={`group relative overflow-hidden rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-brand-green/30 transition-all duration-300 cursor-pointer ${className}`}
         >
           {/* Background Gradient/Image */}
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950 z-0" />
@@ -337,11 +337,11 @@ function App() {
 
           <div className="relative z-10 p-8 h-full flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-brand-green mb-4 group-hover:bg-brand-green group-hover:text-black transition-colors shadow-lg">
+              <div className="w-12 h-12 bg-zinc-800 rounded-xl flex items-center justify-center text-brand-green mb-4 group-hover:bg-brand-green group-hover:text-black transition-colors shadow-lg">
                 <Icon size={24} />
               </div>
               <h3 className={`${large ? 'text-3xl' : 'text-xl'} font-bold text-white mb-2`}>{service.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{service.description}</p>
+              <p className="text-zinc-400 text-sm leading-relaxed">{service.description}</p>
             </div>
             
             <div className="mt-4 flex items-center text-brand-green text-sm font-bold opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">
@@ -439,7 +439,7 @@ function App() {
   };
 
   const ImpactStats = () => (
-    <section className="py-20 bg-slate-900 border-b border-slate-800">
+    <section className="py-20 bg-zinc-900 border-b border-zinc-800">
       <div className="container mx-auto px-6">
         <SectionTitle subtitle="Market Data" title="Why Solar Now?" center />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -461,9 +461,9 @@ function App() {
   
   // Reuse existing component definitions for brevity as they haven't changed except for being inside the file
   const TrustedBrands = () => (
-    <section className="py-20 bg-brand-black border-t border-slate-900 overflow-hidden">
+    <section className="py-20 bg-brand-black border-t border-zinc-900 overflow-hidden">
       <div className="container mx-auto px-6 mb-12 text-center">
-        <p className="text-slate-500 font-bold uppercase tracking-widest text-sm">Authorized Installers For Market Leaders</p>
+        <p className="text-zinc-500 font-bold uppercase tracking-widest text-sm">Authorized Installers For Market Leaders</p>
       </div>
       
       <Marquee speed={30}>
@@ -479,7 +479,7 @@ function App() {
   );
 
   const Gallery = () => (
-    <section id="projects" className="py-32 bg-slate-900 relative">
+    <section id="projects" className="py-32 bg-zinc-900 relative">
       <div className="absolute inset-0 bg-brand-black/90" />
       
       <div className="container mx-auto px-6 relative z-10">
@@ -494,7 +494,7 @@ function App() {
           {PROJECTS.slice(0, 3).map((project, idx) => (
              <Reveal key={project.id} delay={idx * 150}>
               <div 
-                className={`group relative overflow-hidden rounded-2xl h-[400px] border border-slate-700/50 bg-slate-800 shadow-2xl ${project.slug ? 'cursor-pointer' : ''}`}
+                className={`group relative overflow-hidden rounded-2xl h-[400px] border border-zinc-700/50 bg-zinc-800 shadow-2xl ${project.slug ? 'cursor-pointer' : ''}`}
                 onClick={() => project.slug && navigate(`/project/${project.slug}`)}
               >
                 <img 
@@ -543,15 +543,15 @@ function App() {
   );
 
   const Contact = () => (
-    <section id="contact" className="py-32 bg-brand-black border-t border-slate-900 relative">
-      <div className="absolute right-0 top-0 w-1/3 h-full bg-slate-900/20 skew-x-12 pointer-events-none" />
+    <section id="contact" className="py-32 bg-brand-black border-t border-zinc-900 relative">
+      <div className="absolute right-0 top-0 w-1/3 h-full bg-zinc-900/20 skew-x-12 pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div>
             <SectionTitle subtitle="Get In Touch" title="Start Your Energy Journey" />
             <Reveal delay={100}>
-              <p className="text-slate-300 mb-12 text-lg leading-relaxed">
+              <p className="text-zinc-300 mb-12 text-lg leading-relaxed">
                 Ready to reduce your reliance on the grid? Contact {BRAND.name} for a free, no-obligation survey and quotation. We prioritize clear communication and transparent pricing.
               </p>
             </Reveal>
@@ -563,14 +563,14 @@ function App() {
                 { icon: MapPin, title: "Service Area", value: BRAND.location, desc: "Local experts at your door" }
               ].map((item, i) => (
                 <Reveal key={i} delay={200 + (i * 100)}>
-                  <div className="flex items-center gap-6 text-white group p-4 rounded-xl transition-colors hover:bg-slate-900/50 border border-transparent hover:border-slate-800">
-                    <div className="w-16 h-16 rounded-2xl bg-slate-900 flex items-center justify-center text-brand-green border border-slate-700 group-hover:scale-110 group-hover:border-brand-green/50 transition-all shadow-lg group-hover:shadow-neon">
+                  <div className="flex items-center gap-6 text-white group p-4 rounded-xl transition-colors hover:bg-zinc-900/50 border border-transparent hover:border-zinc-800">
+                    <div className="w-16 h-16 rounded-2xl bg-zinc-900 flex items-center justify-center text-brand-green border border-zinc-700 group-hover:scale-110 group-hover:border-brand-green/50 transition-all shadow-lg group-hover:shadow-neon">
                       <item.icon size={28} />
                     </div>
                     <div>
-                      <p className="text-sm text-slate-400 font-medium mb-1 uppercase tracking-wide">{item.title}</p>
+                      <p className="text-sm text-zinc-400 font-medium mb-1 uppercase tracking-wide">{item.title}</p>
                       <p className="font-bold text-2xl group-hover:text-brand-green transition-colors">{item.value}</p>
-                      <p className="text-sm text-slate-500 mt-1">{item.desc}</p>
+                      <p className="text-sm text-zinc-500 mt-1">{item.desc}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -579,14 +579,14 @@ function App() {
           </div>
 
           <Reveal delay={300}>
-            <Card className="bg-slate-900/50 backdrop-blur-xl border border-slate-800 shadow-2xl relative overflow-hidden">
+            <Card className="bg-zinc-900/50 backdrop-blur-xl border border-zinc-800 shadow-2xl relative overflow-hidden">
               {formStatus === 'success' ? (
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-slate-900 animate-in fade-in zoom-in">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-zinc-900 animate-in fade-in zoom-in">
                   <div className="w-20 h-20 bg-brand-green/20 rounded-full flex items-center justify-center mb-6">
                     <CheckCircle className="text-brand-green w-10 h-10" />
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-4">Message Sent!</h3>
-                  <p className="text-slate-400 mb-8">Thank you for contacting Carey Electrical. One of our engineers will be in touch shortly to discuss your project.</p>
+                  <p className="text-zinc-400 mb-8">Thank you for contacting Carey Electrical. One of our engineers will be in touch shortly to discuss your project.</p>
                   <Button variant="outline" onClick={() => { setFormStatus('idle'); setContactMessage(''); }}>Send Another</Button>
                 </div>
               ) : (
@@ -594,21 +594,21 @@ function App() {
                   <h3 className="text-2xl font-bold text-white mb-8">Send us a message</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-400 ml-1">First Name</label>
-                      <input required type="text" className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" placeholder="John" />
+                      <label className="text-sm font-semibold text-zinc-400 ml-1">First Name</label>
+                      <input required type="text" className="w-full bg-brand-black/50 border border-zinc-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-zinc-600" placeholder="John" />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-400 ml-1">Last Name</label>
-                      <input required type="text" className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" placeholder="Doe" />
+                      <label className="text-sm font-semibold text-zinc-400 ml-1">Last Name</label>
+                      <input required type="text" className="w-full bg-brand-black/50 border border-zinc-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-zinc-600" placeholder="Doe" />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-400 ml-1">Email Address</label>
-                    <input required type="email" className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" placeholder="john@example.com" />
+                    <label className="text-sm font-semibold text-zinc-400 ml-1">Email Address</label>
+                    <input required type="email" className="w-full bg-brand-black/50 border border-zinc-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-zinc-600" placeholder="john@example.com" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-400 ml-1">I'm interested in...</label>
-                    <select className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all">
+                    <label className="text-sm font-semibold text-zinc-400 ml-1">I'm interested in...</label>
+                    <select className="w-full bg-brand-black/50 border border-zinc-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all">
                       <option>Solar PV Installation</option>
                       <option>Battery Storage</option>
                       <option>EV Charging</option>
@@ -617,11 +617,11 @@ function App() {
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-400 ml-1">Message</label>
+                    <label className="text-sm font-semibold text-zinc-400 ml-1">Message</label>
                     <textarea 
                       required 
                       rows={4} 
-                      className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" 
+                      className="w-full bg-brand-black/50 border border-zinc-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-zinc-600" 
                       placeholder="Tell us about your project..."
                       value={contactMessage}
                       onChange={(e) => setContactMessage(e.target.value)}
@@ -642,7 +642,7 @@ function App() {
   );
 
   const Footer = () => (
-    <footer className="bg-brand-black border-t border-slate-900 pt-20 pb-24 md:pb-10">
+    <footer className="bg-brand-black border-t border-zinc-900 pt-20 pb-24 md:pb-10">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
           
@@ -653,14 +653,14 @@ function App() {
                alt="Carey Electrical"
                className="h-10 w-auto object-contain"
              />
-             <p className="text-slate-400 leading-relaxed max-w-sm">
+             <p className="text-zinc-400 leading-relaxed max-w-sm">
                Leading the way in renewable energy solutions for Berkshire and beyond. MCS Certified excellence in Solar PV, Battery Storage, and EV Charging.
              </p>
              <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-brand-green hover:text-brand-black transition-all">
+                <a href="#" className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-white hover:bg-brand-green hover:text-brand-black transition-all">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-brand-green hover:text-brand-black transition-all">
+                <a href="#" className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-white hover:bg-brand-green hover:text-brand-black transition-all">
                   <Facebook size={20} />
                 </a>
              </div>
@@ -669,7 +669,7 @@ function App() {
           {/* Column 2: Services */}
           <div className="lg:col-span-2">
             <h4 className="text-white font-bold mb-6 text-lg">Services</h4>
-            <ul className="space-y-4 text-slate-400 text-sm">
+            <ul className="space-y-4 text-zinc-400 text-sm">
               {SERVICES.map(s => (
                 <li key={s.id}><a onClick={() => navigate(`/services/${s.id}`)} className="hover:text-brand-green transition-colors cursor-pointer block py-1">{s.title}</a></li>
               ))}
@@ -679,7 +679,7 @@ function App() {
           {/* Column 3: Company */}
           <div className="lg:col-span-2">
             <h4 className="text-white font-bold mb-6 text-lg">Company</h4>
-            <ul className="space-y-4 text-slate-400 text-sm">
+            <ul className="space-y-4 text-zinc-400 text-sm">
               <li><a onClick={() => navigate('/about')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">About Us</a></li>
               <li><a onClick={() => navigate('/cost-guide')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Pricing Guide</a></li>
               <li><a onClick={() => navigate('/projects')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Our Projects</a></li>
@@ -697,7 +697,7 @@ function App() {
                  <a 
                    key={loc.slug} 
                    onClick={() => navigate(`/location/${loc.slug}`)} 
-                   className="text-slate-400 text-sm hover:text-brand-green transition-colors cursor-pointer truncate"
+                   className="text-zinc-400 text-sm hover:text-brand-green transition-colors cursor-pointer truncate"
                  >
                    {loc.name}
                  </a>
@@ -709,12 +709,12 @@ function App() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-600">
+        <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-zinc-600">
           <p>© {new Date().getFullYear()} Carey Electrical. All rights reserved.</p>
           <div className="flex gap-2">
-             <span className="px-2 py-1 bg-slate-800 rounded text-xs">MCS Certified</span>
-             <span className="px-2 py-1 bg-slate-800 rounded text-xs">NICEIC</span>
-             <span className="px-2 py-1 bg-slate-800 rounded text-xs">RECC</span>
+             <span className="px-2 py-1 bg-zinc-800 rounded text-xs">MCS Certified</span>
+             <span className="px-2 py-1 bg-zinc-800 rounded text-xs">NICEIC</span>
+             <span className="px-2 py-1 bg-zinc-800 rounded text-xs">RECC</span>
           </div>
         </div>
       </div>
@@ -723,7 +723,7 @@ function App() {
 
   // Mobile Sticky CTA
   const MobileStickyCTA = () => (
-    <div className="md:hidden fixed bottom-0 left-0 w-full bg-slate-900 border-t border-slate-800 p-4 z-50 flex gap-3 shadow-2xl safe-area-bottom">
+    <div className="md:hidden fixed bottom-0 left-0 w-full bg-zinc-900 border-t border-zinc-800 p-4 z-50 flex gap-3 shadow-2xl safe-area-bottom">
       <Button variant="secondary" className="flex-1 text-sm py-3" onClick={() => window.location.href = `tel:${BRAND.phone.replace(/\s/g, '')}`}>
         <Phone size={16} /> Call
       </Button>
@@ -737,7 +737,7 @@ function App() {
   
   if (view === 'about') {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200">
+      <div className="bg-brand-black min-h-screen text-zinc-200">
         <Navbar />
         <About onBack={() => navigate('/')} onNavigate={(path) => navigate(path === 'home' ? '/' : path)} />
         <Footer />
@@ -748,7 +748,7 @@ function App() {
 
   if (view === 'cost-guide') {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200">
+      <div className="bg-brand-black min-h-screen text-zinc-200">
         <Navbar />
         <CostGuide onBack={() => navigate('/')} onNavigate={(path) => navigate(path === 'home' ? '/' : path)} />
         <Footer />
@@ -759,7 +759,7 @@ function App() {
 
   if (view === 'grants') {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200">
+      <div className="bg-brand-black min-h-screen text-zinc-200">
         <Navbar />
         <Grants onBack={() => navigate('/')} onNavigate={(path) => navigate(path === 'home' ? '/' : path)} />
         <Footer />
@@ -770,7 +770,7 @@ function App() {
 
   if (view === 'glossary') {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200">
+      <div className="bg-brand-black min-h-screen text-zinc-200">
         <Navbar />
         <Glossary onBack={() => navigate('/')} onNavigate={(path) => navigate(path === 'home' ? '/' : path)} />
         <Footer />
@@ -781,7 +781,7 @@ function App() {
 
   if (view === 'product' && params && PRODUCTS_CONTENT[params]) {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200">
+      <div className="bg-brand-black min-h-screen text-zinc-200">
         <Navbar />
         <ProductDetail 
           data={PRODUCTS_CONTENT[params]} 
@@ -798,7 +798,7 @@ function App() {
     const project = PROJECTS.find(p => p.slug === params);
     if (project) {
       return (
-        <div className="bg-brand-black min-h-screen text-slate-200">
+        <div className="bg-brand-black min-h-screen text-zinc-200">
           <Navbar />
           <ProjectDetail 
             data={project} 
@@ -814,7 +814,7 @@ function App() {
 
   if (view === 'blog-post' && params && BLOG_CONTENT[params]) {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200">
+      <div className="bg-brand-black min-h-screen text-zinc-200">
         <Navbar />
         <BlogPostDetail 
           data={BLOG_CONTENT[params]} 
@@ -829,7 +829,7 @@ function App() {
 
   if (view === 'location-detail' && params && LOCATION_CONTENT[params]) {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200">
+      <div className="bg-brand-black min-h-screen text-zinc-200">
         <Navbar />
         <LocationDetail 
           data={LOCATION_CONTENT[params]} 
@@ -844,7 +844,7 @@ function App() {
 
   if (view === 'service' && params && SERVICE_DETAILS[params]) {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200 selection:bg-brand-green selection:text-brand-black">
+      <div className="bg-brand-black min-h-screen text-zinc-200 selection:bg-brand-green selection:text-brand-black">
         <Navbar />
         <ServiceDetail 
           data={SERVICE_DETAILS[params]} 
@@ -863,7 +863,7 @@ function App() {
 
   if (view === 'blog') {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200">
+      <div className="bg-brand-black min-h-screen text-zinc-200">
         <Navbar />
         <Blog onBack={() => navigate('/')} onNavigate={(path) => navigate(path)} />
         <Footer />
@@ -874,7 +874,7 @@ function App() {
 
   if (view === 'portfolio') {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200">
+      <div className="bg-brand-black min-h-screen text-zinc-200">
         <Navbar />
         <Portfolio onBack={() => navigate('/')} onNavigate={(path) => navigate(path)} />
         <Footer />
@@ -885,7 +885,7 @@ function App() {
 
   if (view === 'locations') {
     return (
-      <div className="bg-brand-black min-h-screen text-slate-200">
+      <div className="bg-brand-black min-h-screen text-zinc-200">
         <Navbar />
         <Locations onBack={() => navigate('/')} onNavigate={(slug) => navigate(`/location/${slug}`)} />
         <Footer />
@@ -896,7 +896,7 @@ function App() {
 
   // DEFAULT HOME VIEW
   return (
-    <div className="bg-brand-black min-h-screen text-slate-200 selection:bg-brand-green selection:text-brand-black">
+    <div className="bg-brand-black min-h-screen text-zinc-200 selection:bg-brand-green selection:text-brand-black">
       <Navbar />
       <Hero />
       <ImpactStats />

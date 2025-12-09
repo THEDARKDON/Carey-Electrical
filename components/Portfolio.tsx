@@ -44,7 +44,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onBack, onNavigate }) => {
         <div className="text-center mb-16">
           <Reveal>
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6">Our <span className="text-brand-green">Work</span></h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10">Browse our latest installations across Berkshire and Hampshire.</p>
+            <p className="text-xl text-zinc-400 max-w-2xl mx-auto mb-10">Browse our latest installations across Berkshire and Hampshire.</p>
             
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map(cat => (
@@ -54,7 +54,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onBack, onNavigate }) => {
                   className={`px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider border transition-all ${
                     filter === cat 
                       ? 'bg-brand-green text-brand-black border-brand-green shadow-neon' 
-                      : 'bg-transparent text-slate-400 border-slate-700 hover:border-brand-green/50 hover:text-white'
+                      : 'bg-transparent text-zinc-400 border-zinc-700 hover:border-brand-green/50 hover:text-white'
                   }`}
                 >
                   {cat}
@@ -68,7 +68,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onBack, onNavigate }) => {
           {filteredProjects.map((project, idx) => (
             <Reveal key={project.id} delay={idx * 50}>
               <div 
-                className={`break-inside-avoid relative group rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 ${project.slug ? 'cursor-pointer' : ''}`}
+                className={`break-inside-avoid relative group rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 ${project.slug ? 'cursor-pointer' : ''}`}
                 onClick={() => handleProjectClick(project)}
               >
                 <img 
@@ -83,7 +83,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onBack, onNavigate }) => {
                       <div className="flex gap-2 mb-3">
                          <Badge className="bg-brand-green text-black border-none">{project.category}</Badge>
                          {project.location && (
-                           <Badge className="bg-slate-800 text-slate-300 border-slate-600 flex items-center gap-1">
+                           <Badge className="bg-zinc-800 text-zinc-300 border-zinc-600 flex items-center gap-1">
                              <MapPin size={10} /> {project.location}
                            </Badge>
                          )}
@@ -109,7 +109,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onBack, onNavigate }) => {
         </div>
         
         {filteredProjects.length === 0 && (
-           <div className="text-center py-20 text-slate-500">
+           <div className="text-center py-20 text-zinc-500">
              <p>No projects found in this category.</p>
            </div>
         )}

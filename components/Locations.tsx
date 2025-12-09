@@ -75,7 +75,7 @@ export const Locations: React.FC<LocationsProps> = ({ onBack, onNavigate }) => {
          <Reveal>
             <div className="text-center mb-12 max-w-3xl mx-auto">
                <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6">Service <span className="text-brand-green">Areas</span></h1>
-               <p className="text-xl text-slate-400">
+               <p className="text-xl text-zinc-400">
                  {BRAND.name} provides premium solar and battery installations across Berkshire, Hampshire, and Oxfordshire.
                </p>
             </div>
@@ -85,12 +85,12 @@ export const Locations: React.FC<LocationsProps> = ({ onBack, onNavigate }) => {
          <Reveal delay={100}>
            <div className="max-w-xl mx-auto mb-20">
              <form onSubmit={handlePostcodeCheck} className="relative">
-               <div className="flex items-center bg-slate-900 border border-slate-700 rounded-full p-2 pl-6 shadow-xl focus-within:ring-2 focus-within:ring-brand-green transition-all">
-                 <MapPin className="text-slate-500 mr-3" />
+               <div className="flex items-center bg-zinc-900 border border-zinc-700 rounded-full p-2 pl-6 shadow-xl focus-within:ring-2 focus-within:ring-brand-green transition-all">
+                 <MapPin className="text-zinc-500 mr-3" />
                  <input 
                    type="text" 
                    placeholder="Enter your postcode..." 
-                   className="bg-transparent text-white placeholder:text-slate-600 outline-none flex-grow"
+                   className="bg-transparent text-white placeholder:text-zinc-600 outline-none flex-grow"
                    value={postcode}
                    onChange={(e) => setPostcode(e.target.value)}
                  />
@@ -111,7 +111,7 @@ export const Locations: React.FC<LocationsProps> = ({ onBack, onNavigate }) => {
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
             {/* Left: Interactive Map */}
             <Reveal delay={200}>
-               <div className="relative h-[500px] bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl z-0">
+               <div className="relative h-[500px] bg-zinc-900 rounded-3xl border border-zinc-800 overflow-hidden shadow-2xl z-0">
                   <MapContainer
                     center={centerPosition}
                     zoom={9}
@@ -136,7 +136,7 @@ export const Locations: React.FC<LocationsProps> = ({ onBack, onNavigate }) => {
 
                     <Marker position={centerPosition}>
                       <Popup>
-                        <div className="text-slate-900">
+                        <div className="text-zinc-900">
                           <strong>Carey Electrical HQ</strong><br />
                           63 Bath Rd, Thatcham
                         </div>
@@ -153,7 +153,7 @@ export const Locations: React.FC<LocationsProps> = ({ onBack, onNavigate }) => {
                           }}
                         >
                           <Popup>
-                            <div className="text-slate-900 cursor-pointer" onClick={() => handleLocationClick(loc.slug)}>
+                            <div className="text-zinc-900 cursor-pointer" onClick={() => handleLocationClick(loc.slug)}>
                               <strong>{loc.name}</strong><br />
                               <span className="text-brand-green font-bold hover:underline">View Page &rarr;</span>
                             </div>
@@ -162,7 +162,7 @@ export const Locations: React.FC<LocationsProps> = ({ onBack, onNavigate }) => {
                       )
                     ))}
                   </MapContainer>
-                  <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur border border-brand-green/30 px-4 py-2 rounded-lg z-[400] shadow-lg">
+                  <div className="absolute top-4 right-4 bg-zinc-900/90 backdrop-blur border border-brand-green/30 px-4 py-2 rounded-lg z-[400] shadow-lg">
                     <div className="flex items-center gap-2">
                        <div className="w-3 h-3 rounded-full bg-brand-green animate-pulse"></div>
                        <span className="text-xs font-bold text-white uppercase tracking-wider">20 Mile Radius</span>
@@ -185,7 +185,7 @@ export const Locations: React.FC<LocationsProps> = ({ onBack, onNavigate }) => {
                          <div 
                            key={loc.slug} 
                            onClick={() => handleLocationClick(loc.slug)}
-                           className="flex items-center gap-2 text-slate-400 hover:text-brand-green transition-colors cursor-pointer group"
+                           className="flex items-center gap-2 text-zinc-400 hover:text-brand-green transition-colors cursor-pointer group"
                          >
                             <ArrowRight size={14} className="text-brand-green opacity-0 group-hover:opacity-100 transition-opacity -ml-4 group-hover:ml-0" />
                             <span>{loc.name}</span>
