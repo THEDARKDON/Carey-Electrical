@@ -167,7 +167,7 @@ export const PROJECTS: ProjectImage[] = [
   {
     id: 'p1',
     slug: 'newbury-libbi-retrofit',
-    url: 'IMG_2857.jpeg', 
+    url: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     category: 'Battery Storage',
     description: 'Myenergi Libbi 5kW Hybrid Inverter Installation',
     location: 'Newbury',
@@ -183,12 +183,12 @@ export const PROJECTS: ProjectImage[] = [
       { label: "Self Consumption", value: "92%" },
       { label: "Payback Period", value: "6.5 Years" }
     ],
-    gallery: ['IMG_2864.jpeg', 'IMG_3962.jpeg']
+    gallery: ['/57eef691-a691-4489-9629-c5336d019a3c.jpg']
   },
   {
     id: 'p2',
     slug: 'reading-premium-black',
-    url: 'IMG_0692.jpeg',
+    url: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     category: 'Solar PV',
     description: 'Premium All-Black Panels on Tiled Roof',
     location: 'Reading',
@@ -208,43 +208,43 @@ export const PROJECTS: ProjectImage[] = [
   {
     id: 'p3',
     slug: 'basingstoke-optimized',
-    url: 'IMG_0758.jpeg',
+    url: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     category: 'Solar PV',
-    description: 'High Efficiency Array with Optimized Spacing',
+    description: 'In-Roof Solar Installation on New Build',
     location: 'Basingstoke',
-    systemSize: '5.2kW System',
-    title: "Optimized Solar for Shaded Roof",
+    systemSize: '8.4kW System',
+    title: "Integrated Solar for New Build",
     client: "Mr. & Mrs. Davies",
     date: "November 2024",
-    challenge: `<p>This property in Chineham had a complex roof with a large chimney and a dormer window that cast moving shadows throughout the day. A traditional string inverter would have seen the system's performance crippled by these shaded areas.</p>`,
-    solution: `<p>We deployed a <strong>SolarEdge Optimized System</strong>. By placing a power optimizer under each of the 12 panels, we ensured that each panel operates independently. When the chimney shades two panels in the afternoon, the other ten continue to generate at 100% capacity.</p>`,
-    outcome: `<p>Generation is estimated to be 25% higher than a standard string system. The client can view the performance of every single panel individually via the monitoring app.</p>`,
+    challenge: `<p>This stunning new build required an integrated solar solution that would blend seamlessly with the roof design. The client wanted maximum generation without compromising the architectural vision.</p>`,
+    solution: `<p>We deployed an <strong>In-Roof Integrated System</strong> that replaces traditional roof tiles. The all-black panels sit flush with the surrounding roof, creating a sleek, modern appearance that complements the property design.</p>`,
+    outcome: `<p>An impressive 8.4kW system generating over 8,000 kWh annually. The seamless integration has enhanced the property value while delivering exceptional energy savings.</p>`,
     stats: [
-      { label: "Yield Boost", value: "+25%" },
-      { label: "Panels", value: "12x Trina 435W" },
-      { label: "Tech", value: "SolarEdge P401" }
+      { label: "System Size", value: "8.4 kW" },
+      { label: "Annual Generation", value: "8,200 kWh" },
+      { label: "CO2 Saved", value: "1.9 Tons/yr" }
     ]
   },
   {
     id: 'p4',
-    url: 'IMG_3962.jpeg', 
-    category: 'Battery Storage',
-    description: 'Clean Garage Installation of Libbi System',
+    url: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
+    category: 'Solar PV',
+    description: 'Outbuilding Solar Installation',
     location: 'Thatcham',
-    systemSize: '10kWh Storage'
+    systemSize: '4kW Array'
   },
   {
     id: 'p5',
-    url: 'IMG_3045.jpeg',
+    url: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     category: 'Solar PV',
-    description: 'Ground Mount System on Gravel Bed',
+    description: 'Domestic Roof Installation',
     location: 'Hungerford',
-    systemSize: '8kW Array'
+    systemSize: '5.2kW Array'
   },
   {
     id: 'p6',
     slug: 'winchester-commercial',
-    url: 'IMG_3042.jpeg',
+    url: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     category: 'Commercial',
     description: 'Large Scale Roof Installation',
     location: 'Winchester',
@@ -263,23 +263,23 @@ export const PROJECTS: ProjectImage[] = [
   },
   {
     id: 'p7',
-    url: 'IMG_3047.jpeg',
+    url: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     category: 'Solar PV',
-    description: 'Compact Ground Mount System',
+    description: 'Garden Office Solar Installation',
     location: 'Andover',
     systemSize: '4kW Array'
   },
   {
     id: 'p8',
-    url: 'IMG_1023.jpeg',
-    category: 'Solar PV',
-    description: 'Sleek Installation on Slate Roof',
+    url: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
+    category: 'Battery Storage',
+    description: 'Myenergi Libbi Installation',
     location: 'Oxford',
-    systemSize: '6kW Array'
+    systemSize: '10kWh Storage'
   },
   {
     id: 'p9',
-    url: 'IMG_3256.jpeg',
+    url: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     category: 'Solar PV',
     description: 'Multi-Section Complex Roof Array',
     location: 'Newbury',
@@ -287,7 +287,7 @@ export const PROJECTS: ProjectImage[] = [
   },
   {
     id: 'p10',
-    url: 'IMG_2864.jpeg',
+    url: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     category: 'Battery Storage',
     description: 'Myenergi Ecosystem Integration',
     location: 'Reading',
@@ -295,7 +295,7 @@ export const PROJECTS: ProjectImage[] = [
   },
   {
     id: 'p11',
-    url: 'IMG_3039.jpeg',
+    url: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     category: 'Solar PV',
     description: 'Flat Roof Extension Array',
     location: 'Thatcham',
@@ -303,11 +303,11 @@ export const PROJECTS: ProjectImage[] = [
   },
   {
     id: 'p12',
-    url: 'IMG_3254.jpeg',
-    category: 'Commercial',
-    description: 'Commercial Installation with Van Fleet',
+    url: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
+    category: 'Solar PV',
+    description: 'Residential Solar Installation',
     location: 'Basingstoke',
-    systemSize: '50kW System'
+    systemSize: '6kW System'
   }
 ];
 
@@ -317,7 +317,7 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
     name: 'Tesla Powerwall 3',
     brand: 'Tesla',
     tagline: 'The Future of Home Energy Storage',
-    heroImage: 'IMG_3962.jpeg',
+    heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     description: 'Powerwall 3 is a fully integrated solar and battery system, designed for easy installation and seamless backup protection.',
     features: [{ title: 'Integrated Inverter', desc: 'Built-in solar inverter for higher efficiency.', icon: 'Zap' }, { title: 'Storm Watch', desc: 'Automatically detects incoming storms.', icon: 'CloudLightning' }, { title: 'Liquid Cooling', desc: 'Advanced thermal management.', icon: 'Thermometer' }],
     specs: { 'Energy Capacity': '13.5 kWh', 'Power Output': '11.5 kW Continuous', 'Solar Input': '6 MPPTs', 'Warranty': '10 Years', 'Weight': '130 kg', 'Dimensions': '1098 x 609 x 193 mm' }
@@ -327,7 +327,7 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
     name: 'Myenergi Libbi',
     brand: 'Myenergi',
     tagline: 'Modular. Smart. British.',
-    heroImage: 'IMG_2864.jpeg',
+    heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     description: 'Libbi is not just a battery; it is an eco-smart energy system that communicates with Zappi and Eddi.',
     features: [{ title: 'Modular Design', desc: 'Stackable 5kWh modules.', icon: 'Layers' }, { title: 'Ecosystem', desc: 'Talks to Zappi and Eddi.', icon: 'Wifi' }, { title: 'UK Support', desc: 'Designed in the UK.', icon: 'Flag' }],
     specs: { 'Capacity': '5kWh - 20kWh', 'Inverter Power': '3.68kW or 5kW', 'Backup': 'Optional', 'Warranty': '10 Years', 'Chemistry': 'LiFePO4', 'Efficiency': '97%' }
@@ -337,7 +337,7 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
     name: 'Myenergi Zappi',
     brand: 'Myenergi',
     tagline: 'The World\'s #1 Solar EV Charger',
-    heroImage: 'IMG_2864.jpeg', // Reusing libbi image context or generic if available
+    heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg', // Reusing libbi image context or generic if available
     description: 'Zappi is a smart EV charger with a difference. It can operate as a standard charger, or it can use 100% green energy generated from your Solar PV or wind generation.',
     features: [{ title: 'Solar Charging', desc: 'Charge on sunshine.', icon: 'Sun' }, { title: 'No Earth Rod', desc: 'Built-in pen fault protection.', icon: 'Shield' }, { title: 'App Control', desc: 'Monitor & control from anywhere.', icon: 'Smartphone' }],
     specs: { 'Power': '7kW (Single Phase) or 22kW (3-Phase)', 'Connector': 'Type 2 Tethered or Untethered', 'Warranty': '3 Years', 'Connectivity': 'WiFi & Ethernet', 'Modes': 'Fast, Eco, Eco+' }
@@ -347,7 +347,7 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
     name: 'Jinko Tiger Neo',
     brand: 'Jinko Solar',
     tagline: 'N-Type Technology for Maximum Yield',
-    heroImage: 'IMG_0758.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     description: 'The Tiger Neo N-type module adopts TOPCon technology for higher efficiency and lower degradation.',
     features: [{ title: 'N-Type TOPCon', desc: 'Superior efficiency.', icon: 'Sun' }, { title: 'All-Black', desc: 'Sleek obsidian look.', icon: 'Eye' }, { title: '30 Year Warranty', desc: 'Industry leading guarantee.', icon: 'ShieldCheck' }],
     specs: { 'Power Output': '440W - 460W', 'Efficiency': '22.8%', 'Degradation': '<0.4% per year', 'Warranty': '30 Year Power', 'Cell Type': 'N-Type Monocrystalline', 'Dimensions': '1762 x 1134 x 30 mm' }
@@ -357,7 +357,7 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
     name: 'GivEnergy All-in-One',
     brand: 'GivEnergy',
     tagline: 'Power Your Entire Home',
-    heroImage: 'IMG_2857.jpeg',
+    heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     description: 'A premium 13.5kWh battery with a massive discharge rate, capable of powering heat pumps.',
     features: [{ title: 'High Discharge', desc: '6kW continuous power.', icon: 'Zap' }, { title: 'Grid Services', desc: 'Ready for grid balancing.', icon: 'TrendingUp' }, { title: 'IP65 Rated', desc: 'Suitable for outdoor.', icon: 'CloudRain' }],
     specs: { 'Capacity': '13.5 kWh', 'Power': '6.0 kW', 'Backup': 'Full Whole-House Backup', 'Warranty': '12 Years', 'Depth of Discharge': '100%', 'Connectivity': 'WiFi / LAN / 4G' }
@@ -365,26 +365,26 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
 };
 
 export const BLOG_POSTS: BlogPost[] = [
-  { id: '1', slug: 'is-solar-worth-it-berkshire', title: 'Is Solar Worth It in Berkshire & Hampshire? (2025 Guide)', excerpt: 'With energy prices fluctuating, we analyze the real ROI for homeowners in Reading, Newbury and Basingstoke.', date: 'Jan 28, 2025', image: 'IMG_0758.jpeg', category: 'Market Analysis', readTime: '8 min read', featured: true },
-  { id: '2', slug: 'solar-power-reading-guide', title: 'Why Reading is Leading the Solar Revolution in 2025', excerpt: 'Reading is becoming a hub for smart energy. From Caversham to Earley, discover how urban homeowners are beating grid prices.', date: 'Feb 2, 2025', image: 'IMG_3039.jpeg', category: 'Local Projects', readTime: '6 min read' },
-  { id: '3', slug: 'best-solar-batteries-2025', title: 'Best Solar Batteries 2025: Tesla Powerwall 3 vs Libbi', excerpt: 'We compare the leading battery storage systems available in the UK. Which one is right for your home?', date: 'Feb 10, 2025', image: 'IMG_3962.jpeg', category: 'Technology', readTime: '10 min read' },
-  { id: '4', slug: 'bird-proofing-cost-guide', title: 'Solar Panel Bird Proofing Cost Guide 2025', excerpt: 'Pigeons nesting under your solar panels? Learn about the costs of removal, cleaning, and mesh installation to protect your roof.', date: 'Feb 12, 2025', image: 'IMG_0692.jpeg', category: 'Maintenance', readTime: '6 min read' },
-  { id: '5', slug: 'solar-carports-vs-roof', title: 'Solar Carports vs Roof Solar: Which is Better?', excerpt: 'Running out of roof space? Discover why solar carports are becoming the premium choice for homeowners in Ascot and Wokingham.', date: 'Feb 18, 2025', image: 'IMG_3045.jpeg', category: 'Technology', readTime: '7 min read' },
-  { id: '6', slug: 'in-roof-solar-guide', title: 'In-Roof vs On-Roof Solar: Aesthetics & Cost', excerpt: 'Building a new home or re-roofing? Integrated solar panels (GSE) offer a stunning flush finish. We compare the costs and benefits.', date: 'Feb 22, 2025', image: 'IMG_1023.jpeg', category: 'Technology', readTime: '8 min read' },
-  { id: '7', slug: 'solar-panels-winchester-heritage', title: 'Installing Solar in Winchester Conservation Areas', excerpt: 'Living in a historic city doesn\'t mean you can\'t have solar. Learn about our heritage-compliant all-black systems.', date: 'Dec 20, 2024', image: 'IMG_1023.jpeg', category: 'Planning', readTime: '7 min read' },
-  { id: '8', slug: 'oxford-solar-net-zero', title: 'Oxford\'s Path to Net Zero: How Homeowners Can Help', excerpt: 'Oxford City Council has ambitious climate goals. See how residential solar arrays are contributing to a greener city.', date: 'Dec 5, 2024', image: 'IMG_3254.jpeg', category: 'Local Projects', readTime: '6 min read' },
-  { id: '9', slug: '0-vat-battery-storage', title: '0% VAT on Battery Storage Extended', excerpt: 'Great news for homeowners! The government has extended the 0% VAT relief to include standalone battery storage systems.', date: 'Feb 15, 2024', image: 'IMG_3962.jpeg', category: 'Finance', readTime: '3 min read' }
+  { id: '1', slug: 'is-solar-worth-it-berkshire', title: 'Is Solar Worth It in Berkshire & Hampshire? (2025 Guide)', excerpt: 'With energy prices fluctuating, we analyze the real ROI for homeowners in Reading, Newbury and Basingstoke.', date: 'Jan 28, 2025', image: '/baea77fd-a9df-488b-9759-39748439a29a.jpg', category: 'Market Analysis', readTime: '8 min read', featured: true },
+  { id: '2', slug: 'solar-power-reading-guide', title: 'Why Reading is Leading the Solar Revolution in 2025', excerpt: 'Reading is becoming a hub for smart energy. From Caversham to Earley, discover how urban homeowners are beating grid prices.', date: 'Feb 2, 2025', image: '/baea77fd-a9df-488b-9759-39748439a29a.jpg', category: 'Local Projects', readTime: '6 min read' },
+  { id: '3', slug: 'best-solar-batteries-2025', title: 'Best Solar Batteries 2025: Tesla Powerwall 3 vs Libbi', excerpt: 'We compare the leading battery storage systems available in the UK. Which one is right for your home?', date: 'Feb 10, 2025', image: '/57eef691-a691-4489-9629-c5336d019a3c.jpg', category: 'Technology', readTime: '10 min read' },
+  { id: '4', slug: 'bird-proofing-cost-guide', title: 'Solar Panel Bird Proofing Cost Guide 2025', excerpt: 'Pigeons nesting under your solar panels? Learn about the costs of removal, cleaning, and mesh installation to protect your roof.', date: 'Feb 12, 2025', image: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', category: 'Maintenance', readTime: '6 min read' },
+  { id: '5', slug: 'solar-carports-vs-roof', title: 'Solar Carports vs Roof Solar: Which is Better?', excerpt: 'Running out of roof space? Discover why solar carports are becoming the premium choice for homeowners in Ascot and Wokingham.', date: 'Feb 18, 2025', image: '/baea77fd-a9df-488b-9759-39748439a29a.jpg', category: 'Technology', readTime: '7 min read' },
+  { id: '6', slug: 'in-roof-solar-guide', title: 'In-Roof vs On-Roof Solar: Aesthetics & Cost', excerpt: 'Building a new home or re-roofing? Integrated solar panels (GSE) offer a stunning flush finish. We compare the costs and benefits.', date: 'Feb 22, 2025', image: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', category: 'Technology', readTime: '8 min read' },
+  { id: '7', slug: 'solar-panels-winchester-heritage', title: 'Installing Solar in Winchester Conservation Areas', excerpt: 'Living in a historic city doesn\'t mean you can\'t have solar. Learn about our heritage-compliant all-black systems.', date: 'Dec 20, 2024', image: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', category: 'Planning', readTime: '7 min read' },
+  { id: '8', slug: 'oxford-solar-net-zero', title: 'Oxford\'s Path to Net Zero: How Homeowners Can Help', excerpt: 'Oxford City Council has ambitious climate goals. See how residential solar arrays are contributing to a greener city.', date: 'Dec 5, 2024', image: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', category: 'Local Projects', readTime: '6 min read' },
+  { id: '9', slug: '0-vat-battery-storage', title: '0% VAT on Battery Storage Extended', excerpt: 'Great news for homeowners! The government has extended the 0% VAT relief to include standalone battery storage systems.', date: 'Feb 15, 2024', image: '/57eef691-a691-4489-9629-c5336d019a3c.jpg', category: 'Finance', readTime: '3 min read' }
 ];
 
 export const BLOG_CONTENT: Record<string, BlogPostData> = {
-  'is-solar-worth-it-berkshire': { id: '1', title: 'Is Solar Worth It in Berkshire & Hampshire? (2025 Guide)', date: 'Jan 28, 2025', category: 'Market Analysis', author: 'James Carey, Lead Engineer', heroImage: 'IMG_0758.jpeg', content: `<h2>The Financial Reality...</h2>` },
+  'is-solar-worth-it-berkshire': { id: '1', title: 'Is Solar Worth It in Berkshire & Hampshire? (2025 Guide)', date: 'Jan 28, 2025', category: 'Market Analysis', author: 'James Carey, Lead Engineer', heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg', content: `<h2>The Financial Reality...</h2>` },
   'in-roof-solar-guide': {
     id: '6',
     title: 'In-Roof vs On-Roof Solar: Aesthetics & Cost',
     date: 'Feb 22, 2025',
     category: 'Technology',
     author: 'James Carey',
-    heroImage: 'IMG_1023.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     content: `
       <h2>The Difference Explained</h2>
       <p>When most people think of solar, they picture "On-Roof" systems where rails are bolted above the tiles. "In-Roof" (or Integrated) solar sits flush with the roofline, acting as the roof covering itself.</p>
@@ -409,7 +409,7 @@ export const BLOG_CONTENT: Record<string, BlogPostData> = {
     date: 'Feb 18, 2025',
     category: 'Technology',
     author: 'James Carey',
-    heroImage: 'IMG_3045.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     content: `<h2>The Rise of the Solar Carport...</h2>` 
   },
   'bird-proofing-cost-guide': {
@@ -418,7 +418,7 @@ export const BLOG_CONTENT: Record<string, BlogPostData> = {
     date: 'Feb 12, 2025',
     category: 'Maintenance',
     author: 'James Carey',
-    heroImage: 'IMG_0692.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     content: `<h2>The True Cost of Pigeon Pests...</h2>`
   },
   'best-solar-batteries-2025': {
@@ -427,7 +427,7 @@ export const BLOG_CONTENT: Record<string, BlogPostData> = {
     date: 'Feb 10, 2025',
     category: 'Technology',
     author: 'James Carey',
-    heroImage: 'IMG_3962.jpeg',
+    heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     content: `<h2>The Battle for Storage Supremacy...</h2>` // Abbreviated for this snippet
   }
 };
@@ -457,7 +457,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'windsor',
     name: 'Windsor',
     metaDescription: 'Solar Panels Windsor & Eton. Heritage specialist solar installers for SL4. In-roof systems and Tesla Powerwall certified.',
-    heroImage: 'IMG_3256.jpeg', // Using a nice roof image
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', // Using a nice roof image
     introTitle: 'Renewable Energy for Royal Berkshire',
     introText: [
       'Windsor combines historic charm with modern living. We specialize in solar installations that respect the unique character of properties in Windsor, Eton, and Old Windsor.',
@@ -486,7 +486,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'ascot',
     name: 'Ascot',
     metaDescription: 'Solar Panels Ascot & Sunningdale. Premium aesthetic solar carports and Tesla Powerwall installers for SL5.',
-    heroImage: 'IMG_3254.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     introTitle: 'Luxury Solar for Ascot Homes',
     introText: [
       'Ascot and Sunningdale represent some of the finest properties in Berkshire. We understand that for homeowners here, energy independence cannot come at the cost of aesthetics.',
@@ -515,7 +515,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'newbury',
     name: 'Newbury',
     metaDescription: 'Solar Panel Installers Newbury. MCS Certified electricians for RG14 & RG20. Experts in Tesla Powerwall, Zappi EV Chargers & Battery Storage.',
-    heroImage: 'IMG_0692.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     introTitle: 'Local Solar Experts for West Berkshire',
     introText: [
       'Newbury is our home turf. From the historic streets of Donnington to the modern developments at the Racecourse, we understand the specific energy needs of Newbury homeowners.',
@@ -543,7 +543,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'thatcham',
     name: 'Thatcham',
     metaDescription: 'Solar Panel Installers Thatcham. Local MCS certified experts for RG18 & RG19. Battery storage & EV charging specialists.',
-    heroImage: 'IMG_0758.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     introTitle: 'Your Local Solar Installers',
     introText: [
       'Thatcham is home to Carey Electrical. As your neighbours, we take pride in delivering exceptional solar installations to the community we live and work in.',
@@ -567,7 +567,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'reading',
     name: 'Reading',
     metaDescription: 'Solar Panel Installation Reading. MCS certified installers for RG1-RG6. Commercial and residential solar experts.',
-    heroImage: 'IMG_3254.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     introTitle: 'Solar Solutions for Reading & Surrounding Areas',
     introText: [
       'Reading is a thriving hub for both residential and commercial solar installations. From Victorian terraces in Caversham to modern developments in Green Park, we design systems for every property type.',
@@ -591,7 +591,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'basingstoke',
     name: 'Basingstoke',
     metaDescription: 'Solar Panels Basingstoke. MCS certified solar installers for RG21-RG24. Battery storage and EV charging specialists.',
-    heroImage: 'IMG_1023.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     introTitle: 'Solar Energy for North Hampshire',
     introText: [
       'Basingstoke combines modern town centre living with beautiful Hampshire villages. We install solar systems across all RG21-RG24 postcodes.',
@@ -615,7 +615,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'hungerford',
     name: 'Hungerford',
     metaDescription: 'Solar Panel Installers Hungerford. Heritage specialists for RG17. Listed building experience and rural solar experts.',
-    heroImage: 'IMG_0692.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     introTitle: 'Solar for the Kennet Valley',
     introText: [
       'Hungerford is a beautiful market town with many period properties. We specialize in sympathetic solar installations that respect the town conservation area.',
@@ -639,7 +639,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'winchester',
     name: 'Winchester',
     metaDescription: 'Solar Panels Winchester. Heritage solar installers for SO22-SO23. MCS certified with conservation area expertise.',
-    heroImage: 'IMG_3256.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     introTitle: 'Solar Energy for Historic Winchester',
     introText: [
       'Winchester combines ancient history with modern living. We specialize in solar installations that respect the city unique heritage while delivering clean energy.',
@@ -663,7 +663,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'andover',
     name: 'Andover',
     metaDescription: 'Solar Panel Installation Andover. MCS certified installers for SP10-SP11. Battery storage and EV charging experts.',
-    heroImage: 'IMG_0758.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     introTitle: 'Solar Solutions for Test Valley',
     introText: [
       'Andover offers a mix of modern housing estates and charming villages. We install solar systems across SP10 and SP11 postcodes.',
@@ -687,7 +687,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'oxford',
     name: 'Oxford',
     metaDescription: 'Solar Panel Installers Oxford. MCS certified experts for OX1-OX4. University city solar specialists with heritage experience.',
-    heroImage: 'IMG_3254.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     introTitle: 'Solar Energy for the City of Dreaming Spires',
     introText: [
       'Oxford presents unique challenges and opportunities for solar installation. We have the expertise to install systems that complement the city diverse architecture.',
@@ -711,7 +711,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'didcot',
     name: 'Didcot',
     metaDescription: 'Solar Panels Didcot. MCS certified installers for OX11. New build specialists and battery storage experts.',
-    heroImage: 'IMG_1023.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     introTitle: 'Solar for South Oxfordshire',
     introText: [
       'Didcot is one of the fastest-growing towns in the UK. Its modern housing stock makes it ideal for solar installation.',
@@ -735,7 +735,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'wantage',
     name: 'Wantage',
     metaDescription: 'Solar Panel Installation Wantage. MCS certified solar experts for OX12. Rural and heritage solar specialists.',
-    heroImage: 'IMG_0692.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     introTitle: 'Solar Energy for the Vale of White Horse',
     introText: [
       'Wantage sits at the heart of the beautiful Vale of White Horse. We install solar systems that suit both the market town and surrounding rural properties.',
@@ -759,7 +759,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'marlborough',
     name: 'Marlborough',
     metaDescription: 'Solar Panels Marlborough. Heritage solar specialists for SN8. MCS certified with conservation area expertise.',
-    heroImage: 'IMG_3256.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     introTitle: 'Solar for Historic Marlborough',
     introText: [
       'Marlborough is a historic market town requiring sensitive approaches to solar installation. We specialize in heritage-friendly solutions.',
@@ -783,7 +783,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'wokingham',
     name: 'Wokingham',
     metaDescription: 'Solar Panel Installers Wokingham. MCS certified for RG40-RG41. Premium solar and battery storage specialists.',
-    heroImage: 'IMG_0758.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     introTitle: 'Solar Solutions for Wokingham Borough',
     introText: [
       'Wokingham offers a mix of historic town centre properties and modern executive homes. We install solar across all property types.',
@@ -807,7 +807,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'bracknell',
     name: 'Bracknell',
     metaDescription: 'Solar Panels Bracknell. MCS certified installers for RG12 & RG42. New town solar specialists.',
-    heroImage: 'IMG_1023.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     introTitle: 'Solar Energy for Bracknell Forest',
     introText: [
       'Bracknell new town planning means many properties have excellent roof orientations for solar. We serve all Bracknell Forest areas.',
@@ -831,7 +831,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'abingdon',
     name: 'Abingdon',
     metaDescription: 'Solar Panel Installation Abingdon. MCS certified experts for OX14. Heritage and modern solar specialists.',
-    heroImage: 'IMG_3254.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     introTitle: 'Solar for Abingdon-on-Thames',
     introText: [
       'Abingdon-on-Thames combines historic charm with modern development. We offer solar solutions for all property types across OX14.',
@@ -855,7 +855,7 @@ export const LOCATION_CONTENT: Record<string, LocationPageData> = {
     slug: 'maidenhead',
     name: 'Maidenhead',
     metaDescription: 'Solar Panels Maidenhead. MCS certified installers for SL6. Premium solar and EV charging specialists.',
-    heroImage: 'IMG_3256.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     introTitle: 'Solar Solutions for Maidenhead',
     introText: [
       'Maidenhead offers excellent opportunities for residential and commercial solar. We serve all SL6 postcodes from Cookham to Cox Green.',
@@ -886,7 +886,7 @@ export const COST_GUIDE_CONTENT: CostGuideData = {
 
 export const ABOUT_CONTENT: AboutPageData = {
   title: "About Carey Electrical",
-  heroImage: 'IMG_3254.jpeg',
+  heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
   story: [],
   values: [],
   teamStats: []
@@ -914,7 +914,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
     id: 'domestic-solar',
     title: 'Domestic Solar Panels',
     subtitle: 'Generate your own clean electricity and reduce your bills.',
-    heroImage: 'IMG_0758.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     overview: 'Our domestic solar PV systems are designed to maximize generation based on your specific roof geometry and usage patterns. We use premium Tier-1 all-black panels for a sleek look that enhances your property value.',
     benefits: [
       { title: 'Lower Bills', desc: 'Reduce electricity costs by up to 70%.', icon: 'PoundSterling' },
@@ -927,7 +927,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
          id: 'jinko-tiger',
          name: 'Jinko Tiger Neo',
          brand: 'Jinko Solar',
-         image: 'IMG_0758.jpeg',
+         image: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
          features: ['N-Type Technology', 'All-Black Aesthetics', 'High Efficiency'],
          description: 'The Tiger Neo N-type module adopts TOPCon technology for higher efficiency and lower degradation.',
          techSpecs: { 'Power Output': '440W', 'Efficiency': '22.8%', 'Warranty': '25 Years' }
@@ -937,13 +937,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do I need planning permission?', answer: 'Most domestic installations are Permitted Development, so no planning is required unless you live in a listed building.' },
       { question: 'How long does installation take?', answer: 'A typical residential system takes 1-2 days to install.' }
     ],
-    galleryImages: ['IMG_0692.jpeg', 'IMG_0758.jpeg', 'IMG_3256.jpeg']
+    galleryImages: ['/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', '/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
   },
   'integrated-solar': {
     id: 'integrated-solar',
     title: 'Integrated In-Roof Solar',
     subtitle: 'The aesthetic choice for new builds and re-roofing.',
-    heroImage: 'IMG_1023.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     overview: 'For a seamless finish that blends perfectly with your home, choose Integrated (In-Roof) Solar. The panels replace the tiles rather than sitting above them, creating a flush, watertight, and stunningly modern roofline.',
     extendedContent: `
       <h2>The "Tesla Roof" Look for Less</h2>
@@ -963,13 +963,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Does it overheat?', answer: 'No, modern in-roof systems have engineered airflow channels to ensure panels stay cool and efficient.' },
       { question: 'Is it waterproof?', answer: 'Yes, the interlocking flashing kits are designed to be 100% weather-tight, tested to extreme conditions.' }
     ],
-    galleryImages: ['IMG_1023.jpeg', 'IMG_3256.jpeg']
+    galleryImages: ['/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
   },
   'agricultural-solar': {
     id: 'agricultural-solar',
     title: 'Agricultural Solar Systems',
     subtitle: 'Powering farms and rural businesses.',
-    heroImage: 'IMG_3045.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     overview: 'Farms have two things in abundance: roof space and high energy demand. We specialize in robust, high-yield solar systems for barns, grain stores, and ground mounts that turn these assets into profit centers.',
     extendedContent: `
       <h2>Reduce Input Costs</h2>
@@ -995,13 +995,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do you work with 3-phase?', answer: 'Yes, almost all our agricultural installs are 3-phase, ranging from 20kW to 200kW+.' },
       { question: 'Can you ground mount in a field?', answer: 'Yes, we offer pile-driven ground mount systems that don\'t require concrete foundations, preserving soil health.' }
     ],
-    galleryImages: ['IMG_3045.jpeg', 'IMG_3047.jpeg']
+    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/baea77fd-a9df-488b-9759-39748439a29a.jpg']
   },
   'solar-carports': {
     id: 'solar-carports',
     title: 'Solar Carports',
     subtitle: 'Generate power from your parking space.',
-    heroImage: 'IMG_3045.jpeg', // Using ground mount image as proxy for carport structure
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg', // Using ground mount image as proxy for carport structure
     overview: 'A solar carport is the ultimate dual-purpose structure. It protects your vehicle from the elements while generating clean energy to power it. We design and install bespoke timber or aluminium carports tailored to your driveway.',
     extendedContent: `
       <h2>The Perfect Partner for Electric Vehicles</h2>
@@ -1021,13 +1021,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do I need planning permission?', answer: 'Often yes, as it is a permanent structure. We can provide elevation drawings to assist with your application.' },
       { question: 'How many panels fit?', answer: 'A double carport typically fits 12-15 panels, generating around 5-6kW.' }
     ],
-    galleryImages: ['IMG_3045.jpeg']
+    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg']
   },
   'flat-roof-solar': {
     id: 'flat-roof-solar',
     title: 'Flat Roof Solar Systems',
     subtitle: 'Specialist ballasted mounting for flat roofs.',
-    heroImage: 'IMG_3039.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     overview: 'Flat roofs on extensions, garages, or commercial buildings offer excellent solar potential. We use specialist aerodynamic mounting systems that are weighed down (ballasted) rather than bolted through the roof, preserving your waterproofing.',
     extendedContent: `
       <h2>Non-Penetrating Installation</h2>
@@ -1047,13 +1047,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Is my roof strong enough?', answer: 'We perform a structural calculation to ensure your roof can take the weight of the ballast (typically 20-30kg/m²).' },
       { question: 'Can I see the panels?', answer: 'Usually not from the garden, as the low profile keeps them below the parapet wall.' }
     ],
-    galleryImages: ['IMG_3039.jpeg', 'IMG_3254.jpeg']
+    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
   },
   'solar-repairs': {
     id: 'solar-repairs',
     title: 'Solar Panel Repairs',
     subtitle: 'Expert diagnostics and repair for faulty solar systems.',
-    heroImage: 'IMG_3042.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     overview: 'Is your solar system showing a red light? Are your bills higher than expected? We provide comprehensive diagnostic and repair services for all types of solar PV systems, even if we didn\'t install them originally.',
     extendedContent: `
       <h2>Common Solar Faults We Fix</h2>
@@ -1075,13 +1075,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do you charge a call-out fee?', answer: 'We charge a standard diagnostic fee which includes the first hour of investigation.' },
       { question: 'Can you fix systems you didn\'t install?', answer: 'Yes, we are happy to take on maintenance and repair for orphaned systems.' }
     ],
-    galleryImages: ['IMG_3042.jpeg']
+    galleryImages: ['/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
   },
   'commercial-ev': {
     id: 'commercial-ev',
     title: 'Commercial EV Charging',
     subtitle: 'Scalable workplace charging solutions.',
-    heroImage: 'IMG_3254.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     overview: 'Attract top talent and electrify your fleet with our commercial EV charging solutions. We design scalable systems for offices, hotels, and depots, fully compliant with OZEV regulations.',
     extendedContent: `
       <h2>Power Your Fleet</h2>
@@ -1101,13 +1101,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Can visitors pay to charge?', answer: 'Yes, we can install units with QR codes for instant payment via app.' },
       { question: 'Do you do groundworks?', answer: 'Yes, we handle trenching, plinths, and making good of car park surfaces.' }
     ],
-    galleryImages: ['IMG_3254.jpeg']
+    galleryImages: ['/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
   },
   'solar-removal': {
     id: 'solar-removal',
     title: 'Solar Removal & Reinstall',
     subtitle: 'Expert removal service for roof repairs and renovations.',
-    heroImage: 'IMG_3039.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     overview: 'If you need to repair or replace your roof, your solar panels must be removed safely by a qualified electrician. We offer a comprehensive removal, storage, and reinstallation service to ensure your system continues to perform perfectly after your roof works.',
     extendedContent: `
       <h2>Don't Let Roofers Remove Your Panels</h2>
@@ -1132,13 +1132,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Can you work with my roofer?', answer: 'Yes, we coordinate directly with your roofing contractor to minimize scaffolding time.' },
       { question: 'Will I lose my Feed-in Tariff?', answer: 'No, provided the system is re-commissioned by an MCS installer like us.' }
     ],
-    galleryImages: ['IMG_3039.jpeg']
+    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg']
   },
   'new-builds': {
     id: 'new-builds',
     title: 'New Build Solar',
     subtitle: 'Integrated solar solutions for developers and self-builders.',
-    heroImage: 'IMG_3256.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     overview: 'Meeting Part L building regulations is easier with solar. We work with architects and developers to design integrated solar systems that are aesthetically pleasing and cost-effective.',
     extendedContent: `
       <h2>Part L Compliance Made Easy</h2>
@@ -1158,13 +1158,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'When should we contact you?', answer: 'As early as possible! Ideally during the design phase so we can optimize roof orientation.' },
       { question: 'Do you offer first and second fix?', answer: 'Yes, we fit cabling during first fix and panels/inverters during second fix.' }
     ],
-    galleryImages: ['IMG_3256.jpeg', 'IMG_0692.jpeg']
+    galleryImages: ['/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg']
   },
   'commercial-solar': {
     id: 'commercial-solar',
     title: 'Commercial Solar Installation',
     subtitle: 'Power your business with sustainable energy.',
-    heroImage: 'IMG_3254.jpeg',
+    heroImage: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
     overview: 'Commercial solar installations offer a high return on investment and safeguard your business against rising energy costs. We specialize in large-scale roof arrays for warehouses, offices, and factories across Berkshire.',
     extendedContent: `
       <h2>The Business Case for Solar PV</h2>
@@ -1186,13 +1186,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
         { question: 'Can we operate during installation?', answer: 'Yes, we minimize disruption and can work out of hours if needed.' },
         { question: 'Do you offer maintenance contracts?', answer: 'Yes, we offer O&M (Operations & Maintenance) packages for commercial arrays.' }
     ],
-    galleryImages: ['IMG_3254.jpeg', 'IMG_3042.jpeg']
+    galleryImages: ['/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
   },
   'battery-storage': {
     id: 'battery-storage',
     title: 'Battery Storage Systems',
     subtitle: 'Store your solar energy for use day and night.',
-    heroImage: 'IMG_2864.jpeg',
+    heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     overview: 'Battery storage allows you to use solar energy when the sun goes down, or charge from the grid during cheap overnight tariffs. We are certified installers of Tesla Powerwall, Myenergi Libbi, and GivEnergy systems.',
     benefits: [
       { title: 'Use Solar at Night', desc: 'Increase self-consumption to 90%.', icon: 'Moon' },
@@ -1204,7 +1204,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
          id: 'tesla-powerwall',
          name: 'Tesla Powerwall 3',
          brand: 'Tesla',
-         image: 'IMG_3962.jpeg',
+         image: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
          features: ['13.5kWh Capacity', 'Built-in Inverter', 'Backup Gateway'],
          description: 'The gold standard in home battery storage.',
          techSpecs: { 'Capacity': '13.5kWh', 'Power': '11.5kW', 'Warranty': '10 Years' }
@@ -1213,7 +1213,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
          id: 'myenergi-libbi',
          name: 'Myenergi Libbi',
          brand: 'Myenergi',
-         image: 'IMG_2864.jpeg',
+         image: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
          features: ['Modular Design', 'Ecosystem Integration', 'UK Support'],
          description: 'Smart battery storage that talks to your Zappi EV charger.',
          techSpecs: { 'Capacity': '5-20kWh', 'Power': '5kW', 'Warranty': '10 Years' }
@@ -1222,13 +1222,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
     faqs: [
         { question: 'Can I add a battery to existing panels?', answer: 'Yes, we can retrofit batteries to almost any existing solar system.' }
     ],
-    galleryImages: ['IMG_2864.jpeg', 'IMG_2857.jpeg', 'IMG_3962.jpeg']
+    galleryImages: ['/57eef691-a691-4489-9629-c5336d019a3c.jpg', '/57eef691-a691-4489-9629-c5336d019a3c.jpg', '/57eef691-a691-4489-9629-c5336d019a3c.jpg']
   },
   'bird-proofing': {
     id: 'bird-proofing',
     title: 'Solar Panel Bird Proofing',
     subtitle: 'Protect your investment from pigeons and pests.',
-    heroImage: 'IMG_0692.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     overview: 'Pigeons love nesting under solar panels. This can lead to reduced efficiency, damage to cables, and messy guano buildup. We install robust, non-intrusive mesh systems to keep them out for good.',
     extendedContent: `
       <h2>Why Bird Proofing is Essential</h2>
@@ -1251,13 +1251,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Will it damage my panels?', answer: 'No, we use specialized clips that attach to the frame lip without any drilling or adhesive.' },
       { question: 'Can you clean the panels too?', answer: 'Yes, we typically perform a full clean and biocide treatment before installing the mesh.' }
     ],
-    galleryImages: ['IMG_0692.jpeg', 'IMG_3256.jpeg']
+    galleryImages: ['/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
   },
   'maintenance': {
     id: 'maintenance',
     title: 'Solar Panel Cleaning & Maintenance',
     subtitle: 'Maximize your generation with professional care.',
-    heroImage: 'IMG_0758.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     overview: 'Solar panels are generally low maintenance, but they are not "no maintenance". Dirt, lichen, and loose connections can cost you hundreds in lost generation. We offer comprehensive health checks and cleaning.',
     extendedContent: `
       <h2>Annual System Health Check</h2>
@@ -1280,13 +1280,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'How often should I clean them?', answer: 'We recommend a professional clean every 1-2 years, depending on the pitch of your roof and local tree cover.' },
       { question: 'Do you check the battery too?', answer: 'Yes, if you have a battery, we check its State of Health (SOH) and calibration.' }
     ],
-    galleryImages: ['IMG_0758.jpeg', 'IMG_3042.jpeg']
+    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg']
   },
   'ground-mount': {
     id: 'ground-mount',
     title: 'Ground Mount Systems',
     subtitle: 'Utilize your land for maximum energy generation.',
-    heroImage: 'IMG_3045.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     overview: 'If roof space is limited but you have land, a ground mount system is an excellent alternative. We offer various mounting solutions including screw piles and concrete ballasts.',
     benefits: [
       { title: 'Perfect Angle', desc: 'Oriented for maximum yield.', icon: 'Compass' },
@@ -1297,13 +1297,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
     faqs: [
         { question: 'Do I need planning for ground mount?', answer: 'Often yes, especially for arrays larger than 9m2. We can assist with the application.' }
     ],
-    galleryImages: ['IMG_3045.jpeg', 'IMG_3047.jpeg']
+    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/baea77fd-a9df-488b-9759-39748439a29a.jpg']
   },
   'off-grid': {
     id: 'off-grid',
     title: 'Off-Grid Systems',
     subtitle: 'Complete energy independence for remote locations.',
-    heroImage: 'IMG_1023.jpeg',
+    heroImage: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
     overview: 'For locations without a grid connection, or for those seeking total autonomy. We design robust off-grid systems using Victron Energy equipment for reliability.',
     benefits: [
       { title: 'No Bills', desc: 'Total freedom from utility companies.', icon: 'WifiOff' },
@@ -1313,13 +1313,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
     faqs: [
         { question: 'Can I run a whole house off-grid?', answer: 'Yes, with sufficient solar and battery capacity, plus a backup generator for winter.' }
     ],
-    galleryImages: ['IMG_1023.jpeg']
+    galleryImages: ['/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg']
   },
   'ev-charging': {
     id: 'ev-charging',
     title: 'EV Charger Installation',
     subtitle: 'Drive on sunshine with smart home charging.',
-    heroImage: 'IMG_2864.jpeg',
+    heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     overview: 'Home charging is the most convenient and cost-effective way to power your electric vehicle. We install smart chargers that integrate seamlessly with your solar panels, allowing you to charge for free using your own clean energy.',
     extendedContent: `
       <h2>The Perfect Partner for Solar</h2>
@@ -1343,7 +1343,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
          id: 'myenergi-zappi',
          name: 'Myenergi Zappi',
          brand: 'Myenergi',
-         image: 'IMG_2864.jpeg', // Fallback to Libbi img for demo if Zappi specific not available
+         image: '/57eef691-a691-4489-9629-c5336d019a3c.jpg', // Fallback to Libbi img for demo if Zappi specific not available
          features: ['Solar Diversion', 'No Earth Rod Needed', '3 Charging Modes'],
          description: 'The world\'s #1 solar-compatible EV charger. Made in Britain.',
          techSpecs: { 'Power': '7kW', 'Warranty': '3 Years', 'Connection': 'Tethered/Socket' }
@@ -1353,13 +1353,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do I need a new fuse box?', answer: 'Often yes, or a mini consumer unit. We include this in our survey and quote.' },
       { question: 'Can I charge two cars?', answer: 'Yes, we can install dual chargers or load-balance two units so they don\'t overload your supply.' }
     ],
-    galleryImages: ['IMG_2864.jpeg']
+    galleryImages: ['/57eef691-a691-4489-9629-c5336d019a3c.jpg']
   },
   'inverter-replacement': {
     id: 'inverter-replacement',
     title: 'Solar Inverter Replacement',
     subtitle: 'Get your system back online fast.',
-    heroImage: 'IMG_0758.jpeg',
+    heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     overview: 'The inverter is the hardworking heart of your solar system. While panels last 25+ years, inverters typically last 10-12 years. If yours has failed, we can replace it with a modern, high-efficiency unit.',
     extendedContent: `
       <h2>Is Your Inverter Broken?</h2>
@@ -1384,6 +1384,6 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Will I lose my Feed-in Tariff?', answer: 'No. You are allowed to repair your system. We provide the necessary paperwork to notify your FiT licensee.' },
       { question: 'How much does it cost?', answer: 'A typical 3.6kW string inverter replacement starts from around £850 fully installed.' }
     ],
-    galleryImages: ['IMG_0758.jpeg']
+    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg']
   }
 };

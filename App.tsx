@@ -132,16 +132,12 @@ function App() {
   const Navbar = () => (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-brand-black/80 backdrop-blur-xl border-b border-white/5 py-4 shadow-glass' : 'bg-transparent py-8'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center gap-3 group cursor-pointer" onClick={() => navigate('/')}>
-          <div className="relative w-10 h-10">
-             <div className="absolute inset-0 bg-brand-green blur opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-             <div className="relative w-10 h-10 bg-gradient-to-br from-brand-green to-brand-accent rounded-br-xl rounded-tl-xl flex items-center justify-center shadow-lg border border-white/10">
-              <span className="text-brand-black font-extrabold text-xl">CE</span>
-            </div>
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-2xl font-bold text-white tracking-tight group-hover:text-brand-green transition-colors">Carey<span className="text-brand-green group-hover:text-white transition-colors">Electrical</span></span>
-          </div>
+        <div className="flex items-center gap-2 group cursor-pointer" onClick={() => navigate('/')}>
+          <img
+            src="/image1.png"
+            alt="Carey Electrical"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </div>
 
         <div className="hidden md:flex items-center gap-8 bg-brand-black/30 px-8 py-3 rounded-full border border-white/5 backdrop-blur-sm">
@@ -191,14 +187,11 @@ function App() {
   );
 
   const Hero = () => {
-    // USING REAL FILENAMES FROM UPLOAD
     const heroImages = [
-      'IMG_0692.jpeg', // Chimney Roof
-      'IMG_0758.jpeg', // Blue Sky Roof
-      'IMG_3254.jpeg', // Commercial Wide
-      'IMG_3256.jpeg', // Large Roof
-      'IMG_3045.jpeg', // Ground Mount
-      'IMG_1023.jpeg'  // Slate Roof
+      '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
+      '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
+      '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
+      '/57eef691-a691-4489-9629-c5336d019a3c.jpg'
     ];
     
     const [currentImageIdx, setCurrentImageIdx] = useState(0);
@@ -650,12 +643,11 @@ function App() {
           
           {/* Column 1: Brand Info */}
           <div className="lg:col-span-4 space-y-6">
-             <div className="flex items-center gap-2">
-               <div className="w-8 h-8 bg-brand-green rounded flex items-center justify-center">
-                 <span className="text-brand-black font-bold text-sm">CE</span>
-               </div>
-               <span className="text-2xl font-bold text-white tracking-tight">Carey<span className="text-brand-green">Electrical</span></span>
-             </div>
+             <img
+               src="/image1.png"
+               alt="Carey Electrical"
+               className="h-10 w-auto object-contain"
+             />
              <p className="text-slate-400 leading-relaxed max-w-sm">
                Leading the way in renewable energy solutions for Berkshire and beyond. MCS Certified excellence in Solar PV, Battery Storage, and EV Charging.
              </p>
