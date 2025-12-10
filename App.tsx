@@ -134,7 +134,7 @@ function App() {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-2 group cursor-pointer" onClick={() => navigate('/')}>
           <img
-            src="/image1.png"
+            src="/carey_electrical_logo_improved.png"
             alt="Carey Electrical"
             className="h-10 md:h-12 w-auto object-contain"
           />
@@ -654,7 +654,7 @@ function App() {
           {/* Column 1: Brand Info */}
           <div className="lg:col-span-4 space-y-6">
              <img
-               src="/image1.png"
+               src="/carey_electrical_logo_improved.png"
                alt="Carey Electrical"
                className="h-10 w-auto object-contain"
              />
