@@ -18,26 +18,80 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
     window.scrollTo(0, 0);
   }, [data]);
 
-  // SEO
+  // SEO with enhanced schema including breadcrumbs and service details
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": data.title,
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Carey Electrical"
-    },
-    "description": data.overview,
-    "areaServed": {
-      "@type": "State",
-      "name": "Berkshire"
-    }
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://careyelectrical.co.uk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://careyelectrical.co.uk/#/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": data.title,
+            "item": window.location.href
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": data.title,
+        "serviceType": data.title,
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Carey Electrical",
+          "telephone": "01635 783887",
+          "email": "info@careyelectrical.co.uk",
+          "url": "https://careyelectrical.co.uk",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Thatcham",
+            "addressRegion": "Berkshire",
+            "postalCode": "RG18 3BD",
+            "addressCountry": "GB"
+          }
+        },
+        "description": data.overview,
+        "image": data.heroImage,
+        "areaServed": [
+          { "@type": "City", "name": "Newbury" },
+          { "@type": "City", "name": "Reading" },
+          { "@type": "City", "name": "Basingstoke" },
+          { "@type": "State", "name": "Berkshire" }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "description": "Professional " + data.title + " services",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "GBP"
+          }
+        }
+      }
+    ]
   };
 
+  const pageKeywords = `${data.title}, ${data.title} Berkshire, ${data.title} Newbury, ${data.title} Reading, solar installation, renewable energy, MCS certified`;
+
   useSEO(
-    `${data.title} Installation`,
-    `Expert ${data.title} services from Carey Electrical. ${data.overview.substring(0, 120)}...`,
-    schema
+    `${data.title} Installation Berkshire`,
+    `Expert ${data.title} services from MCS certified Carey Electrical. ${data.overview.substring(0, 140)}`,
+    schema,
+    data.heroImage,
+    'website',
+    pageKeywords
   );
 
   // Helper to get icon component dynamically

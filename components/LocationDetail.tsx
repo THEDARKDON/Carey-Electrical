@@ -16,28 +16,91 @@ export const LocationDetail: React.FC<LocationDetailProps> = ({ data, onBack, on
     window.scrollTo(0, 0);
   }, [data]);
 
-  // Combined LocalBusiness and FAQPage Schema using @graph
+  // Combined LocalBusiness, FAQPage, and Breadcrumbs Schema using @graph
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://careyelectrical.co.uk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Locations",
+            "item": "https://careyelectrical.co.uk/#/locations"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": data.name,
+            "item": window.location.href
+          }
+        ]
+      },
+      {
         "@type": "LocalBusiness",
-        "name": `Carey Electrical ${data.name}`,
-        "image": "https://careyelectrical.co.uk/" + data.heroImage,
+        "name": `Carey Electrical - Solar Installers ${data.name}`,
+        "image": "https://careyelectrical.co.uk" + data.heroImage,
         "telephone": "01635 783887",
         "email": "info@careyelectrical.co.uk",
         "url": window.location.href,
         "areaServed": {
-          "@type": "Place",
-          "name": data.name
+          "@type": "City",
+          "name": data.name,
+          "containedIn": {
+            "@type": "State",
+            "name": "Berkshire"
+          }
         },
-        "priceRange": "££",
+        "priceRange": "££-£££",
         "description": data.metaDescription,
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Thatcham", // Head office
+          "addressLocality": "Thatcham",
           "addressRegion": "Berkshire",
-          "addressCountry": "UK"
+          "postalCode": "RG18 3BD",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "51.4011",
+          "longitude": "-1.2644"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Solar & Renewable Energy Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Solar Panel Installation " + data.name,
+                "areaServed": data.name
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Battery Storage " + data.name,
+                "areaServed": data.name
+              }
+            }
+          ]
         }
       },
       {
@@ -54,10 +117,15 @@ export const LocationDetail: React.FC<LocationDetailProps> = ({ data, onBack, on
     ]
   };
 
+  const pageKeywords = `solar panels ${data.name}, solar installation ${data.name}, battery storage ${data.name}, EV charging ${data.name}, solar installers near me, renewable energy ${data.name}`;
+
   useSEO(
-    `Solar Panels & Battery Installers ${data.name}`,
+    `Solar Panel Installers ${data.name}`,
     data.metaDescription,
-    schema
+    schema,
+    data.heroImage,
+    'website',
+    pageKeywords
   );
 
   // Filter projects for this location if possible, otherwise show generic good ones

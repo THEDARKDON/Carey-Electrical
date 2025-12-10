@@ -15,28 +15,80 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
     window.scrollTo(0, 0);
   }, [data]);
 
-  // Article Schema
+  // Article Schema with Breadcrumbs
   const schema = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": data.title,
-    "image": data.heroImage,
-    "author": {
-      "@type": "Person",
-      "name": data.author
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Carey Electrical",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://careyelectrical.co.uk/logo.png" 
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://careyelectrical.co.uk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "News",
+            "item": "https://careyelectrical.co.uk/#/news"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": data.title,
+            "item": window.location.href
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": data.title,
+        "image": {
+          "@type": "ImageObject",
+          "url": data.heroImage,
+          "width": 1200,
+          "height": 630
+        },
+        "author": {
+          "@type": "Person",
+          "name": data.author,
+          "url": "https://careyelectrical.co.uk"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Carey Electrical",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png",
+            "width": 600,
+            "height": 200
+          }
+        },
+        "datePublished": data.date,
+        "dateModified": data.date,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": window.location.href
+        },
+        "description": data.excerpt || data.title,
+        "articleSection": data.category,
+        "keywords": data.tags ? data.tags.join(', ') : "solar energy, renewable energy, solar panels"
       }
-    },
-    "datePublished": data.date
+    ]
   };
 
-  useSEO(data.title, data.title + " - Read our latest insights on solar energy.", schema);
+  const articleKeywords = `${data.category}, solar energy news, renewable energy, ${data.tags ? data.tags.join(', ') : 'solar panels, battery storage'}`;
+
+  useSEO(
+    data.title,
+    (data.excerpt || data.title) + " - Expert insights on solar energy from Carey Electrical.",
+    schema,
+    data.heroImage,
+    'article',
+    articleKeywords
+  );
 
   return (
     <div className="min-h-screen bg-brand-black pt-20">

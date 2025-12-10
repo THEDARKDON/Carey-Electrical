@@ -603,9 +603,10 @@ function App() {
                 className={`group relative overflow-hidden rounded-2xl h-[400px] border border-slate-700/50 bg-slate-800 shadow-2xl ${project.slug ? 'cursor-pointer' : ''}`}
                 onClick={() => project.slug && navigate(`/project/${project.slug}`)}
               >
-                <img 
-                  src={project.url} 
-                  alt={project.description} 
+                <img
+                  src={project.url}
+                  alt={`${project.description} - Solar installation by Carey Electrical`}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
