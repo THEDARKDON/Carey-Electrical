@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SectionTitle, Card, Reveal, SimpleBarChart } from './UIComponents';
+import { SectionTitle, Card, Reveal, SimpleBarChart, useSEO } from './UIComponents';
 import { Sun, Battery, PoundSterling, Zap, ArrowRight, PieChart, TrendingUp, Leaf, Wallet, BarChart3 } from 'lucide-react';
 
 interface SolarCalculatorProps {
@@ -72,6 +72,74 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
     runningTotal += (totalAnnualBenefit * inflationMultiplier);
     cumulativeData.push(Math.round(runningTotal));
   }
+
+  // -- SEO SCHEMA --
+  const calculatorSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Solar Savings Calculator",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web Browser",
+        "description": "Calculate your potential savings from solar panel installation. Estimate ROI, payback period, and environmental benefits.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "GBP"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Carey Electrical"
+        }
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Calculate Solar Panel Savings",
+        "description": "Use our calculator to estimate your solar panel savings based on your electricity usage.",
+        "totalTime": "PT2M",
+        "tool": {
+          "@type": "HowToTool",
+          "name": "Solar Savings Calculator"
+        },
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Enter your monthly electricity bill",
+            "text": "Input your average monthly electricity bill in pounds to estimate your annual energy consumption."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Select system size",
+            "text": "Choose the solar panel system size in kW. Our calculator will recommend an optimal size based on your usage."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Add battery storage",
+            "text": "Optionally add battery storage to increase self-consumption and maximize savings."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "View your results",
+            "text": "See your estimated annual savings, payback period, and environmental impact."
+          }
+        ]
+      }
+    ]
+  };
+
+  useSEO(
+    "Solar Savings Calculator",
+    "Calculate your potential savings from solar panels. Free online tool to estimate ROI, payback period, and environmental benefits for your home in Berkshire.",
+    calculatorSchema,
+    undefined,
+    'website',
+    "solar calculator, solar savings calculator, solar panel ROI, solar payback period, solar cost calculator UK"
+  );
 
   // -- DYNAMIC UI HELPERS --
 

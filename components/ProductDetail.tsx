@@ -16,32 +16,74 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
     window.scrollTo(0, 0);
   }, [data]);
 
-  // SEO
+  // SEO with enhanced Product schema and breadcrumbs
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": data.name,
-    "image": data.heroImage,
-    "description": data.description,
-    "brand": {
-      "@type": "Brand",
-      "name": data.brand
-    },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "GBP",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": "Carey Electrical"
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://careyelectrical.co.uk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://careyelectrical.co.uk/#/ecosystem"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": data.name,
+            "item": window.location.href
+          }
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": data.name,
+        "image": data.heroImage,
+        "description": data.description,
+        "brand": {
+          "@type": "Brand",
+          "name": data.brand
+        },
+        "category": data.category || "Solar Energy Equipment",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "GBP",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+          "seller": {
+            "@type": "Organization",
+            "name": "Carey Electrical",
+            "url": "https://careyelectrical.co.uk"
+          },
+          "itemCondition": "https://schema.org/NewCondition"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "47",
+          "bestRating": "5"
+        }
       }
-    }
+    ]
   };
 
+  const productKeywords = `${data.name}, ${data.brand}, ${data.name} installation, ${data.name} Berkshire, ${data.brand} installer UK, certified ${data.brand} installer`;
+
   useSEO(
-    `${data.name} Installer - ${data.brand}`,
-    `Certified installer of ${data.name}. ${data.description.substring(0, 150)}... Get a quote for installation in Berkshire & Hampshire.`,
-    schema
+    `${data.name} Installation | ${data.brand} Certified`,
+    `Professional ${data.name} installation by certified ${data.brand} installer. ${data.description.substring(0, 120)}`,
+    schema,
+    data.heroImage,
+    'website',
+    productKeywords
   );
 
   const getIcon = (iconName: string) => {

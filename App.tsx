@@ -213,6 +213,23 @@ function App() {
       "bestRating": "5",
       "worstRating": "1"
     },
+    "review": TESTIMONIALS.map(t => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": t.name
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": t.rating,
+        "bestRating": 5
+      },
+      "reviewBody": t.quote,
+      "itemReviewed": {
+        "@type": "Service",
+        "name": t.system || "Solar Installation"
+      }
+    })),
     "makesOffer": [
       {
         "@type": "Offer",

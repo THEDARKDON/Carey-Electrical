@@ -13,17 +13,35 @@ export const Grants: React.FC<GrantsProps> = ({ onBack, onNavigate }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const grantsSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectrical.co.uk" },
+          { "@type": "ListItem", "position": 2, "name": "Grants & Funding", "item": window.location.href }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Are there grants for solar panels in 2025?", "acceptedAnswer": { "@type": "Answer", "text": "The main grant available is ECO4 for low-income households. For most homeowners, the 0% VAT rate acts as a significant discount, saving around 20% on installation costs." } },
+          { "@type": "Question", "name": "What is the Smart Export Guarantee (SEG)?", "acceptedAnswer": { "@type": "Answer", "text": "The SEG is a UK government scheme where energy suppliers pay you for the electricity you export to the grid from your solar panels. Rates vary between suppliers from 3p to 15p per kWh." } },
+          { "@type": "Question", "name": "Is there 0% VAT on solar panels?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, since April 2022, residential solar panel installations benefit from 0% VAT in the UK until 2027. This applies to both solar panels and battery storage systems." } },
+          { "@type": "Question", "name": "What is ECO4?", "acceptedAnswer": { "@type": "Answer", "text": "ECO4 (Energy Company Obligation) is a government scheme that provides free or subsidized solar panels to low-income households receiving certain benefits." } }
+        ]
+      }
+    ]
+  };
+
   useSEO(
     "Solar Grants, Funding & 0% VAT (2025 Guide)",
-    "Everything you need to know about ECO4, the Smart Export Guarantee (SEG) and 0% VAT on solar panels and batteries.",
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Are there grants for solar panels?", "acceptedAnswer": { "@type": "Answer", "text": "The main grant available is ECO4 for low-income households. For most homeowners, the 0% VAT rate acts as a significant discount." } },
-        { "@type": "Question", "name": "What is the Smart Export Guarantee?", "acceptedAnswer": { "@type": "Answer", "text": "The SEG is a scheme where energy suppliers pay you for the electricity you export to the grid." } }
-      ]
-    }
+    "Everything you need to know about ECO4, the Smart Export Guarantee (SEG) and 0% VAT on solar panels and batteries in the UK.",
+    grantsSchema,
+    undefined,
+    'article',
+    "solar grants UK, ECO4, Smart Export Guarantee, SEG, 0% VAT solar panels, solar panel funding, free solar panels UK"
   );
 
   return (

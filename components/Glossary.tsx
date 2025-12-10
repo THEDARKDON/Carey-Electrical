@@ -15,10 +15,36 @@ export const Glossary: React.FC<GlossaryProps> = ({ onBack, onNavigate }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const glossarySchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectrical.co.uk" },
+          { "@type": "ListItem", "position": 2, "name": "Glossary", "item": window.location.href }
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "name": "Solar Energy Glossary",
+        "description": "A comprehensive glossary of solar energy terms and definitions for homeowners",
+        "hasDefinedTerm": GLOSSARY_TERMS.slice(0, 20).map(term => ({
+          "@type": "DefinedTerm",
+          "name": term.term,
+          "description": term.definition
+        }))
+      }
+    ]
+  };
+
   useSEO(
-    "Solar Energy Glossary - Terminology Explained",
+    "Solar Energy Glossary - Terms Explained",
     "Confused by solar jargon? Our glossary explains everything from kW vs kWh to G99 and SEG payments. Simple definitions for homeowners.",
-    undefined
+    glossarySchema,
+    undefined,
+    'website',
+    "solar glossary, solar terms, kW vs kWh, inverter, SEG, solar panel terminology, renewable energy terms"
   );
 
   const filteredTerms = GLOSSARY_TERMS.filter(item => 

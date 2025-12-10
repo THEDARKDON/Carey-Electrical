@@ -14,24 +14,57 @@ export const CostGuide: React.FC<CostGuideProps> = ({ onBack, onNavigate }) => {
     window.scrollTo(0, 0);
   }, []);
 
-  // FAQ Schema for Rich Snippets
-  const faqSchema = {
+  // Combined Breadcrumbs and FAQ Schema for Rich Snippets
+  const pageSchema = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": COST_GUIDE_CONTENT.faqs.map(f => ({
-      "@type": "Question",
-      "name": f.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.answer
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectrical.co.uk" },
+          { "@type": "ListItem", "position": 2, "name": "Cost Guide", "item": window.location.href }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": COST_GUIDE_CONTENT.faqs.map(f => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
+      },
+      {
+        "@type": "Article",
+        "headline": "Solar Panel Installation Costs UK 2025",
+        "description": "Complete guide to solar panel pricing in the UK",
+        "author": {
+          "@type": "Organization",
+          "name": "Carey Electrical"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Carey Electrical",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png"
+          }
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": COST_GUIDE_CONTENT.lastUpdated
       }
-    }))
+    ]
   };
 
   useSEO(
     "Solar Panel Cost Guide 2025 - UK Pricing",
     "How much do solar panels cost in 2025? Full breakdown of installation prices, battery storage costs, and potential savings for Berkshire homeowners.",
-    faqSchema
+    pageSchema,
+    undefined,
+    'article',
+    "solar panel cost, solar panel prices UK, solar installation cost 2025, how much do solar panels cost, battery storage cost"
   );
 
   return (
