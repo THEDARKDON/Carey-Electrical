@@ -1,0 +1,27 @@
+{
+  "name": "Carey Electrical - Solar & Renewable Energy",
+  "short_name": "Carey Electrical",
+  "description": "MCS certified solar panel installers serving Berkshire. Expert Solar PV, Battery Storage, and EV Charging installation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#10b981",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/carey_electrical_logo_improved-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/carey_electrical_logo_improved-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "utilities"],
+  "lang": "en-GB",
+  "dir": "ltr"
+}

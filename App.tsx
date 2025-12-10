@@ -103,23 +103,124 @@ function App() {
   // --- SEO FOR HOME ---
   const orgSchema = {
     "@context": "https://schema.org",
-    "@type": "Electrician",
+    "@type": "LocalBusiness",
+    "@id": "https://careyelectrical.co.uk/#organization",
     "name": BRAND.name,
-    "image": 'IMG_3254.jpeg', 
+    "alternateName": "Carey Electrical Ltd",
+    "description": "MCS certified solar panel installers and renewable energy specialists serving Berkshire and surrounding areas. Expert installation of Solar PV, Battery Storage, and EV Charging systems.",
+    "url": "https://careyelectrical.co.uk",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png",
+      "width": "600",
+      "height": "200"
+    },
+    "image": "https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png",
     "telephone": BRAND.phone,
     "email": BRAND.email,
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Thatcham",
       "addressLocality": "Thatcham",
       "addressRegion": "Berkshire",
       "postalCode": "RG18 3BD",
-      "addressCountry": "UK"
+      "addressCountry": "GB"
     },
-    "priceRange": "££",
-    "areaServed": ["Newbury", "Reading", "Basingstoke", "Winchester", "Oxford"],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "51.4011",
+      "longitude": "-1.2644"
+    },
+    "priceRange": "££-£££",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "13:00"
+      }
+    ],
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Newbury"
+      },
+      {
+        "@type": "City",
+        "name": "Reading"
+      },
+      {
+        "@type": "City",
+        "name": "Basingstoke"
+      },
+      {
+        "@type": "City",
+        "name": "Winchester"
+      },
+      {
+        "@type": "City",
+        "name": "Oxford"
+      },
+      {
+        "@type": "State",
+        "name": "Berkshire"
+      }
+    ],
     "sameAs": [
       "https://www.facebook.com/careyelectrical",
       "https://www.instagram.com/careyelectrical"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Solar & Renewable Energy Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Solar Panel Installation",
+            "description": "Professional solar PV panel installation for residential and commercial properties"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Battery Storage Systems",
+            "description": "Tesla Powerwall and Myenergi Libbi battery storage installation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "EV Charging Installation",
+            "description": "Electric vehicle charging point installation for home and business"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Free Solar Survey",
+        "description": "Free no-obligation solar panel survey and quote",
+        "price": "0",
+        "priceCurrency": "GBP"
+      }
     ]
   };
 

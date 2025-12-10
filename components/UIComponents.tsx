@@ -281,27 +281,70 @@ export const Marquee: React.FC<{ children: React.ReactNode; direction?: 'left' |
 }
 
 // --- SEO HOOK ---
-export const useSEO = (title: string, description: string, schema?: object) => {
+interface SEOProps {
+  title: string;
+  description: string;
+  schema?: object;
+  image?: string;
+  type?: 'website' | 'article';
+  keywords?: string;
+}
+
+export const useSEO = (title: string, description: string, schema?: object, image?: string, type: 'website' | 'article' = 'website', keywords?: string) => {
   useEffect(() => {
-    document.title = `${title} | Carey Electrical`;
+    const fullTitle = `${title} | Carey Electrical`;
+    document.title = fullTitle;
 
-    let metaDesc = document.querySelector("meta[name='description']");
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.setAttribute("name", "description");
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute("content", description);
+    const defaultImage = window.location.origin + '/carey_electrical_logo_improved-removebg-preview.png';
+    const ogImage = image || defaultImage;
+    const currentUrl = window.location.href;
 
-    let linkCanonical = document.querySelector("link[rel='canonical']");
+    const metaTags = [
+      { name: 'description', content: description },
+      { name: 'keywords', content: keywords || 'solar panels, battery storage, EV charging, solar installation, Berkshire, Newbury, Reading, MCS certified, renewable energy' },
+      { name: 'author', content: 'Carey Electrical' },
+      { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
+      { name: 'googlebot', content: 'index, follow' },
+      { property: 'og:title', content: fullTitle },
+      { property: 'og:description', content: description },
+      { property: 'og:type', content: type },
+      { property: 'og:url', content: currentUrl },
+      { property: 'og:image', content: ogImage },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:site_name', content: 'Carey Electrical' },
+      { property: 'og:locale', content: 'en_GB' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: fullTitle },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: ogImage },
+      { name: 'twitter:site', content: '@careyelectrical' },
+      { name: 'format-detection', content: 'telephone=yes' },
+      { name: 'theme-color', content: '#10b981' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }
+    ];
+
+    metaTags.forEach(({ name, property, content }) => {
+      const attr = name ? 'name' : 'property';
+      const value = name || property;
+      let meta = document.querySelector(`meta[${attr}='${value}']`) as HTMLMetaElement;
+
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute(attr, value!);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    });
+
+    let linkCanonical = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
     if (!linkCanonical) {
       linkCanonical = document.createElement("link");
       linkCanonical.setAttribute("rel", "canonical");
       document.head.appendChild(linkCanonical);
     }
-    // Using Hash routing means the canonical is technically the base URL for bots, 
-    // but useful for History API fallback
-    linkCanonical.setAttribute("href", window.location.href.split('#')[0]);
+    linkCanonical.setAttribute("href", currentUrl.split('#')[0]);
 
     if (schema) {
       const oldSchema = document.getElementById("json-ld-schema");
@@ -318,5 +361,5 @@ export const useSEO = (title: string, description: string, schema?: object) => {
       const script = document.getElementById("json-ld-schema");
       if (script) script.remove();
     };
-  }, [title, description, schema]);
+  }, [title, description, schema, image, type, keywords]);
 };
