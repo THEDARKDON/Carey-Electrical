@@ -15,10 +15,56 @@ export const Blog: React.FC<BlogProps> = ({ onBack, onNavigate }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectrical.co.uk" },
+          { "@type": "ListItem", "position": 2, "name": "News", "item": window.location.href }
+        ]
+      },
+      {
+        "@type": "Blog",
+        "name": "Carey Electrical Solar Blog",
+        "description": "Latest updates on Solar PV technology, battery storage, and government grants for UK homeowners",
+        "url": window.location.href,
+        "publisher": {
+          "@type": "Organization",
+          "name": "Carey Electrical",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png"
+          }
+        },
+        "blogPost": BLOG_POSTS.slice(0, 10).map(post => ({
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.excerpt,
+          "image": post.image,
+          "datePublished": post.date,
+          "author": {
+            "@type": "Organization",
+            "name": "Carey Electrical"
+          }
+        }))
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "Solar Industry News & Guides",
+        "description": "Browse our collection of articles about solar panels, battery storage, and renewable energy"
+      }
+    ]
+  };
+
   useSEO(
     "Solar Industry News & Guides",
-    "Latest updates on Solar PV technology, battery storage, and government grants for UK homeowners.",
-    undefined
+    "Latest updates on Solar PV technology, battery storage, and government grants for UK homeowners. Expert advice from MCS certified installers.",
+    blogSchema,
+    undefined,
+    'website',
+    "solar news, solar blog, solar panel guides, battery storage news, EV charging updates, renewable energy UK"
   );
 
   const categories = ['All', 'Technology', 'Finance', 'Maintenance', 'Commercial'];

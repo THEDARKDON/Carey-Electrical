@@ -238,7 +238,38 @@ function App() {
         "price": "0",
         "priceCurrency": "GBP"
       }
-    ]
+    ],
+    "event": {
+      "@type": "Event",
+      "name": "Free Solar Consultation",
+      "description": "Book a free, no-obligation consultation to discuss your solar panel, battery storage, or EV charging requirements.",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "startDate": new Date().toISOString().split('T')[0],
+      "endDate": new Date(new Date().setMonth(new Date().getMonth() + 3)).toISOString().split('T')[0],
+      "location": {
+        "@type": "Place",
+        "name": "Your Home",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Berkshire",
+          "addressCountry": "GB"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Carey Electrical",
+        "url": "https://careyelectrical.co.uk"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "validFrom": new Date().toISOString().split('T')[0]
+      },
+      "isAccessibleForFree": true
+    }
   };
 
   useSEO(

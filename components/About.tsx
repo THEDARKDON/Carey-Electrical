@@ -15,18 +15,46 @@ export const About: React.FC<AboutProps> = ({ onBack, onNavigate }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectrical.co.uk" },
+          { "@type": "ListItem", "position": 2, "name": "About Us", "item": window.location.href }
+        ]
+      },
+      {
+        "@type": "AboutPage",
+        "name": "About Carey Electrical",
+        "description": "Meet the team behind Carey Electrical, Berkshire's trusted experts in Solar PV and Battery Storage",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Carey Electrical",
+          "foundingLocation": {
+            "@type": "Place",
+            "name": "Thatcham, Berkshire"
+          },
+          "slogan": "Power Your Future With Clean Energy",
+          "knowsAbout": ["Solar PV Installation", "Battery Storage", "EV Charging", "Renewable Energy"],
+          "hasCredential": ACCREDITATIONS.map(acc => ({
+            "@type": "EducationalOccupationalCredential",
+            "name": acc.name,
+            "description": acc.sub
+          }))
+        }
+      }
+    ]
+  };
+
   useSEO(
     "About Carey Electrical - MCS Certified Installers",
-    "Meet the team behind Carey Electrical. Based in Thatcham, we are Berkshire's trusted experts in Solar PV and Battery Storage.",
-    {
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "mainEntity": {
-        "@type": "Organization",
-        "name": "Carey Electrical",
-        "foundingLocation": "Thatcham"
-      }
-    }
+    "Meet the team behind Carey Electrical. Based in Thatcham, we are Berkshire's trusted experts in Solar PV and Battery Storage installation.",
+    aboutSchema,
+    ABOUT_CONTENT.heroImage,
+    'website',
+    "Carey Electrical, about us, MCS certified, solar installers Berkshire, Thatcham electricians, renewable energy experts"
   );
 
   const getIcon = (iconName: string) => {
@@ -44,10 +72,11 @@ export const About: React.FC<AboutProps> = ({ onBack, onNavigate }) => {
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8">
               Local Experts, <span className="text-brand-green">Global Tech</span>
             </h1>
-            <img 
-              src={ABOUT_CONTENT.heroImage} 
-              alt="Carey Electrical Team / Installation" 
+            <img
+              src={ABOUT_CONTENT.heroImage}
+              alt="Carey Electrical team - MCS certified solar panel installers in Berkshire performing a professional solar installation"
               className="w-full h-[400px] object-cover rounded-3xl shadow-2xl border border-slate-800 mb-12"
+              loading="lazy"
             />
           </div>
         </Reveal>

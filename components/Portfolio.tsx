@@ -15,10 +15,47 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onBack, onNavigate }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const portfolioSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectrical.co.uk" },
+          { "@type": "ListItem", "position": 2, "name": "Projects", "item": window.location.href }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "Solar Installation Portfolio",
+        "description": "Gallery of recent Solar PV, Battery Storage and EV Charger installations",
+        "provider": {
+          "@type": "Organization",
+          "name": "Carey Electrical"
+        }
+      },
+      {
+        "@type": "ImageGallery",
+        "name": "Solar Installation Gallery",
+        "description": "Photos of completed solar panel, battery storage, and EV charging installations",
+        "numberOfItems": PROJECTS.length,
+        "image": PROJECTS.slice(0, 10).map(p => ({
+          "@type": "ImageObject",
+          "url": p.image,
+          "name": p.title,
+          "description": `${p.category} installation in ${p.location}`
+        }))
+      }
+    ]
+  };
+
   useSEO(
     "Solar Installation Portfolio",
-    "View our gallery of recent Solar PV, Battery Storage and EV Charger installations across Berkshire and Hampshire.",
-    undefined
+    "View our gallery of recent Solar PV, Battery Storage and EV Charger installations across Berkshire and Hampshire. See real projects completed by MCS certified installers.",
+    portfolioSchema,
+    undefined,
+    'website',
+    "solar installation gallery, solar panel projects, battery storage installations, EV charger installations, Berkshire solar projects"
   );
 
   const categories = ['All', 'Domestic', 'Commercial', 'Battery'];
