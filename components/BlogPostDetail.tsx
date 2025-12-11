@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { ArrowLeft, Calendar, User, Tag, Share2, ArrowRight } from 'lucide-react';
+import React, { useEffect, useMemo } from 'react';
+import { ArrowLeft, Calendar, User, Tag, Share2, ArrowRight, Clock } from 'lucide-react';
 import { Button, Reveal, Card, Badge, useSEO } from './UIComponents';
 import { BlogPostData } from '../types';
 
@@ -9,8 +9,19 @@ interface BlogPostDetailProps {
   onNavigate: (path: string) => void;
 }
 
+const getContentStats = (content: string) => {
+  const wordsPerMinute = 200;
+  const text = content.replace(/<[^>]*>/g, '');
+  const wordCount = text.split(/\s+/).filter(word => word.length > 0).length;
+  const minutes = Math.ceil(wordCount / wordsPerMinute);
+  return { readingTime: `${minutes} min read`, wordCount };
+};
+
 export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, onNavigate }) => {
-  
+
+  const contentStats = useMemo(() => getContentStats(data.content), [data.content]);
+  const { readingTime, wordCount } = contentStats;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [data]);
@@ -74,7 +85,9 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
         },
         "description": data.excerpt || data.title,
         "articleSection": data.category,
-        "keywords": data.tags ? data.tags.join(', ') : "solar energy, renewable energy, solar panels"
+        "keywords": data.tags ? data.tags.join(', ') : "solar energy, renewable energy, solar panels",
+        "wordCount": wordCount,
+        "timeRequired": `PT${Math.ceil(wordCount / 200)}M`
       }
     ]
   };
@@ -123,7 +136,7 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
               <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 max-w-4xl leading-tight">
                 {data.title}
               </h1>
-              <div className="flex items-center gap-6 text-slate-300 text-sm font-medium">
+              <div className="flex flex-wrap items-center gap-6 text-slate-300 text-sm font-medium">
                 <div className="flex items-center gap-2">
                   <User size={16} className="text-brand-green" />
                   {data.author}
@@ -131,6 +144,10 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
                 <div className="flex items-center gap-2">
                   <Calendar size={16} className="text-brand-green" />
                   {data.date}
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock size={16} className="text-brand-green" />
+                  {readingTime}
                 </div>
               </div>
             </Reveal>

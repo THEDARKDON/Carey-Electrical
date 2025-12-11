@@ -295,9 +295,11 @@ export const useSEO = (title: string, description: string, schema?: object, imag
     const fullTitle = `${title} | Carey Electrical`;
     document.title = fullTitle;
 
-    const defaultImage = window.location.origin + '/carey_electrical_logo_improved-removebg-preview.png';
-    const ogImage = image || defaultImage;
-    const currentUrl = window.location.href;
+    const defaultImage = 'https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png';
+    const ogImage = image ? (image.startsWith('http') ? image : `https://careyelectrical.co.uk${image}`) : defaultImage;
+    const baseUrl = 'https://careyelectrical.co.uk';
+    const hashPath = window.location.hash || '';
+    const currentUrl = hashPath && hashPath !== '#/' ? `${baseUrl}/${hashPath}` : baseUrl + '/';
 
     const metaTags = [
       { name: 'description', content: description },
@@ -358,7 +360,7 @@ export const useSEO = (title: string, description: string, schema?: object, imag
       linkCanonical.setAttribute("rel", "canonical");
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.setAttribute("href", currentUrl.split('#')[0]);
+    linkCanonical.setAttribute("href", currentUrl);
 
     if (schema) {
       const oldSchema = document.getElementById("json-ld-schema");

@@ -141,20 +141,21 @@ export const About: React.FC<AboutProps> = ({ onBack, onNavigate }) => {
           <SectionTitle subtitle="Our Work" title="Recent Installations" center />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg',
-              '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg',
-              '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg',
-              '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg',
-              '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg',
-              '/img_8048.jpeg',
-              '/img_0493.jpeg',
-              '/img_8715.jpeg'
-            ].map((img, idx) => (
+              { src: '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', alt: 'Professional solar panel mounting system installed by Carey Electrical in Berkshire' },
+              { src: '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg', alt: 'Residential solar PV system on slate roof in Newbury' },
+              { src: '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg', alt: 'Tesla Powerwall battery storage installation in Reading area' },
+              { src: '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg', alt: 'Complete solar and battery system installed in Basingstoke home' },
+              { src: '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg', alt: 'Commercial solar installation on business premises by MCS certified installers' },
+              { src: '/img_8048.jpeg', alt: 'High-efficiency solar panels installed on a UK residential property' },
+              { src: '/img_0493.jpeg', alt: 'Expert solar panel fitting demonstrating professional workmanship' },
+              { src: '/img_8715.jpeg', alt: 'Ground-mounted solar array installation for off-grid energy solution' }
+            ].map((image, idx) => (
               <Reveal key={idx} delay={idx * 75}>
                 <div className="aspect-square overflow-hidden rounded-xl border border-slate-800 group">
                   <img
-                    src={img}
-                    alt={`Carey Electrical Installation ${idx + 1}`}
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>

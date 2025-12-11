@@ -269,7 +269,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
               {data.galleryImages.map((img, idx) => (
                 <Reveal key={idx} delay={idx * 100}>
                   <div className="rounded-xl overflow-hidden border border-slate-800 h-64 group relative cursor-pointer hover:border-brand-green/50 transition-all">
-                    <img src={img} alt={`${data.title} installation example`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <img src={img} alt={`${data.title} installation by Carey Electrical in Berkshire - example ${idx + 1}`} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-brand-black/20 group-hover:bg-transparent transition-colors" />
                     <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur px-3 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">
                       View Project

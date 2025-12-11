@@ -84,9 +84,13 @@ export const CostGuide: React.FC<CostGuideProps> = ({ onBack, onNavigate }) => {
               Transparent pricing for Solar PV and Battery Storage installations in Berkshire and Hampshire.
             </p>
             <div className="grid grid-cols-3 gap-3 max-w-3xl mx-auto">
-              {['/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg', '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg'].map((img, idx) => (
+              {[
+                { src: '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg', alt: 'Typical 4kW residential solar panel installation cost example' },
+                { src: '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', alt: 'Premium solar PV system with battery storage pricing example' },
+                { src: '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg', alt: 'Complete solar and EV charging installation cost breakdown' }
+              ].map((image, idx) => (
                 <div key={idx} className="aspect-video overflow-hidden rounded-xl border border-slate-800">
-                  <img src={img} alt={`Solar Installation ${idx + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                  <img src={image.src} alt={image.alt} loading="lazy" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
                 </div>
               ))}
             </div>

@@ -16,6 +16,7 @@ import { CostGuide } from './components/CostGuide';
 import { Grants } from './components/Grants';
 import { About } from './components/About';
 import { Glossary } from './components/Glossary';
+import { NotFound } from './components/NotFound';
 import { BRAND, SERVICES, PROJECTS, SERVICE_DETAILS, PRODUCTS_CONTENT, TRUSTED_BRANDS, TESTIMONIALS, ACCREDITATIONS, LOCATION_CONTENT, BLOG_CONTENT, LOCATIONS } from './constants';
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
     if (hash.startsWith('/news/')) return { view: 'blog-post', params: hash.split('/news/')[1] };
     if (hash.startsWith('/project/')) return { view: 'project-detail', params: hash.split('/project/')[1] };
     
-    return { view: 'home', params: '' }; // Fallback
+    return { view: '404', params: '' }; // Fallback for unknown routes
   };
 
   useEffect(() => {
@@ -103,9 +104,45 @@ function App() {
   // --- SEO FOR HOME ---
   const orgSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://careyelectrical.co.uk/#organization",
-    "name": BRAND.name,
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://careyelectrical.co.uk/#website",
+        "url": "https://careyelectrical.co.uk",
+        "name": "Carey Electrical - Solar Panel Installers Berkshire",
+        "description": "MCS certified solar panel installers serving Berkshire. Expert Solar PV, Battery Storage, and EV Charging installation.",
+        "publisher": {
+          "@id": "https://careyelectrical.co.uk/#organization"
+        },
+        "inLanguage": "en-GB",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://careyelectrical.co.uk/#/glossary?search={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "@id": "https://careyelectrical.co.uk/#navigation",
+        "name": "Main Navigation",
+        "hasPart": [
+          { "@type": "WebPage", "name": "Home", "url": "https://careyelectrical.co.uk/" },
+          { "@type": "WebPage", "name": "Solar Panel Installation", "url": "https://careyelectrical.co.uk/#/services/domestic-solar" },
+          { "@type": "WebPage", "name": "Battery Storage", "url": "https://careyelectrical.co.uk/#/services/battery-storage" },
+          { "@type": "WebPage", "name": "EV Charging", "url": "https://careyelectrical.co.uk/#/services/ev-charging" },
+          { "@type": "WebPage", "name": "Projects", "url": "https://careyelectrical.co.uk/#/projects" },
+          { "@type": "WebPage", "name": "Cost Guide", "url": "https://careyelectrical.co.uk/#/cost-guide" },
+          { "@type": "WebPage", "name": "Locations", "url": "https://careyelectrical.co.uk/#/locations" },
+          { "@type": "WebPage", "name": "News", "url": "https://careyelectrical.co.uk/#/news" }
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://careyelectrical.co.uk/#organization",
+        "name": BRAND.name,
     "alternateName": "Carey Electrical Ltd",
     "description": "MCS certified solar panel installers and renewable energy specialists serving Berkshire and surrounding areas. Expert installation of Solar PV, Battery Storage, and EV Charging systems.",
     "url": "https://careyelectrical.co.uk",
@@ -270,6 +307,8 @@ function App() {
       },
       "isAccessibleForFree": true
     }
+  }
+    ]
   };
 
   useSEO(
@@ -337,20 +376,20 @@ function App() {
 
   const Hero = () => {
     const heroImages = [
-      '/img_0493.jpeg',
-      '/img_8048.jpeg',
-      '/img_0875.jpeg',
-      '/img_8715.jpeg',
-      '/img_0366.jpeg',
-      '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg',
-      '/img_0494.jpeg',
-      '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg',
-      '/img_0876.jpeg',
-      '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg',
-      '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg',
-      '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg',
-      '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg',
-      '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg'
+      { src: '/img_0493.jpeg', alt: 'Residential solar panel installation on a Berkshire home roof by Carey Electrical' },
+      { src: '/img_8048.jpeg', alt: 'MCS certified solar PV system installation in progress in Newbury' },
+      { src: '/img_0875.jpeg', alt: 'Premium black solar panels installed on a UK residential property' },
+      { src: '/img_8715.jpeg', alt: 'Ground-mounted solar array installation for maximum energy generation' },
+      { src: '/img_0366.jpeg', alt: 'Professional solar panel installation team working on roof in Reading' },
+      { src: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', alt: 'Completed domestic solar installation with battery storage in Basingstoke' },
+      { src: '/img_0494.jpeg', alt: 'High-efficiency Jinko Tiger solar panels installed by certified engineers' },
+      { src: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', alt: 'Tesla Powerwall battery storage installation in a Berkshire home' },
+      { src: '/img_0876.jpeg', alt: 'Modern solar panel system generating clean renewable energy' },
+      { src: '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', alt: 'Solar PV installation showcasing expert cable management and mounting' },
+      { src: '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg', alt: 'Rooftop solar array with optimized panel positioning for UK climate' },
+      { src: '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg', alt: 'Commercial solar installation on business premises in Berkshire' },
+      { src: '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg', alt: 'Integrated solar and EV charging solution for modern homes' },
+      { src: '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg', alt: 'Myenergi Libbi battery storage system installed with solar panels' }
     ];
     
     const [currentImageIdx, setCurrentImageIdx] = useState(0);
@@ -365,14 +404,15 @@ function App() {
     return (
       <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden bg-brand-black">
-          {heroImages.map((img, idx) => (
-             <div 
-               key={img}
+          {heroImages.map((image, idx) => (
+             <div
+               key={image.src}
                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === currentImageIdx ? 'opacity-50' : 'opacity-0'}`}
              >
-               <img 
-                 src={img} 
-                 alt="Solar Installation Background" 
+               <img
+                 src={image.src}
+                 alt={image.alt}
+                 loading={idx === 0 ? 'eager' : 'lazy'}
                  className={`w-full h-full object-cover animate-ken-burns origin-center ${idx === currentImageIdx ? 'scale-100' : 'scale-110'}`}
                />
              </div>
@@ -1049,30 +1089,40 @@ function App() {
     )
   }
 
-  // DEFAULT HOME VIEW
+  if (view === 'home') {
+    return (
+      <div className="bg-brand-black min-h-screen text-slate-200 selection:bg-brand-green selection:text-brand-black">
+        <Navbar />
+        <Hero />
+        <ImpactStats />
+        <LiveMonitor />
+        <ServicesList />
+        <SmartEcosystem />
+        <Gallery />
+        <SolarCalculator onRequestQuote={handleCalculatorQuote} />
+        <Testimonials />
+        <TrustedBrands />
+        <Contact />
+        <Footer />
+        <MobileStickyCTA />
+
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className={`fixed bottom-20 md:bottom-8 right-8 bg-brand-green text-brand-black p-3 rounded-full shadow-neon hover:shadow-neon-hover transition-all transform hover:-translate-y-1 z-40 ${scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}
+        >
+          <ArrowUp size={24} />
+        </button>
+      </div>
+    );
+  }
+
+  // 404 FALLBACK - catches all unmatched routes including invalid dynamic params
   return (
-    <div className="bg-brand-black min-h-screen text-slate-200 selection:bg-brand-green selection:text-brand-black">
+    <div className="bg-brand-black min-h-screen text-slate-200">
       <Navbar />
-      <Hero />
-      <ImpactStats />
-      <LiveMonitor />
-      <ServicesList />
-      <SmartEcosystem />
-      <Gallery />
-      <SolarCalculator onRequestQuote={handleCalculatorQuote} />
-      <Testimonials />
-      <TrustedBrands />
-      <Contact />
+      <NotFound onNavigate={(path) => navigate(path)} />
       <Footer />
       <MobileStickyCTA />
-      
-      {/* Scroll To Top */}
-      <button 
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className={`fixed bottom-20 md:bottom-8 right-8 bg-brand-green text-brand-black p-3 rounded-full shadow-neon hover:shadow-neon-hover transition-all transform hover:-translate-y-1 z-40 ${scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}
-      >
-        <ArrowUp size={24} />
-      </button>
     </div>
   );
 }

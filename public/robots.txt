@@ -7,6 +7,7 @@ Disallow: /*?*
 Crawl-delay: 1
 
 Sitemap: https://careyelectrical.co.uk/sitemap.xml
+Sitemap: https://careyelectrical.co.uk/sitemap-images.xml
 
 User-agent: Googlebot
 Allow: /

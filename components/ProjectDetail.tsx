@@ -151,7 +151,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
                 <h3 className="text-2xl font-bold text-white mb-6">Gallery</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {data.gallery.map((img, idx) => (
-                    <img key={idx} src={img} alt={`Installation photo ${idx + 1}`} className="rounded-xl border border-slate-800 w-full h-64 object-cover" />
+                    <img key={idx} src={img} alt={`${data.title} - ${data.systemSize || 'solar'} installation photo ${idx + 1} in ${data.location}`} loading="lazy" className="rounded-xl border border-slate-800 w-full h-64 object-cover" />
                   ))}
                 </div>
               </Reveal>
