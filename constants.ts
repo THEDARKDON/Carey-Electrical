@@ -627,7 +627,12 @@ export const BLOG_POSTS: BlogPost[] = [
   { id: '14', slug: 'solar-panel-costs-newbury', title: 'Solar Panel Installation Costs in Newbury - Complete Guide', excerpt: 'What do solar panels cost in Newbury and West Berkshire? Local pricing, grants, and ROI calculations for RG14 homeowners.', date: 'Dec 10, 2025', image: '/img_0875.jpeg', category: 'Local Guides', readTime: '6 min read' },
   { id: '15', slug: 'solar-worth-it-wokingham', title: 'Is Solar Worth It in Wokingham? ROI Calculator & Guide', excerpt: 'Calculate your solar ROI in Wokingham. We break down costs, savings, and payback periods for RG40 and RG41 postcodes.', date: 'Dec 10, 2025', image: '/img_8715.jpeg', category: 'Local Guides', readTime: '7 min read' },
   { id: '16', slug: 'solar-panel-costs-bracknell', title: 'Solar Panels in Bracknell - Costs, Savings & Local Installers', excerpt: 'Everything you need to know about solar panel costs in Bracknell, Crowthorne and Sandhurst. 2025 pricing guide.', date: 'Dec 10, 2025', image: '/img_8050.jpeg', category: 'Local Guides', readTime: '6 min read' },
-  { id: '17', slug: 'solar-panel-costs-basingstoke', title: 'Solar Panel Costs in Basingstoke - 2025 Price Guide', excerpt: 'How much do solar panels cost in Basingstoke? Local installation prices, battery storage options, and available grants.', date: 'Dec 10, 2025', image: '/img_0876.jpeg', category: 'Local Guides', readTime: '6 min read' }
+  { id: '17', slug: 'solar-panel-costs-basingstoke', title: 'Solar Panel Costs in Basingstoke - 2025 Price Guide', excerpt: 'How much do solar panels cost in Basingstoke? Local installation prices, battery storage options, and available grants.', date: 'Dec 10, 2025', image: '/img_0876.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '18', slug: 'solar-panel-costs-windsor', title: 'Solar Panels in Windsor - Costs & Heritage Installation Guide', excerpt: 'Installing solar in Royal Windsor? Complete guide to costs, conservation area rules, and premium installations in SL4.', date: 'Dec 10, 2025', image: '/img_0875.jpeg', category: 'Local Guides', readTime: '7 min read' },
+  { id: '19', slug: 'solar-panel-costs-maidenhead', title: 'Solar Panel Installation Costs in Maidenhead (2025)', excerpt: 'What do solar panels cost in Maidenhead, Cookham and Marlow? Local pricing guide for SL6 homeowners.', date: 'Dec 10, 2025', image: '/img_8715.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '20', slug: 'solar-panels-winchester-costs', title: 'Solar Panels in Winchester - Heritage City Installation Guide', excerpt: 'Installing solar in Winchester conservation areas. Costs, planning rules, and all-black panel options for SO21-SO23.', date: 'Dec 10, 2025', image: '/img_0493.jpeg', category: 'Local Guides', readTime: '7 min read' },
+  { id: '21', slug: 'solar-panel-costs-oxford', title: 'Solar Panel Costs in Oxford - University City Guide', excerpt: 'Solar installation prices for Oxford homeowners. Coverage from Headington to Summertown, including student lets.', date: 'Dec 10, 2025', image: '/img_0494.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '22', slug: 'solar-panel-costs-slough', title: 'Solar Panels in Slough - Costs, Savings & Local Installers', excerpt: 'Complete guide to solar panel costs in Slough, Langley and Colnbrook. Urban installation specialists.', date: 'Dec 10, 2025', image: '/img_8050.jpeg', category: 'Local Guides', readTime: '6 min read' }
 ];
 
 export const BLOG_CONTENT: Record<string, BlogPostData> = {
@@ -947,6 +952,277 @@ export const BLOG_CONTENT: Record<string, BlogPostData> = {
     ],
     locationSlug: 'basingstoke',
     relatedLocations: ['tadley', 'kingsclere', 'overton', 'whitchurch'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-windsor': {
+    id: '18',
+    title: 'Solar Panels in Windsor - Costs & Heritage Installation Guide',
+    date: 'Dec 10, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0875.jpeg',
+    content: `
+      <h2>Installing Solar in Royal Windsor</h2>
+      <p>Windsor presents unique opportunities and challenges for solar installations. As a royal borough with significant heritage, many properties require sensitive approaches - but that does not mean solar is off the table. Our experience in <strong>SL4</strong> postcodes shows that premium all-black systems can complement even the most prestigious properties.</p>
+
+      <h3>Windsor Solar Panel Costs</h3>
+      <p>Premium property areas typically command slightly higher installation costs due to aesthetic requirements:</p>
+      <ul>
+        <li><strong>3kW System:</strong> £5,800 - £7,000 - Suitable for period cottages near the river</li>
+        <li><strong>4kW System:</strong> £7,000 - £8,500 - Popular for Victorian terraces in the town</li>
+        <li><strong>5kW System:</strong> £8,200 - £10,000 - Ideal for larger homes in Clewer and Dedworth</li>
+        <li><strong>6kW+ System:</strong> £9,800 - £13,000 - For executive properties in Old Windsor</li>
+      </ul>
+
+      <h3>Conservation Area Considerations</h3>
+      <p>Much of Windsor falls within conservation areas. Key considerations include:</p>
+      <ul>
+        <li><strong>Panel Aesthetics:</strong> All-black panels with black frames are essential for heritage settings</li>
+        <li><strong>Roof Position:</strong> Installations on rear-facing or non-visible roof slopes typically require no planning permission</li>
+        <li><strong>Listed Buildings:</strong> Properties near the Castle may need Listed Building Consent</li>
+        <li><strong>Our Experience:</strong> We have completed numerous installations in RBWM conservation areas</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Windsor coverage includes:</p>
+      <ul>
+        <li>Windsor Town Centre and Eton</li>
+        <li>Old Windsor and Datchet</li>
+        <li>Clewer Village and Dedworth</li>
+        <li><a href="#/location/ascot">Ascot</a> and Sunningdale</li>
+        <li><a href="#/location/maidenhead">Maidenhead</a> and Bray</li>
+      </ul>
+
+      <h3>Premium Installations for Premium Properties</h3>
+      <p>Windsor homeowners often prefer our <a href="#/services/integrated-solar">integrated in-roof solar systems</a> which sit flush with the roof for a seamless appearance. Combined with <a href="#/product/tesla-powerwall-3">Tesla Powerwall 3</a> storage, these systems offer both performance and aesthetics.</p>
+
+      <h3>Get Expert Advice</h3>
+      <p>We provide free consultations for Windsor properties, including assessment of any planning requirements. Our team understands RBWM regulations and can advise on the best approach for your specific situation.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Windsor', url: '#/location/windsor' },
+      { label: 'Integrated Solar Systems', url: '#/services/integrated-solar' },
+      { label: 'View Our Portfolio', url: '#/portfolio' }
+    ],
+    locationSlug: 'windsor',
+    relatedLocations: ['ascot', 'maidenhead', 'slough'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-maidenhead': {
+    id: '19',
+    title: 'Solar Panel Installation Costs in Maidenhead (2025)',
+    date: 'Dec 10, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_8715.jpeg',
+    content: `
+      <h2>Solar Panel Prices in Maidenhead</h2>
+      <p>Maidenhead has seen significant solar adoption in recent years. The town's mix of riverside properties, executive estates, and suburban family homes makes it ideal for solar installations. Here is what you can expect to pay in the <strong>SL6</strong> postcode area.</p>
+
+      <h3>Maidenhead Solar Installation Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,600 - £6,800 - Ideal for townhouses and smaller properties</li>
+        <li><strong>4kW System:</strong> £6,800 - £8,200 - Most popular choice for family homes in Boyn Hill</li>
+        <li><strong>5kW System:</strong> £7,900 - £9,600 - Perfect for larger properties in Cox Green</li>
+        <li><strong>6kW+ System:</strong> £9,500 - £12,500 - For executive homes near Boulters Lock</li>
+      </ul>
+
+      <h3>Surrounding Areas</h3>
+      <p>We cover all areas around Maidenhead including:</p>
+      <ul>
+        <li>Cookham and Cookham Rise - village properties with excellent solar potential</li>
+        <li>Marlow and Bourne End - Thames-side homes with premium installations</li>
+        <li>Taplow and Burnham - quick access from our base</li>
+        <li><a href="#/location/windsor">Windsor</a> and <a href="#/location/slough">Slough</a></li>
+      </ul>
+
+      <h3>Why Maidenhead Homes Excel for Solar</h3>
+      <p>Several factors make Maidenhead particularly suited to solar:</p>
+      <ul>
+        <li><strong>Property Size:</strong> Many 4+ bedroom homes with large roof areas</li>
+        <li><strong>Roof Types:</strong> Mix of modern tiles and traditional slate - we work with both</li>
+        <li><strong>High Energy Users:</strong> Larger homes benefit most from solar savings</li>
+        <li><strong>EV Adoption:</strong> Strong demand for combined solar and <a href="#/product/myenergi-zappi">EV charging</a></li>
+      </ul>
+
+      <h3>Crossrail Premium</h3>
+      <p>With the Elizabeth Line connecting Maidenhead directly to central London, property values have increased. Solar adds further value while reducing running costs for commuters who charge EVs at home.</p>
+
+      <h3>Battery Storage Recommendations</h3>
+      <p>For Maidenhead's commuter households, <a href="#/services/battery-storage">battery storage</a> is particularly valuable. Store solar energy during the day while at work, then use it during expensive evening peak hours.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Maidenhead', url: '#/location/maidenhead' },
+      { label: 'EV Charger Installation', url: '#/services/ev-charging' },
+      { label: 'Battery Storage Options', url: '#/services/battery-storage' }
+    ],
+    locationSlug: 'maidenhead',
+    relatedLocations: ['windsor', 'slough', 'henley-on-thames'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panels-winchester-costs': {
+    id: '20',
+    title: 'Solar Panels in Winchester - Heritage City Installation Guide',
+    date: 'Dec 10, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0493.jpeg',
+    content: `
+      <h2>Solar Installation in Winchester</h2>
+      <p>Winchester is one of England's most historic cities, yet it is embracing renewable energy. Many properties in the <strong>SO21, SO22, and SO23</strong> postcodes are now generating their own clean electricity. Here is our guide to costs and considerations.</p>
+
+      <h3>Winchester Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,500 - £6,700 - Suitable for Victorian terraces near the Cathedral</li>
+        <li><strong>4kW System:</strong> £6,600 - £8,000 - Popular for suburban homes in Weeke and Harestock</li>
+        <li><strong>5kW System:</strong> £7,600 - £9,300 - Great for larger properties in Compton and Twyford</li>
+        <li><strong>6kW+ System:</strong> £9,200 - £12,000 - For rural homes in the surrounding villages</li>
+      </ul>
+
+      <h3>Heritage and Conservation</h3>
+      <p>Winchester City Council takes heritage seriously, but supports sustainable energy. Key points:</p>
+      <ul>
+        <li><strong>Conservation Areas:</strong> Much of central Winchester requires careful consideration</li>
+        <li><strong>All-Black Panels:</strong> We exclusively use premium all-black systems for heritage settings</li>
+        <li><strong>Roof Positioning:</strong> Rear or non-visible installations typically do not need permission</li>
+        <li><strong>Our Track Record:</strong> See our <a href="#/blog/solar-panels-winchester-heritage">Winchester heritage installation guide</a></li>
+      </ul>
+
+      <h3>Village Coverage</h3>
+      <p>Beyond Winchester city, we serve the surrounding Hampshire villages:</p>
+      <ul>
+        <li>Kings Worthy, Headbourne Worthy, and Littleton</li>
+        <li>Alresford, Itchen Abbas, and Itchen Valley</li>
+        <li>South Downs villages including Cheriton and Bramdean</li>
+        <li><a href="#/location/basingstoke">Basingstoke</a> and <a href="#/location/andover">Andover</a></li>
+      </ul>
+
+      <h3>University City Benefits</h3>
+      <p>Winchester has a significant student population. Landlords with HMOs can benefit from solar by reducing utility bills and improving EPC ratings - increasingly important for rental compliance.</p>
+
+      <h3>Combined Heat Pump Systems</h3>
+      <p>Many Winchester homeowners are combining solar with heat pumps for full decarbonisation. Our solar systems are designed to integrate with heat pump installations.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Winchester', url: '#/location/winchester' },
+      { label: 'Heritage Installation Guide', url: '#/blog/solar-panels-winchester-heritage' },
+      { label: 'Our Solar Services', url: '#/services/domestic-solar' }
+    ],
+    locationSlug: 'winchester',
+    relatedLocations: ['basingstoke', 'andover'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-oxford': {
+    id: '21',
+    title: 'Solar Panel Costs in Oxford - University City Guide',
+    date: 'Dec 10, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0494.jpeg',
+    content: `
+      <h2>Solar Installation Prices in Oxford</h2>
+      <p>Oxford is leading the way on climate action, with ambitious net-zero targets driving solar adoption. From Headington to Summertown, homeowners across <strong>OX1, OX2, OX3, and OX4</strong> postcodes are investing in solar. Here is what you need to know about costs.</p>
+
+      <h3>Oxford Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,600 - £6,800 - Ideal for Victorian terraces in East Oxford</li>
+        <li><strong>4kW System:</strong> £6,700 - £8,200 - Popular for family homes in Headington and Marston</li>
+        <li><strong>5kW System:</strong> £7,800 - £9,500 - Great for larger properties in Summertown</li>
+        <li><strong>6kW+ System:</strong> £9,400 - £12,500 - For executive homes in North Oxford</li>
+      </ul>
+
+      <h3>Oxford City Council's Climate Goals</h3>
+      <p>Oxford declared a Climate Emergency and aims for net-zero by 2040. The council actively supports residential solar through:</p>
+      <ul>
+        <li>Streamlined planning for standard installations</li>
+        <li>Zero-carbon area targets for new developments</li>
+        <li>Support for retrofit improvements in older properties</li>
+        <li>See our article on <a href="#/blog/oxford-solar-net-zero">Oxford's path to net zero</a></li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Oxford coverage includes:</p>
+      <ul>
+        <li>Central Oxford, Jericho, and North Oxford</li>
+        <li>Headington, Marston, and Barton</li>
+        <li>Cowley, Littlemore, and Rose Hill</li>
+        <li><a href="#/location/abingdon">Abingdon</a>, <a href="#/location/didcot">Didcot</a>, and <a href="#/location/wallingford">Wallingford</a></li>
+      </ul>
+
+      <h3>Landlord and HMO Considerations</h3>
+      <p>Oxford's large rental market creates opportunities for landlords. Solar installations can:</p>
+      <ul>
+        <li>Improve EPC ratings for rental compliance</li>
+        <li>Reduce shared electricity costs in HMOs</li>
+        <li>Add value to investment properties</li>
+        <li>Qualify for green finance options</li>
+      </ul>
+
+      <h3>Battery Storage for High Users</h3>
+      <p>Academic households often have irregular usage patterns. <a href="#/services/battery-storage">Battery storage</a> ensures you maximise self-consumption regardless of when you are home.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Oxford', url: '#/location/oxford' },
+      { label: 'Oxford Net Zero Article', url: '#/blog/oxford-solar-net-zero' },
+      { label: 'Battery Storage Solutions', url: '#/services/battery-storage' }
+    ],
+    locationSlug: 'oxford',
+    relatedLocations: ['abingdon', 'didcot', 'wallingford', 'henley-on-thames'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-slough': {
+    id: '22',
+    title: 'Solar Panels in Slough - Costs, Savings & Local Installers',
+    date: 'Dec 10, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_8050.jpeg',
+    content: `
+      <h2>Solar Panel Installation in Slough</h2>
+      <p>Slough's regeneration has brought renewed focus on sustainability. The borough's mix of new developments and established residential areas offers excellent solar potential. Here is what homeowners in <strong>SL1, SL2, and SL3</strong> postcodes can expect.</p>
+
+      <h3>Slough Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,300 - £6,400 - Ideal for terraced homes in central Slough</li>
+        <li><strong>4kW System:</strong> £6,400 - £7,800 - Popular for family homes in Langley and Colnbrook</li>
+        <li><strong>5kW System:</strong> £7,400 - £9,100 - Great for larger properties in Farnham Common</li>
+        <li><strong>6kW+ System:</strong> £8,900 - £11,500 - For detached homes in surrounding villages</li>
+      </ul>
+
+      <h3>Urban Installation Specialists</h3>
+      <p>Slough's urban environment requires experienced installers who understand:</p>
+      <ul>
+        <li><strong>Flat Roofs:</strong> Many properties have flat or low-pitch roofs - we specialise in <a href="#/services/flat-roof-solar">flat roof installations</a></li>
+        <li><strong>Terraced Access:</strong> Experience with scaffolding and access for mid-terrace properties</li>
+        <li><strong>New Builds:</strong> Integration with modern construction methods</li>
+        <li><strong>Mixed-Use:</strong> Combined residential and commercial installations</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Slough coverage includes:</p>
+      <ul>
+        <li>Slough Town Centre and Upton</li>
+        <li>Langley, Colnbrook, and Brands Hill</li>
+        <li>Burnham and Farnham Royal</li>
+        <li><a href="#/location/windsor">Windsor</a> and <a href="#/location/maidenhead">Maidenhead</a></li>
+      </ul>
+
+      <h3>Trading Estate Proximity</h3>
+      <p>Many Slough residents work locally on the trading estate. Short commutes mean more time at home during daylight hours, increasing solar self-consumption rates without battery storage.</p>
+
+      <h3>Heathrow Connection</h3>
+      <p>Excellent transport links mean high EV adoption. Combine solar with a <a href="#/product/myenergi-zappi">Myenergi Zappi</a> for free charging from your roof.</p>
+
+      <h3>Get Your Free Quote</h3>
+      <p>We provide free surveys across Slough Borough. Our team will assess your property type, roof condition, and design a system optimised for your needs.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Slough', url: '#/location/slough' },
+      { label: 'Flat Roof Solar Options', url: '#/services/flat-roof-solar' },
+      { label: 'EV Charger Installation', url: '#/services/ev-charging' }
+    ],
+    locationSlug: 'slough',
+    relatedLocations: ['windsor', 'maidenhead'],
     targetService: 'domestic-solar'
   }
 };
