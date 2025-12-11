@@ -632,7 +632,12 @@ export const BLOG_POSTS: BlogPost[] = [
   { id: '19', slug: 'solar-panel-costs-maidenhead', title: 'Solar Panel Installation Costs in Maidenhead (2025)', excerpt: 'What do solar panels cost in Maidenhead, Cookham and Marlow? Local pricing guide for SL6 homeowners.', date: 'Dec 10, 2025', image: '/img_8715.jpeg', category: 'Local Guides', readTime: '6 min read' },
   { id: '20', slug: 'solar-panels-winchester-costs', title: 'Solar Panels in Winchester - Heritage City Installation Guide', excerpt: 'Installing solar in Winchester conservation areas. Costs, planning rules, and all-black panel options for SO21-SO23.', date: 'Dec 10, 2025', image: '/img_0493.jpeg', category: 'Local Guides', readTime: '7 min read' },
   { id: '21', slug: 'solar-panel-costs-oxford', title: 'Solar Panel Costs in Oxford - University City Guide', excerpt: 'Solar installation prices for Oxford homeowners. Coverage from Headington to Summertown, including student lets.', date: 'Dec 10, 2025', image: '/img_0494.jpeg', category: 'Local Guides', readTime: '6 min read' },
-  { id: '22', slug: 'solar-panel-costs-slough', title: 'Solar Panels in Slough - Costs, Savings & Local Installers', excerpt: 'Complete guide to solar panel costs in Slough, Langley and Colnbrook. Urban installation specialists.', date: 'Dec 10, 2025', image: '/img_8050.jpeg', category: 'Local Guides', readTime: '6 min read' }
+  { id: '22', slug: 'solar-panel-costs-slough', title: 'Solar Panels in Slough - Costs, Savings & Local Installers', excerpt: 'Complete guide to solar panel costs in Slough, Langley and Colnbrook. Urban installation specialists.', date: 'Dec 10, 2025', image: '/img_8050.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '23', slug: 'solar-panel-costs-ascot', title: 'Solar Panels in Ascot - Premium Installation Guide', excerpt: 'Installing solar in Ascot, Sunninghill and Sunningdale. Premium systems for prestigious properties in SL5.', date: 'Dec 11, 2025', image: '/img_0493.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '24', slug: 'solar-panel-costs-henley', title: 'Solar Panel Costs in Henley-on-Thames (2025)', excerpt: 'Solar installation prices for Henley, Shiplake and the Chilterns. Thames Valley specialists.', date: 'Dec 11, 2025', image: '/img_0494.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '25', slug: 'solar-panel-costs-didcot', title: 'Solar Panels in Didcot - New Build & Retrofit Guide', excerpt: 'Solar costs for Didcot, Harwell and Great Western Park. New development specialists.', date: 'Dec 11, 2025', image: '/img_8715.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '26', slug: 'solar-panel-costs-andover', title: 'Solar Panel Installation Costs in Andover', excerpt: 'What do solar panels cost in Andover and Test Valley? Local pricing for SP10 and SP11 postcodes.', date: 'Dec 11, 2025', image: '/img_0875.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '27', slug: 'solar-panel-costs-wallingford', title: 'Solar Panels in Wallingford - South Oxfordshire Guide', excerpt: 'Solar installation costs for Wallingford, Cholsey and Benson. Rural and village property specialists.', date: 'Dec 11, 2025', image: '/img_8050.jpeg', category: 'Local Guides', readTime: '6 min read' }
 ];
 
 export const BLOG_CONTENT: Record<string, BlogPostData> = {
@@ -1223,6 +1228,267 @@ export const BLOG_CONTENT: Record<string, BlogPostData> = {
     ],
     locationSlug: 'slough',
     relatedLocations: ['windsor', 'maidenhead'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-ascot': {
+    id: '23',
+    title: 'Solar Panels in Ascot - Premium Installation Guide',
+    date: 'Dec 11, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0493.jpeg',
+    content: `
+      <h2>Premium Solar for Ascot Properties</h2>
+      <p>Ascot is synonymous with prestige, and solar installations here need to match. Our experience in <strong>SL5</strong> postcodes shows that homeowners expect discreet, high-performance systems that complement rather than compromise their properties. Here is what premium solar looks like in Ascot.</p>
+
+      <h3>Ascot Solar Panel Costs</h3>
+      <p>Executive properties typically require larger systems with premium aesthetics:</p>
+      <ul>
+        <li><strong>4kW System:</strong> £7,200 - £8,800 - For period properties in Ascot village</li>
+        <li><strong>5kW System:</strong> £8,500 - £10,200 - Popular for Sunninghill family homes</li>
+        <li><strong>6kW System:</strong> £10,000 - £12,500 - Ideal for Sunningdale properties</li>
+        <li><strong>8kW+ System:</strong> £13,000 - £18,000 - For larger estates and equestrian properties</li>
+      </ul>
+
+      <h3>Why Ascot Chooses Premium</h3>
+      <p>Our Ascot clients typically specify:</p>
+      <ul>
+        <li><strong>All-Black Panels:</strong> Premium monocrystalline with black frames and backsheets</li>
+        <li><strong>Integrated Systems:</strong> <a href="#/services/integrated-solar">In-roof solar</a> that sits flush with existing tiles</li>
+        <li><strong>Premium Batteries:</strong> <a href="#/product/tesla-powerwall-3">Tesla Powerwall 3</a> for seamless energy storage</li>
+        <li><strong>Smart EV Charging:</strong> <a href="#/product/myenergi-zappi">Myenergi Zappi</a> for the Range Rover or Tesla</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Ascot coverage includes:</p>
+      <ul>
+        <li>Ascot Village and North Ascot</li>
+        <li>Sunninghill and Sunningdale</li>
+        <li>Virginia Water and Wentworth</li>
+        <li><a href="#/location/windsor">Windsor</a> and <a href="#/location/bracknell">Bracknell</a></li>
+      </ul>
+
+      <h3>Wentworth Estate Expertise</h3>
+      <p>We have completed installations on the Wentworth Estate and understand the aesthetic standards required. Our all-black systems and careful positioning ensure minimal visual impact while maximising generation.</p>
+
+      <h3>Large Roof Opportunities</h3>
+      <p>Ascot properties often have substantial roof areas. Larger systems mean greater savings and faster payback, especially when combined with EV charging and home battery storage.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Ascot', url: '#/location/ascot' },
+      { label: 'Integrated Solar Systems', url: '#/services/integrated-solar' },
+      { label: 'Tesla Powerwall 3', url: '#/product/tesla-powerwall-3' }
+    ],
+    locationSlug: 'ascot',
+    relatedLocations: ['windsor', 'bracknell', 'wokingham'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-henley': {
+    id: '24',
+    title: 'Solar Panel Costs in Henley-on-Thames (2025)',
+    date: 'Dec 11, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0494.jpeg',
+    content: `
+      <h2>Solar Installation in Henley-on-Thames</h2>
+      <p>Henley-on-Thames offers a unique blend of riverside living, Chilterns charm, and strong environmental awareness. The town's affluent residents are increasingly choosing solar, and we have become the local installer of choice for <strong>RG9</strong> properties.</p>
+
+      <h3>Henley Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,800 - £7,000 - Suitable for townhouses near the river</li>
+        <li><strong>4kW System:</strong> £7,000 - £8,500 - Popular for family homes in Henley town</li>
+        <li><strong>5kW System:</strong> £8,200 - £10,000 - Ideal for larger properties in Shiplake</li>
+        <li><strong>6kW+ System:</strong> £9,800 - £13,000 - For Chilterns village properties</li>
+      </ul>
+
+      <h3>Chilterns AONB Considerations</h3>
+      <p>Much of the area around Henley falls within the Chilterns Area of Outstanding Natural Beauty. This means:</p>
+      <ul>
+        <li><strong>Sensitive Design:</strong> All-black panels are essential for AONB compliance</li>
+        <li><strong>Planning Awareness:</strong> Some properties may need planning consultation</li>
+        <li><strong>Our Experience:</strong> We have completed numerous AONB installations successfully</li>
+        <li><strong>Integrated Options:</strong> <a href="#/services/integrated-solar">In-roof systems</a> offer the most discreet solution</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Henley coverage extends to:</p>
+      <ul>
+        <li>Henley town centre and riverside properties</li>
+        <li>Shiplake, Lower Shiplake and Wargrave</li>
+        <li>Nettlebed, Rotherfield Greys and Sonning Common</li>
+        <li><a href="#/location/reading">Reading</a>, <a href="#/location/maidenhead">Maidenhead</a>, and <a href="#/location/oxford">Oxford</a></li>
+      </ul>
+
+      <h3>Thames Valley Premium</h3>
+      <p>Riverside properties in Henley command premium prices. Solar adds value while reducing running costs, particularly important for larger homes with significant energy demands.</p>
+
+      <h3>Regatta Town Goes Green</h3>
+      <p>Henley has a strong environmental community. Solar adoption is growing rapidly as residents seek to reduce their carbon footprint while benefiting from long-term energy savings.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Henley', url: '#/location/henley-on-thames' },
+      { label: 'Reading Solar Guide', url: '#/blog/solar-panel-costs-reading' },
+      { label: 'Battery Storage Options', url: '#/services/battery-storage' }
+    ],
+    locationSlug: 'henley-on-thames',
+    relatedLocations: ['reading', 'maidenhead', 'oxford', 'wallingford'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-didcot': {
+    id: '25',
+    title: 'Solar Panels in Didcot - New Build & Retrofit Guide',
+    date: 'Dec 11, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_8715.jpeg',
+    content: `
+      <h2>Solar Installation in Didcot</h2>
+      <p>Didcot has transformed in recent years with major new developments like Great Western Park. This mix of new builds and established properties creates diverse solar opportunities. Here is what homeowners in <strong>OX11</strong> postcodes can expect.</p>
+
+      <h3>Didcot Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,200 - £6,300 - Ideal for terraced homes and starter properties</li>
+        <li><strong>4kW System:</strong> £6,300 - £7,700 - Popular for Great Western Park family homes</li>
+        <li><strong>5kW System:</strong> £7,300 - £8,900 - Great for larger properties in Ladygrove</li>
+        <li><strong>6kW+ System:</strong> £8,800 - £11,500 - For detached homes in surrounding villages</li>
+      </ul>
+
+      <h3>New Build Advantages</h3>
+      <p>Didcot's new developments offer excellent solar potential:</p>
+      <ul>
+        <li><strong>Modern Roofs:</strong> New build roofs are typically in perfect condition for solar</li>
+        <li><strong>South-Facing Plots:</strong> Many new homes are designed with solar in mind</li>
+        <li><strong>EPC Requirements:</strong> Adding solar to a new build improves your EPC rating</li>
+        <li><strong>Developer Upgrades:</strong> We can work alongside your new build purchase</li>
+      </ul>
+
+      <h3>Harwell Campus Connection</h3>
+      <p>Many Didcot residents work at Harwell Science and Innovation Campus. The area has a strong technology and sustainability focus, making solar adoption particularly popular among the science park community.</p>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Didcot coverage includes:</p>
+      <ul>
+        <li>Didcot town centre, Ladygrove, and Great Western Park</li>
+        <li>Harwell, East Hagbourne, and West Hagbourne</li>
+        <li>Steventon, Milton, and Sutton Courtenay</li>
+        <li><a href="#/location/abingdon">Abingdon</a>, <a href="#/location/wallingford">Wallingford</a>, and <a href="#/location/oxford">Oxford</a></li>
+      </ul>
+
+      <h3>GWR Commuter Benefits</h3>
+      <p>Excellent rail links to London and Reading mean many residents commute. <a href="#/services/battery-storage">Battery storage</a> allows you to store daytime solar generation for evening use when you return home.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Didcot', url: '#/location/didcot' },
+      { label: 'Oxford Solar Guide', url: '#/blog/solar-panel-costs-oxford' },
+      { label: 'Battery Storage Solutions', url: '#/services/battery-storage' }
+    ],
+    locationSlug: 'didcot',
+    relatedLocations: ['abingdon', 'wallingford', 'oxford', 'newbury'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-andover': {
+    id: '26',
+    title: 'Solar Panel Installation Costs in Andover',
+    date: 'Dec 11, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0875.jpeg',
+    content: `
+      <h2>Solar Panels in Andover</h2>
+      <p>Andover and the Test Valley offer excellent conditions for solar installations. The mix of market town properties and rural villages, combined with relatively low shading, makes <strong>SP10 and SP11</strong> postcodes ideal for solar generation.</p>
+
+      <h3>Andover Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,200 - £6,300 - Suitable for terraced homes in the town centre</li>
+        <li><strong>4kW System:</strong> £6,300 - £7,700 - Popular for family homes in Augusta Park</li>
+        <li><strong>5kW System:</strong> £7,200 - £8,800 - Great for larger properties in Charlton</li>
+        <li><strong>6kW+ System:</strong> £8,700 - £11,500 - For rural properties and farmhouses</li>
+      </ul>
+
+      <h3>Test Valley Advantages</h3>
+      <p>The Test Valley district offers several solar benefits:</p>
+      <ul>
+        <li><strong>Rural Properties:</strong> Larger roofs with minimal shading from neighbours</li>
+        <li><strong>Agricultural Buildings:</strong> Barns and outbuildings suitable for solar</li>
+        <li><strong>Lower Light Pollution:</strong> Generally unobstructed sky views</li>
+        <li><strong>Oil Heating Replacement:</strong> Many rural homes are off-gas and benefit from solar</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Andover coverage includes:</p>
+      <ul>
+        <li>Andover town centre, Augusta Park, and Picket Piece</li>
+        <li>Charlton, Penton, and the Wallops</li>
+        <li>Stockbridge, Longstock, and Wherwell</li>
+        <li><a href="#/location/basingstoke">Basingstoke</a>, <a href="#/location/winchester">Winchester</a>, and Salisbury</li>
+      </ul>
+
+      <h3>Off-Grid Considerations</h3>
+      <p>Rural Test Valley properties often rely on oil heating. Solar combined with <a href="#/services/battery-storage">battery storage</a> can significantly reduce reliance on oil, especially when paired with a heat pump.</p>
+
+      <h3>Army Town Expertise</h3>
+      <p>With significant military presence in the area, we understand the needs of service families and MOD housing. We work with both private homeowners and rental properties.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Andover', url: '#/location/andover' },
+      { label: 'Winchester Solar Guide', url: '#/blog/solar-panels-winchester-costs' },
+      { label: 'Basingstoke Solar Guide', url: '#/blog/solar-panel-costs-basingstoke' }
+    ],
+    locationSlug: 'andover',
+    relatedLocations: ['basingstoke', 'winchester', 'newbury'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-wallingford': {
+    id: '27',
+    title: 'Solar Panels in Wallingford - South Oxfordshire Guide',
+    date: 'Dec 11, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_8050.jpeg',
+    content: `
+      <h2>Solar Installation in Wallingford</h2>
+      <p>Wallingford is a historic market town with a strong community focus on sustainability. Properties in <strong>OX10</strong> postcodes range from period townhouses to modern developments, all offering good solar potential in South Oxfordshire.</p>
+
+      <h3>Wallingford Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,400 - £6,500 - Suitable for townhouses in the market square area</li>
+        <li><strong>4kW System:</strong> £6,500 - £7,900 - Popular for family homes in Winterbrook</li>
+        <li><strong>5kW System:</strong> £7,500 - £9,200 - Ideal for larger properties in Cholsey</li>
+        <li><strong>6kW+ System:</strong> £9,000 - £12,000 - For village properties in Benson and Ewelme</li>
+      </ul>
+
+      <h3>Historic Town Considerations</h3>
+      <p>Wallingford has a rich history and several conservation areas:</p>
+      <ul>
+        <li><strong>Conservation Sensitivity:</strong> All-black panels essential for period properties</li>
+        <li><strong>Rear Installations:</strong> Positioning on non-visible roof slopes where possible</li>
+        <li><strong>Our Experience:</strong> Successful installations throughout South Oxfordshire</li>
+        <li><strong>Planning Support:</strong> We can advise on any required permissions</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Wallingford coverage extends to:</p>
+      <ul>
+        <li>Wallingford town centre and Castle grounds area</li>
+        <li>Cholsey, Moulsford, and South Stoke</li>
+        <li>Benson, Ewelme, and Brightwell-cum-Sotwell</li>
+        <li><a href="#/location/didcot">Didcot</a>, <a href="#/location/oxford">Oxford</a>, and <a href="#/location/henley-on-thames">Henley</a></li>
+      </ul>
+
+      <h3>Agatha Christie Country</h3>
+      <p>Wallingford was home to Agatha Christie, and the town maintains its traditional character. Modern solar technology can be installed sensitively to preserve this heritage while providing clean energy for generations to come.</p>
+
+      <h3>RAF Benson Proximity</h3>
+      <p>The nearby RAF base means many local residents have service connections. We provide installations for both owner-occupied and rental properties in the area.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Wallingford', url: '#/location/wallingford' },
+      { label: 'Didcot Solar Guide', url: '#/blog/solar-panel-costs-didcot' },
+      { label: 'Oxford Solar Guide', url: '#/blog/solar-panel-costs-oxford' }
+    ],
+    locationSlug: 'wallingford',
+    relatedLocations: ['didcot', 'oxford', 'henley-on-thames', 'reading'],
     targetService: 'domestic-solar'
   }
 };
