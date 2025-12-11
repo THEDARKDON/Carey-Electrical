@@ -318,57 +318,59 @@ function App() {
   );
 
   const Navbar = () => (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-brand-black/80 backdrop-blur-xl border-b border-white/5 py-4 shadow-glass' : 'bg-transparent py-8'}`}>
+    <nav role="navigation" aria-label="Main navigation" className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-brand-black/80 backdrop-blur-xl border-b border-white/5 py-4 shadow-glass' : 'bg-transparent py-8'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center gap-2 group cursor-pointer" onClick={() => navigate('/')}>
+        <a href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }} className="flex items-center gap-2 group cursor-pointer" aria-label="Carey Electrical - Home">
           <img
             src="/carey_electrical_logo_improved-removebg-preview.png"
             alt="Carey Electrical"
+            width="120"
+            height="40"
             className="h-10 md:h-12 w-auto object-contain"
           />
-        </div>
+        </a>
 
-        <div className="hidden md:flex items-center gap-8 bg-brand-black/30 px-8 py-3 rounded-full border border-white/5 backdrop-blur-sm">
-          <a onClick={() => navigate('/')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'home' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`}>Home</a>
-          
+        <div className="hidden md:flex items-center gap-8 bg-brand-black/30 px-8 py-3 rounded-full border border-white/5 backdrop-blur-sm" role="menubar">
+          <a href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'home' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`} role="menuitem" aria-current={view === 'home' ? 'page' : undefined}>Home</a>
+
           <div className="relative group">
-            <button className="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1">
-              Services <ChevronRight size={14} className="rotate-90" />
+            <button className="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1" aria-haspopup="true" aria-expanded="false" aria-label="Services menu">
+              Services <ChevronRight size={14} className="rotate-90" aria-hidden="true" />
             </button>
-            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-64">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-64" role="menu" aria-label="Services submenu">
               <div className="bg-brand-black border border-slate-700 rounded-xl p-2 shadow-2xl flex flex-col gap-1 max-h-80 overflow-y-auto custom-scrollbar">
                 {SERVICES.map(s => (
-                  <button key={s.id} onClick={() => navigate(`/services/${s.id}`)} className="text-left px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-brand-green rounded-lg transition-colors flex items-center gap-3 w-full">
+                  <a key={s.id} href={`#/services/${s.id}`} onClick={(e) => { e.preventDefault(); navigate(`/services/${s.id}`); }} className="text-left px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-brand-green rounded-lg transition-colors flex items-center gap-3 w-full" role="menuitem">
                     {s.title}
-                  </button>
+                  </a>
                 ))}
               </div>
             </div>
           </div>
 
-          <a onClick={() => navigate('/projects')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'portfolio' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`}>Projects</a>
-          <a onClick={() => navigate('/cost-guide')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'cost-guide' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`}>Costs</a>
-          <a onClick={() => navigate('/locations')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'locations' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`}>Locations</a>
-          <a onClick={() => navigate('/news')} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'blog' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`}>News</a>
+          <a href="#/projects" onClick={(e) => { e.preventDefault(); navigate('/projects'); }} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'portfolio' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`} role="menuitem" aria-current={view === 'portfolio' ? 'page' : undefined}>Projects</a>
+          <a href="#/cost-guide" onClick={(e) => { e.preventDefault(); navigate('/cost-guide'); }} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'cost-guide' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`} role="menuitem" aria-current={view === 'cost-guide' ? 'page' : undefined}>Costs</a>
+          <a href="#/locations" onClick={(e) => { e.preventDefault(); navigate('/locations'); }} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'locations' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`} role="menuitem" aria-current={view === 'locations' ? 'page' : undefined}>Locations</a>
+          <a href="#/news" onClick={(e) => { e.preventDefault(); navigate('/news'); }} className={`text-sm font-medium cursor-pointer transition-colors hover:scale-105 transform duration-200 ${view === 'blog' ? 'text-brand-green' : 'text-slate-300 hover:text-white'}`} role="menuitem" aria-current={view === 'blog' ? 'page' : undefined}>News</a>
         </div>
 
         <div className="hidden md:block">
            <Button onClick={() => { navigate('/'); setTimeout(() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'}), 100); }} className="text-sm">Get Quote</Button>
         </div>
 
-        <button className="md:hidden text-white p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X /> : <Menu />}
+        <button className="md:hidden text-white p-2" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} aria-expanded={isMenuOpen}>
+          {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
       </div>
 
-      <div className={`fixed inset-0 bg-brand-black z-40 flex flex-col items-center justify-center gap-6 transition-transform duration-500 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <a onClick={() => navigate('/')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Home</a>
-        <a onClick={() => navigate('/about')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">About Us</a>
-        <a onClick={() => navigate('/projects')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Projects</a>
-        <a onClick={() => navigate('/cost-guide')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Pricing Guide</a>
-        <a onClick={() => navigate('/news')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">News</a>
-        <a onClick={() => navigate('/grants')} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Grants</a>
-        <div className="h-px w-20 bg-slate-800" />
+      <div className={`fixed inset-0 bg-brand-black z-40 flex flex-col items-center justify-center gap-6 transition-transform duration-500 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
+        <a href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Home</a>
+        <a href="#/about" onClick={(e) => { e.preventDefault(); navigate('/about'); }} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">About Us</a>
+        <a href="#/projects" onClick={(e) => { e.preventDefault(); navigate('/projects'); }} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Projects</a>
+        <a href="#/cost-guide" onClick={(e) => { e.preventDefault(); navigate('/cost-guide'); }} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Pricing Guide</a>
+        <a href="#/news" onClick={(e) => { e.preventDefault(); navigate('/news'); }} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">News</a>
+        <a href="#/grants" onClick={(e) => { e.preventDefault(); navigate('/grants'); }} className="text-2xl font-bold text-slate-300 hover:text-brand-green cursor-pointer">Grants</a>
+        <div className="h-px w-20 bg-slate-800" aria-hidden="true" />
         <Button onClick={() => { navigate('/'); setTimeout(() => document.getElementById('contact')?.scrollIntoView(), 100); }}>Get Quote</Button>
       </div>
     </nav>
@@ -376,20 +378,20 @@ function App() {
 
   const Hero = () => {
     const heroImages = [
-      { src: '/img_0493.jpeg', alt: 'Residential solar panel installation on a Berkshire home roof by Carey Electrical' },
-      { src: '/img_8048.jpeg', alt: 'MCS certified solar PV system installation in progress in Newbury' },
-      { src: '/img_0875.jpeg', alt: 'Premium black solar panels installed on a UK residential property' },
-      { src: '/img_8715.jpeg', alt: 'Ground-mounted solar array installation for maximum energy generation' },
-      { src: '/img_0366.jpeg', alt: 'Professional solar panel installation team working on roof in Reading' },
-      { src: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', alt: 'Completed domestic solar installation with battery storage in Basingstoke' },
-      { src: '/img_0494.jpeg', alt: 'High-efficiency Jinko Tiger solar panels installed by certified engineers' },
-      { src: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', alt: 'Tesla Powerwall battery storage installation in a Berkshire home' },
-      { src: '/img_0876.jpeg', alt: 'Modern solar panel system generating clean renewable energy' },
-      { src: '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', alt: 'Solar PV installation showcasing expert cable management and mounting' },
-      { src: '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg', alt: 'Rooftop solar array with optimized panel positioning for UK climate' },
-      { src: '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg', alt: 'Commercial solar installation on business premises in Berkshire' },
-      { src: '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg', alt: 'Integrated solar and EV charging solution for modern homes' },
-      { src: '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg', alt: 'Myenergi Libbi battery storage system installed with solar panels' }
+      { src: '/img_0493.jpeg', alt: 'Residential solar panel installation on a Berkshire home roof by Carey Electrical', width: 1920, height: 1080 },
+      { src: '/img_8048.jpeg', alt: 'MCS certified solar PV system installation in progress in Newbury', width: 1920, height: 1080 },
+      { src: '/img_0875.jpeg', alt: 'Premium black solar panels installed on a UK residential property', width: 1920, height: 1080 },
+      { src: '/img_8715.jpeg', alt: 'Ground-mounted solar array installation for maximum energy generation', width: 1920, height: 1080 },
+      { src: '/img_0366.jpeg', alt: 'Professional solar panel installation team working on roof in Reading', width: 1920, height: 1080 },
+      { src: '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', alt: 'Completed domestic solar installation with battery storage in Basingstoke', width: 1920, height: 1080 },
+      { src: '/img_0494.jpeg', alt: 'High-efficiency Jinko Tiger solar panels installed by certified engineers', width: 1920, height: 1080 },
+      { src: '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', alt: 'Tesla Powerwall battery storage installation in a Berkshire home', width: 1920, height: 1080 },
+      { src: '/img_0876.jpeg', alt: 'Modern solar panel system generating clean renewable energy', width: 1920, height: 1080 },
+      { src: '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', alt: 'Solar PV installation showcasing expert cable management and mounting', width: 1920, height: 1080 },
+      { src: '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg', alt: 'Rooftop solar array with optimized panel positioning for UK climate', width: 1920, height: 1080 },
+      { src: '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg', alt: 'Commercial solar installation on business premises in Berkshire', width: 1920, height: 1080 },
+      { src: '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg', alt: 'Integrated solar and EV charging solution for modern homes', width: 1920, height: 1080 },
+      { src: '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg', alt: 'Myenergi Libbi battery storage system installed with solar panels', width: 1920, height: 1080 }
     ];
     
     const [currentImageIdx, setCurrentImageIdx] = useState(0);
@@ -412,7 +414,10 @@ function App() {
                <img
                  src={image.src}
                  alt={image.alt}
+                 width={image.width}
+                 height={image.height}
                  loading={idx === 0 ? 'eager' : 'lazy'}
+                 decoding={idx === 0 ? 'sync' : 'async'}
                  className={`w-full h-full object-cover animate-ken-burns origin-center ${idx === currentImageIdx ? 'scale-100' : 'scale-110'}`}
                />
              </div>
@@ -785,25 +790,25 @@ function App() {
                   <Button variant="outline" onClick={() => { setFormStatus('idle'); setContactMessage(''); }}>Send Another</Button>
                 </div>
               ) : (
-                <form className="space-y-6 relative z-10" onSubmit={handleFormSubmit}>
+                <form className="space-y-6 relative z-10" onSubmit={handleFormSubmit} aria-label="Contact form">
                   <h3 className="text-2xl font-bold text-white mb-8">Send us a message</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-400 ml-1">First Name</label>
-                      <input required type="text" className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" placeholder="John" />
+                      <label htmlFor="contact-firstname" className="text-sm font-semibold text-slate-400 ml-1">First Name</label>
+                      <input id="contact-firstname" name="firstname" required type="text" autoComplete="given-name" className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" placeholder="John" />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-400 ml-1">Last Name</label>
-                      <input required type="text" className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" placeholder="Doe" />
+                      <label htmlFor="contact-lastname" className="text-sm font-semibold text-slate-400 ml-1">Last Name</label>
+                      <input id="contact-lastname" name="lastname" required type="text" autoComplete="family-name" className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" placeholder="Doe" />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-400 ml-1">Email Address</label>
-                    <input required type="email" className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" placeholder="john@example.com" />
+                    <label htmlFor="contact-email" className="text-sm font-semibold text-slate-400 ml-1">Email Address</label>
+                    <input id="contact-email" name="email" required type="email" autoComplete="email" className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" placeholder="john@example.com" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-400 ml-1">I'm interested in...</label>
-                    <select className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all">
+                    <label htmlFor="contact-interest" className="text-sm font-semibold text-slate-400 ml-1">I'm interested in...</label>
+                    <select id="contact-interest" name="interest" className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all">
                       <option>Solar PV Installation</option>
                       <option>Battery Storage</option>
                       <option>EV Charging</option>
@@ -812,11 +817,13 @@ function App() {
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-400 ml-1">Message</label>
-                    <textarea 
-                      required 
-                      rows={4} 
-                      className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600" 
+                    <label htmlFor="contact-message" className="text-sm font-semibold text-slate-400 ml-1">Message</label>
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      required
+                      rows={4}
+                      className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600"
                       placeholder="Tell us about your project..."
                       value={contactMessage}
                       onChange={(e) => setContactMessage(e.target.value)}
@@ -824,7 +831,7 @@ function App() {
                   </div>
                   <Button fullWidth className="py-5 text-lg mt-4" disabled={formStatus === 'submitting'}>
                     {formStatus === 'submitting' ? (
-                      <span className="flex items-center"><Loader2 className="animate-spin mr-2" /> Sending...</span>
+                      <span className="flex items-center"><Loader2 className="animate-spin mr-2" aria-hidden="true" /> Sending...</span>
                     ) : 'Send Enquiry'}
                   </Button>
                 </form>
@@ -1093,16 +1100,18 @@ function App() {
     return (
       <div className="bg-brand-black min-h-screen text-slate-200 selection:bg-brand-green selection:text-brand-black">
         <Navbar />
-        <Hero />
-        <ImpactStats />
-        <LiveMonitor />
-        <ServicesList />
-        <SmartEcosystem />
-        <Gallery />
-        <SolarCalculator onRequestQuote={handleCalculatorQuote} />
-        <Testimonials />
-        <TrustedBrands />
-        <Contact />
+        <main id="main-content">
+          <Hero />
+          <ImpactStats />
+          <LiveMonitor />
+          <ServicesList />
+          <SmartEcosystem />
+          <Gallery />
+          <SolarCalculator onRequestQuote={handleCalculatorQuote} />
+          <Testimonials />
+          <TrustedBrands />
+          <Contact />
+        </main>
         <Footer />
         <MobileStickyCTA />
 

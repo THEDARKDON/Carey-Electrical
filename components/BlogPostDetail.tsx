@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo } from 'react';
-import { ArrowLeft, Calendar, User, Tag, Share2, ArrowRight, Clock } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Tag, Share2, ArrowRight, Clock, BookOpen } from 'lucide-react';
 import { Button, Reveal, Card, Badge, useSEO } from './UIComponents';
 import { BlogPostData } from '../types';
+import { BLOG_CONTENT } from '../constants';
 
 interface BlogPostDetailProps {
   data: BlogPostData;
@@ -21,6 +22,14 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
 
   const contentStats = useMemo(() => getContentStats(data.content), [data.content]);
   const { readingTime, wordCount } = contentStats;
+
+  const relatedArticles = useMemo(() => {
+    const allPosts = Object.entries(BLOG_CONTENT);
+    return allPosts
+      .filter(([slug, post]) => slug !== data.slug && post.category === data.category)
+      .slice(0, 3)
+      .map(([slug, post]) => ({ slug, ...post }));
+  }, [data.slug, data.category]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -120,9 +129,13 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
         {/* Header */}
         <header className="relative h-[50vh] min-h-[400px] flex items-end pb-12 overflow-hidden">
           <div className="absolute inset-0">
-            <img 
-              src={data.heroImage} 
-              alt={data.title} 
+            <img
+              src={data.heroImage}
+              alt={data.title}
+              width={1920}
+              height={1080}
+              loading="eager"
+              decoding="sync"
               className="w-full h-full object-cover animate-ken-burns opacity-60"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-transparent" />
@@ -230,6 +243,48 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
 
           </div>
         </div>
+
+        {relatedArticles.length > 0 && (
+          <section className="py-16 bg-slate-900/50 border-t border-slate-800" aria-labelledby="related-articles-heading">
+            <div className="container mx-auto px-6">
+              <h2 id="related-articles-heading" className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                <BookOpen size={24} className="text-brand-green" />
+                Related Articles
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedArticles.map((article, idx) => (
+                  <Reveal key={article.slug} delay={idx * 100}>
+                    <a
+                      href={`#/news/${article.slug}`}
+                      onClick={(e) => { e.preventDefault(); onNavigate(`/news/${article.slug}`); }}
+                      className="block bg-brand-black rounded-xl border border-slate-800 overflow-hidden hover:border-brand-green/50 transition-all group"
+                    >
+                      <div className="h-40 overflow-hidden">
+                        <img
+                          src={article.heroImage}
+                          alt={article.title}
+                          width={400}
+                          height={200}
+                          loading="lazy"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                      </div>
+                      <div className="p-5">
+                        <Badge className="mb-3 text-xs">{article.category}</Badge>
+                        <h3 className="text-white font-bold text-lg leading-tight group-hover:text-brand-green transition-colors line-clamp-2">
+                          {article.title}
+                        </h3>
+                        <p className="text-slate-400 text-sm mt-2 flex items-center gap-2">
+                          <Calendar size={12} /> {article.date}
+                        </p>
+                      </div>
+                    </a>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
       </article>
     </div>
   );

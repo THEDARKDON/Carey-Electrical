@@ -18,7 +18,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
     window.scrollTo(0, 0);
   }, [data]);
 
-  // SEO with enhanced schema including breadcrumbs and service details
+  // SEO with enhanced schema including breadcrumbs, service details, and FAQs
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -79,6 +79,48 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
             "priceCurrency": "GBP"
           }
         }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": data.faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      },
+      {
+        "@type": "HowTo",
+        "name": `How ${data.title} Installation Works`,
+        "description": `Professional ${data.title} installation process by Carey Electrical`,
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Survey",
+            "text": "Detailed site analysis and shading calculation to determine optimal system configuration."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Design",
+            "text": "Custom proposal with full ROI breakdown and system specifications."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Install",
+            "text": "1-2 day installation by MCS certified engineers with minimal disruption."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Support",
+            "text": "Monitoring setup, system handover, and ongoing maintenance support."
+          }
+        ]
       }
     ]
   };
@@ -119,9 +161,13 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
       {/* Hero Section */}
       <div className="relative h-[60vh] min-h-[500px] overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={data.heroImage} 
-            alt={data.title} 
+          <img
+            src={data.heroImage}
+            alt={data.title}
+            width={1920}
+            height={1080}
+            loading="eager"
+            decoding="sync"
             className="w-full h-full object-cover opacity-60 animate-ken-burns"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent" />

@@ -10,6 +10,15 @@ interface NotFoundProps {
 export const NotFound: React.FC<NotFoundProps> = ({ onNavigate }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    const metaRobots = document.querySelector('meta[name="robots"]');
+    if (metaRobots) {
+      metaRobots.setAttribute('content', 'noindex, nofollow');
+    }
+    return () => {
+      if (metaRobots) {
+        metaRobots.setAttribute('content', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+      }
+    };
   }, []);
 
   useSEO(
