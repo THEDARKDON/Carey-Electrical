@@ -637,7 +637,12 @@ export const BLOG_POSTS: BlogPost[] = [
   { id: '24', slug: 'solar-panel-costs-henley', title: 'Solar Panel Costs in Henley-on-Thames (2025)', excerpt: 'Solar installation prices for Henley, Shiplake and the Chilterns. Thames Valley specialists.', date: 'Dec 11, 2025', image: '/img_0494.jpeg', category: 'Local Guides', readTime: '6 min read' },
   { id: '25', slug: 'solar-panel-costs-didcot', title: 'Solar Panels in Didcot - New Build & Retrofit Guide', excerpt: 'Solar costs for Didcot, Harwell and Great Western Park. New development specialists.', date: 'Dec 11, 2025', image: '/img_8715.jpeg', category: 'Local Guides', readTime: '6 min read' },
   { id: '26', slug: 'solar-panel-costs-andover', title: 'Solar Panel Installation Costs in Andover', excerpt: 'What do solar panels cost in Andover and Test Valley? Local pricing for SP10 and SP11 postcodes.', date: 'Dec 11, 2025', image: '/img_0875.jpeg', category: 'Local Guides', readTime: '6 min read' },
-  { id: '27', slug: 'solar-panel-costs-wallingford', title: 'Solar Panels in Wallingford - South Oxfordshire Guide', excerpt: 'Solar installation costs for Wallingford, Cholsey and Benson. Rural and village property specialists.', date: 'Dec 11, 2025', image: '/img_8050.jpeg', category: 'Local Guides', readTime: '6 min read' }
+  { id: '27', slug: 'solar-panel-costs-wallingford', title: 'Solar Panels in Wallingford - South Oxfordshire Guide', excerpt: 'Solar installation costs for Wallingford, Cholsey and Benson. Rural and village property specialists.', date: 'Dec 11, 2025', image: '/img_8050.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '28', slug: 'solar-panel-costs-abingdon', title: 'Solar Panel Costs in Abingdon (2025)', excerpt: 'Solar installation prices for Abingdon, Radley and Marcham. Vale of White Horse specialists.', date: 'Dec 11, 2025', image: '/img_0493.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '29', slug: 'solar-panel-costs-thatcham', title: 'Solar Panels in Thatcham - West Berkshire Guide', excerpt: 'What do solar panels cost in Thatcham and Cold Ash? Local pricing for RG18 and RG19 postcodes.', date: 'Dec 11, 2025', image: '/img_0494.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '30', slug: 'solar-panel-costs-hungerford', title: 'Solar Panel Installation Costs in Hungerford', excerpt: 'Solar costs for Hungerford, Lambourn and the Kennet Valley. Rural West Berkshire specialists.', date: 'Dec 11, 2025', image: '/img_8715.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '31', slug: 'solar-panel-costs-camberley', title: 'Solar Panels in Camberley - Surrey Heath Guide', excerpt: 'Installing solar in Camberley, Frimley and Sandhurst. GU15-GU17 coverage with military housing expertise.', date: 'Dec 11, 2025', image: '/img_0875.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '32', slug: 'solar-panel-costs-farnborough', title: 'Solar Panel Costs in Farnborough (2025)', excerpt: 'Solar installation prices for Farnborough, Cove and North Camp. Hampshire border specialists.', date: 'Dec 11, 2025', image: '/img_8050.jpeg', category: 'Local Guides', readTime: '6 min read' }
 ];
 
 export const BLOG_CONTENT: Record<string, BlogPostData> = {
@@ -1489,6 +1494,266 @@ export const BLOG_CONTENT: Record<string, BlogPostData> = {
     ],
     locationSlug: 'wallingford',
     relatedLocations: ['didcot', 'oxford', 'henley-on-thames', 'reading'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-abingdon': {
+    id: '28',
+    title: 'Solar Panel Costs in Abingdon (2025)',
+    date: 'Dec 11, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0493.jpeg',
+    content: `
+      <h2>Solar Installation in Abingdon</h2>
+      <p>Abingdon-on-Thames combines historic charm with modern living, making it an excellent location for solar installations. Properties in <strong>OX14</strong> postcodes benefit from the Vale of White Horse's open skies and strong solar irradiance.</p>
+
+      <h3>Abingdon Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,300 - £6,400 - Suitable for terraced homes near the town centre</li>
+        <li><strong>4kW System:</strong> £6,400 - £7,800 - Popular for family homes in Peachcroft</li>
+        <li><strong>5kW System:</strong> £7,400 - £9,100 - Ideal for larger properties in Radley</li>
+        <li><strong>6kW+ System:</strong> £8,900 - £11,800 - For village properties in Marcham and Steventon</li>
+      </ul>
+
+      <h3>Vale of White Horse Benefits</h3>
+      <p>The Vale district offers excellent conditions for solar:</p>
+      <ul>
+        <li><strong>Open Landscape:</strong> Minimal shading from surrounding buildings</li>
+        <li><strong>Science Vale Connection:</strong> Strong sustainability awareness from nearby research centres</li>
+        <li><strong>Property Mix:</strong> From period townhouses to modern estates</li>
+        <li><strong>River Setting:</strong> Properties benefit from reflected light near the Thames</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Abingdon coverage includes:</p>
+      <ul>
+        <li>Abingdon town centre, Peachcroft, and Caldecott</li>
+        <li>Radley, Kennington, and Sunningwell</li>
+        <li>Marcham, Drayton, and Sutton Courtenay</li>
+        <li><a href="#/location/didcot">Didcot</a>, <a href="#/location/oxford">Oxford</a>, and <a href="#/location/wallingford">Wallingford</a></li>
+      </ul>
+
+      <h3>Historic Town Sensitivity</h3>
+      <p>Abingdon has one of England's oldest town centres. Our all-black panel systems and careful positioning ensure installations complement rather than detract from the town's heritage character.</p>
+
+      <h3>Culham Science Centre Proximity</h3>
+      <p>Many residents work at JET and the nearby science facilities. The area has a strong focus on clean energy technology, making solar adoption a natural choice for forward-thinking homeowners.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Abingdon', url: '#/location/abingdon' },
+      { label: 'Didcot Solar Guide', url: '#/blog/solar-panel-costs-didcot' },
+      { label: 'Oxford Solar Guide', url: '#/blog/solar-panel-costs-oxford' }
+    ],
+    locationSlug: 'abingdon',
+    relatedLocations: ['didcot', 'oxford', 'wallingford', 'newbury'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-thatcham': {
+    id: '29',
+    title: 'Solar Panels in Thatcham - West Berkshire Guide',
+    date: 'Dec 11, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0494.jpeg',
+    content: `
+      <h2>Solar Installation in Thatcham</h2>
+      <p>Thatcham offers excellent value for solar installations, with a mix of established housing and newer developments. Properties in <strong>RG18 and RG19</strong> postcodes benefit from competitive pricing and strong generation potential in West Berkshire.</p>
+
+      <h3>Thatcham Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,100 - £6,200 - Ideal for terraced homes near the station</li>
+        <li><strong>4kW System:</strong> £6,200 - £7,500 - Popular for family homes in Thatcham Park</li>
+        <li><strong>5kW System:</strong> £7,100 - £8,700 - Great for larger properties in Cold Ash</li>
+        <li><strong>6kW+ System:</strong> £8,500 - £11,200 - For detached homes in surrounding villages</li>
+      </ul>
+
+      <h3>West Berkshire Advantages</h3>
+      <p>Thatcham offers several benefits for solar:</p>
+      <ul>
+        <li><strong>Lower Property Costs:</strong> More affordable than nearby Newbury means budget for larger systems</li>
+        <li><strong>Good Roof Stock:</strong> Mix of 1970s-2000s builds with suitable roof pitches</li>
+        <li><strong>Commuter Town:</strong> <a href="#/services/battery-storage">Battery storage</a> maximises evening energy use</li>
+        <li><strong>Nature Reserve Setting:</strong> Strong environmental awareness in the community</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Thatcham coverage includes:</p>
+      <ul>
+        <li>Thatcham town centre and Thatcham Park</li>
+        <li>Cold Ash, Ashmore Green, and Bucklebury</li>
+        <li>Midgham, Woolhampton, and Upper Bucklebury</li>
+        <li><a href="#/location/newbury">Newbury</a>, <a href="#/location/reading">Reading</a>, and <a href="#/location/hungerford">Hungerford</a></li>
+      </ul>
+
+      <h3>Nature Reserve Town</h3>
+      <p>Thatcham is famous for its nature discovery centre and reedbeds. Residents here often have strong environmental values, making solar an attractive option for reducing household carbon footprints.</p>
+
+      <h3>GWR Commuter Benefits</h3>
+      <p>Direct trains to Reading and London mean many residents are away during peak solar hours. Our battery solutions ensure you benefit from daytime generation even when commuting.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Thatcham', url: '#/location/thatcham' },
+      { label: 'Newbury Solar Guide', url: '#/blog/solar-panel-costs-newbury' },
+      { label: 'Battery Storage Options', url: '#/services/battery-storage' }
+    ],
+    locationSlug: 'thatcham',
+    relatedLocations: ['newbury', 'reading', 'hungerford'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-hungerford': {
+    id: '30',
+    title: 'Solar Panel Installation Costs in Hungerford',
+    date: 'Dec 11, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_8715.jpeg',
+    content: `
+      <h2>Solar Panels in Hungerford</h2>
+      <p>Hungerford and the surrounding Kennet Valley offer ideal conditions for rural solar installations. Properties in <strong>RG17</strong> postcodes often have larger roofs, minimal shading, and higher energy demands that benefit from solar power.</p>
+
+      <h3>Hungerford Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,400 - £6,500 - Suitable for townhouses on the High Street</li>
+        <li><strong>4kW System:</strong> £6,500 - £7,900 - Popular for family homes in Hungerford Newtown</li>
+        <li><strong>5kW System:</strong> £7,500 - £9,200 - Ideal for larger village properties</li>
+        <li><strong>6kW+ System:</strong> £9,000 - £12,500 - For rural properties and farmhouses</li>
+      </ul>
+
+      <h3>Rural West Berkshire Benefits</h3>
+      <p>The Hungerford area offers unique solar advantages:</p>
+      <ul>
+        <li><strong>Larger Properties:</strong> More roof space for bigger, more efficient systems</li>
+        <li><strong>Minimal Shading:</strong> Open countryside means unobstructed sunlight</li>
+        <li><strong>Off-Gas Properties:</strong> Many rural homes use oil or LPG, making solar savings significant</li>
+        <li><strong>Agricultural Buildings:</strong> Barns and outbuildings suitable for solar</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Hungerford coverage extends to:</p>
+      <ul>
+        <li>Hungerford town centre and Common</li>
+        <li>Lambourn, Great Shefford, and East Garston</li>
+        <li>Kintbury, Inkpen, and Shalbourne</li>
+        <li><a href="#/location/newbury">Newbury</a>, <a href="#/location/thatcham">Thatcham</a>, and Marlborough</li>
+      </ul>
+
+      <h3>Lambourn Valley Expertise</h3>
+      <p>The racing industry around Lambourn means many properties have stables and outbuildings. We have experience installing solar on equestrian properties, including stable blocks and training facilities.</p>
+
+      <h3>Off-Grid Solutions</h3>
+      <p>Rural properties often benefit from larger battery systems. Combined with solar, <a href="#/services/battery-storage">battery storage</a> provides energy security for homes that may experience occasional power cuts.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Hungerford', url: '#/location/hungerford' },
+      { label: 'Newbury Solar Guide', url: '#/blog/solar-panel-costs-newbury' },
+      { label: 'Rural Solar Solutions', url: '#/services/domestic-solar' }
+    ],
+    locationSlug: 'hungerford',
+    relatedLocations: ['newbury', 'thatcham', 'andover'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-camberley': {
+    id: '31',
+    title: 'Solar Panels in Camberley - Surrey Heath Guide',
+    date: 'Dec 11, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0875.jpeg',
+    content: `
+      <h2>Solar Installation in Camberley</h2>
+      <p>Camberley and Surrey Heath sit at the Hampshire-Surrey border, offering excellent solar potential. Properties in <strong>GU15, GU16, and GU17</strong> postcodes benefit from our cross-border expertise and competitive pricing.</p>
+
+      <h3>Camberley Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,400 - £6,600 - Suitable for townhouses near the town centre</li>
+        <li><strong>4kW System:</strong> £6,600 - £8,000 - Popular for family homes in Old Dean</li>
+        <li><strong>5kW System:</strong> £7,600 - £9,300 - Ideal for larger properties in Frimley Green</li>
+        <li><strong>6kW+ System:</strong> £9,200 - £12,200 - For executive homes in Sandhurst</li>
+      </ul>
+
+      <h3>Military Town Expertise</h3>
+      <p>With Sandhurst and numerous military connections, we understand the needs of service families:</p>
+      <ul>
+        <li><strong>MOD Housing:</strong> Experience with service family accommodation requirements</li>
+        <li><strong>Rental Properties:</strong> Solutions for landlords with military tenants</li>
+        <li><strong>Quick Turnaround:</strong> Efficient installations for families on posting cycles</li>
+        <li><strong>Documentation:</strong> All paperwork for MOD housing requirements</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Camberley coverage includes:</p>
+      <ul>
+        <li>Camberley town centre, Old Dean, and Crawley Hill</li>
+        <li>Frimley, Frimley Green, and Mytchett</li>
+        <li>Sandhurst, College Town, and Blackwater</li>
+        <li><a href="#/location/farnborough">Farnborough</a>, <a href="#/location/bracknell">Bracknell</a>, and <a href="#/location/fleet">Fleet</a></li>
+      </ul>
+
+      <h3>Surrey Heath Premium</h3>
+      <p>Surrey Heath has some of the most affluent postcodes in our coverage area. We offer premium all-black systems and <a href="#/services/integrated-solar">in-roof solar</a> for properties where aesthetics are paramount.</p>
+
+      <h3>M3 Corridor Benefits</h3>
+      <p>Excellent road links mean many residents commute to London or other business centres. <a href="#/services/battery-storage">Battery storage</a> ensures you use your solar power when you return home.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Camberley', url: '#/location/camberley' },
+      { label: 'Farnborough Solar Guide', url: '#/blog/solar-panel-costs-farnborough' },
+      { label: 'Bracknell Solar Guide', url: '#/blog/solar-panel-costs-bracknell' }
+    ],
+    locationSlug: 'camberley',
+    relatedLocations: ['farnborough', 'bracknell', 'fleet', 'reading'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-farnborough': {
+    id: '32',
+    title: 'Solar Panel Costs in Farnborough (2025)',
+    date: 'Dec 11, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_8050.jpeg',
+    content: `
+      <h2>Solar Installation in Farnborough</h2>
+      <p>Farnborough is famous for aviation innovation, and many residents here are equally forward-thinking about home energy. Properties in <strong>GU14</strong> postcodes offer excellent solar potential with a mix of housing stock and good sun exposure.</p>
+
+      <h3>Farnborough Solar Panel Costs</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,300 - £6,400 - Ideal for terraced homes near the station</li>
+        <li><strong>4kW System:</strong> £6,400 - £7,800 - Popular for family homes in Cove</li>
+        <li><strong>5kW System:</strong> £7,400 - £9,000 - Great for larger properties in North Camp</li>
+        <li><strong>6kW+ System:</strong> £8,900 - £11,800 - For detached homes in Farnborough Park</li>
+      </ul>
+
+      <h3>Aviation Town Innovation</h3>
+      <p>Farnborough has a heritage of technological innovation:</p>
+      <ul>
+        <li><strong>Tech-Savvy Residents:</strong> Strong appetite for smart home integration</li>
+        <li><strong>Business Park Proximity:</strong> High-income households with larger energy needs</li>
+        <li><strong>EV Adoption:</strong> Above-average electric vehicle ownership, ideal for <a href="#/services/ev-charging">EV charging</a></li>
+        <li><strong>New Developments:</strong> Modern estates with solar-ready roofs</li>
+      </ul>
+
+      <h3>Areas We Cover</h3>
+      <p>Our Farnborough coverage includes:</p>
+      <ul>
+        <li>Farnborough town centre and Farnborough Park</li>
+        <li>Cove, North Camp, and South Farnborough</li>
+        <li>Aldershot, Fleet, and Church Crookham</li>
+        <li><a href="#/location/camberley">Camberley</a>, <a href="#/location/basingstoke">Basingstoke</a>, and <a href="#/location/reading">Reading</a></li>
+      </ul>
+
+      <h3>Hampshire-Surrey Border</h3>
+      <p>We cover both sides of the county border seamlessly. Whether you are in Hampshire or Surrey, you get the same high-quality installation and aftercare service.</p>
+
+      <h3>Airshow Town Solar</h3>
+      <p>The famous Farnborough Airshow brings the world's attention to innovation. Join the growing number of Farnborough residents who are innovating at home with solar power and battery storage.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Farnborough', url: '#/location/farnborough' },
+      { label: 'Camberley Solar Guide', url: '#/blog/solar-panel-costs-camberley' },
+      { label: 'EV Charging Solutions', url: '#/services/ev-charging' }
+    ],
+    locationSlug: 'farnborough',
+    relatedLocations: ['camberley', 'basingstoke', 'fleet', 'reading'],
     targetService: 'domestic-solar'
   }
 };
