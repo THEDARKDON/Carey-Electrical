@@ -556,7 +556,9 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
     heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     description: 'Powerwall 3 is a fully integrated solar and battery system, designed for easy installation and seamless backup protection.',
     features: [{ title: 'Integrated Inverter', desc: 'Built-in solar inverter for higher efficiency.', icon: 'Zap' }, { title: 'Storm Watch', desc: 'Automatically detects incoming storms.', icon: 'CloudLightning' }, { title: 'Liquid Cooling', desc: 'Advanced thermal management.', icon: 'Thermometer' }],
-    specs: { 'Energy Capacity': '13.5 kWh', 'Power Output': '11.5 kW Continuous', 'Solar Input': '6 MPPTs', 'Warranty': '10 Years', 'Weight': '130 kg', 'Dimensions': '1098 x 609 x 193 mm' }
+    specs: { 'Energy Capacity': '13.5 kWh', 'Power Output': '11.5 kW Continuous', 'Solar Input': '6 MPPTs', 'Warranty': '10 Years', 'Weight': '130 kg', 'Dimensions': '1098 x 609 x 193 mm' },
+    priceRange: { low: '8500', high: '12000' },
+    category: 'Battery Storage Systems'
   },
   'myenergi-libbi': {
     id: 'myenergi-libbi',
@@ -566,17 +568,21 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
     heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     description: 'Libbi is not just a battery; it is an eco-smart energy system that communicates with Zappi and Eddi.',
     features: [{ title: 'Modular Design', desc: 'Stackable 5kWh modules.', icon: 'Layers' }, { title: 'Ecosystem', desc: 'Talks to Zappi and Eddi.', icon: 'Wifi' }, { title: 'UK Support', desc: 'Designed in the UK.', icon: 'Flag' }],
-    specs: { 'Capacity': '5kWh - 20kWh', 'Inverter Power': '3.68kW or 5kW', 'Backup': 'Optional', 'Warranty': '10 Years', 'Chemistry': 'LiFePO4', 'Efficiency': '97%' }
+    specs: { 'Capacity': '5kWh - 20kWh', 'Inverter Power': '3.68kW or 5kW', 'Backup': 'Optional', 'Warranty': '10 Years', 'Chemistry': 'LiFePO4', 'Efficiency': '97%' },
+    priceRange: { low: '4500', high: '12000' },
+    category: 'Battery Storage Systems'
   },
   'myenergi-zappi': {
     id: 'myenergi-zappi',
     name: 'Myenergi Zappi',
     brand: 'Myenergi',
     tagline: 'The World\'s #1 Solar EV Charger',
-    heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg', // Reusing libbi image context or generic if available
+    heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     description: 'Zappi is a smart EV charger with a difference. It can operate as a standard charger, or it can use 100% green energy generated from your Solar PV or wind generation.',
     features: [{ title: 'Solar Charging', desc: 'Charge on sunshine.', icon: 'Sun' }, { title: 'No Earth Rod', desc: 'Built-in pen fault protection.', icon: 'Shield' }, { title: 'App Control', desc: 'Monitor & control from anywhere.', icon: 'Smartphone' }],
-    specs: { 'Power': '7kW (Single Phase) or 22kW (3-Phase)', 'Connector': 'Type 2 Tethered or Untethered', 'Warranty': '3 Years', 'Connectivity': 'WiFi & Ethernet', 'Modes': 'Fast, Eco, Eco+' }
+    specs: { 'Power': '7kW (Single Phase) or 22kW (3-Phase)', 'Connector': 'Type 2 Tethered or Untethered', 'Warranty': '3 Years', 'Connectivity': 'WiFi & Ethernet', 'Modes': 'Fast, Eco, Eco+' },
+    priceRange: { low: '1200', high: '1800' },
+    category: 'EV Charging Equipment'
   },
   'jinko-tiger': {
     id: 'jinko-tiger',
@@ -586,7 +592,9 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
     heroImage: '/baea77fd-a9df-488b-9759-39748439a29a.jpg',
     description: 'The Tiger Neo N-type module adopts TOPCon technology for higher efficiency and lower degradation.',
     features: [{ title: 'N-Type TOPCon', desc: 'Superior efficiency.', icon: 'Sun' }, { title: 'All-Black', desc: 'Sleek obsidian look.', icon: 'Eye' }, { title: '30 Year Warranty', desc: 'Industry leading guarantee.', icon: 'ShieldCheck' }],
-    specs: { 'Power Output': '440W - 460W', 'Efficiency': '22.8%', 'Degradation': '<0.4% per year', 'Warranty': '30 Year Power', 'Cell Type': 'N-Type Monocrystalline', 'Dimensions': '1762 x 1134 x 30 mm' }
+    specs: { 'Power Output': '440W - 460W', 'Efficiency': '22.8%', 'Degradation': '<0.4% per year', 'Warranty': '30 Year Power', 'Cell Type': 'N-Type Monocrystalline', 'Dimensions': '1762 x 1134 x 30 mm' },
+    priceRange: { low: '150', high: '250' },
+    category: 'Solar Panels'
   },
   'givenergy-aio': {
     id: 'givenergy-aio',
@@ -596,7 +604,9 @@ export const PRODUCTS_CONTENT: Record<string, ProductPageData> = {
     heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
     description: 'A premium 13.5kWh battery with a massive discharge rate, capable of powering heat pumps.',
     features: [{ title: 'High Discharge', desc: '6kW continuous power.', icon: 'Zap' }, { title: 'Grid Services', desc: 'Ready for grid balancing.', icon: 'TrendingUp' }, { title: 'IP65 Rated', desc: 'Suitable for outdoor.', icon: 'CloudRain' }],
-    specs: { 'Capacity': '13.5 kWh', 'Power': '6.0 kW', 'Backup': 'Full Whole-House Backup', 'Warranty': '12 Years', 'Depth of Discharge': '100%', 'Connectivity': 'WiFi / LAN / 4G' }
+    specs: { 'Capacity': '13.5 kWh', 'Power': '6.0 kW', 'Backup': 'Full Whole-House Backup', 'Warranty': '12 Years', 'Depth of Discharge': '100%', 'Connectivity': 'WiFi / LAN / 4G' },
+    priceRange: { low: '7500', high: '10000' },
+    category: 'Battery Storage Systems'
   }
 };
 
@@ -1205,7 +1215,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do I need planning permission?', answer: 'Most domestic installations are Permitted Development, so no planning is required unless you live in a listed building.' },
       { question: 'How long does installation take?', answer: 'A typical residential system takes 1-2 days to install.' }
     ],
-    galleryImages: ['/img_0493.jpeg', '/img_8048.jpeg', '/img_0494.jpeg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg']
+    galleryImages: ['/img_0493.jpeg', '/img_8048.jpeg', '/img_0494.jpeg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg'],
+    relatedServices: ['battery-storage', 'ev-charging', 'integrated-solar']
   },
   'integrated-solar': {
     id: 'integrated-solar',
@@ -1490,7 +1501,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
     faqs: [
         { question: 'Can I add a battery to existing panels?', answer: 'Yes, we can retrofit batteries to almost any existing solar system.' }
     ],
-    galleryImages: ['/img_8050.jpeg', '/img_9312.jpeg', '/57eef691-a691-4489-9629-c5336d019a3c.jpg']
+    galleryImages: ['/img_8050.jpeg', '/img_9312.jpeg', '/57eef691-a691-4489-9629-c5336d019a3c.jpg'],
+    relatedServices: ['domestic-solar', 'ev-charging', 'off-grid']
   },
   'bird-proofing': {
     id: 'bird-proofing',
@@ -1621,7 +1633,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do I need a new fuse box?', answer: 'Often yes, or a mini consumer unit. We include this in our survey and quote.' },
       { question: 'Can I charge two cars?', answer: 'Yes, we can install dual chargers or load-balance two units so they don\'t overload your supply.' }
     ],
-    galleryImages: ['/57eef691-a691-4489-9629-c5336d019a3c.jpg']
+    galleryImages: ['/57eef691-a691-4489-9629-c5336d019a3c.jpg'],
+    relatedServices: ['domestic-solar', 'battery-storage', 'commercial-ev']
   },
   'inverter-replacement': {
     id: 'inverter-replacement',

@@ -50,7 +50,9 @@ export interface ProductPageData {
   description: string;
   features: { title: string; desc: string; icon: string }[];
   specs: Record<string, string>;
-  relatedProducts?: string[]; // IDs of other products
+  relatedProducts?: string[];
+  priceRange?: { low: string; high: string };
+  category?: string;
 }
 
 export interface ServiceDetailData {
@@ -59,11 +61,12 @@ export interface ServiceDetailData {
   subtitle: string;
   heroImage: string;
   overview: string;
-  extendedContent?: string; // HTML for rich SEO content
+  extendedContent?: string;
   benefits: { title: string; desc: string; icon: string }[];
   products: ProductSpec[];
-  galleryImages?: string[]; 
+  galleryImages?: string[];
   faqs: { question: string; answer: string }[];
+  relatedServices?: string[];
 }
 
 export interface BlogPost {

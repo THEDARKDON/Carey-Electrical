@@ -54,16 +54,25 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
         },
         "category": data.category || "Solar Energy Equipment",
         "offers": {
-          "@type": "Offer",
+          "@type": "AggregateOffer",
           "priceCurrency": "GBP",
           "availability": "https://schema.org/InStock",
           "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+          "lowPrice": data.priceRange?.low || "500",
+          "highPrice": data.priceRange?.high || "15000",
+          "offerCount": "1",
           "seller": {
             "@type": "Organization",
             "name": "Carey Electrical",
             "url": "https://careyelectrical.co.uk"
           },
           "itemCondition": "https://schema.org/NewCondition"
+        },
+        "sku": data.id,
+        "mpn": data.id,
+        "manufacturer": {
+          "@type": "Organization",
+          "name": data.brand
         },
         "aggregateRating": {
           "@type": "AggregateRating",

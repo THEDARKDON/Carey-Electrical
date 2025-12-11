@@ -16,6 +16,7 @@ import { CostGuide } from './components/CostGuide';
 import { Grants } from './components/Grants';
 import { About } from './components/About';
 import { Glossary } from './components/Glossary';
+import { Sitemap } from './components/Sitemap';
 import { NotFound } from './components/NotFound';
 import { BRAND, SERVICES, PROJECTS, SERVICE_DETAILS, PRODUCTS_CONTENT, TRUSTED_BRANDS, TESTIMONIALS, ACCREDITATIONS, LOCATION_CONTENT, BLOG_CONTENT, LOCATIONS } from './constants';
 
@@ -41,7 +42,8 @@ function App() {
     if (hash === '/grants') return { view: 'grants', params: '' };
     if (hash === '/about') return { view: 'about', params: '' };
     if (hash === '/glossary') return { view: 'glossary', params: '' };
-    
+    if (hash === '/sitemap') return { view: 'sitemap', params: '' };
+
     // Dynamic Routes
     if (hash.startsWith('/services/')) return { view: 'service', params: hash.split('/services/')[1] };
     if (hash.startsWith('/location/')) return { view: 'location-detail', params: hash.split('/location/')[1] };
@@ -213,6 +215,39 @@ function App() {
       "https://www.facebook.com/careyelectrical",
       "https://www.instagram.com/careyelectrical"
     ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+44-1635-783887",
+        "contactType": "customer service",
+        "areaServed": "GB",
+        "availableLanguage": "English",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+44-1635-783887",
+        "contactType": "sales",
+        "areaServed": "GB",
+        "availableLanguage": "English"
+      }
+    ],
+    "knowsAbout": [
+      "Solar Panel Installation",
+      "Battery Storage Systems",
+      "EV Charging Installation",
+      "Myenergi Libbi",
+      "Tesla Powerwall",
+      "Solar PV Systems",
+      "Renewable Energy"
+    ],
+    "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Bank Transfer"],
+    "currenciesAccepted": "GBP",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Solar & Renewable Energy Services",
@@ -418,6 +453,7 @@ function App() {
                  height={image.height}
                  loading={idx === 0 ? 'eager' : 'lazy'}
                  decoding={idx === 0 ? 'sync' : 'async'}
+                 {...(idx === 0 ? { fetchPriority: 'high' as const } : {})}
                  className={`w-full h-full object-cover animate-ken-burns origin-center ${idx === currentImageIdx ? 'scale-100' : 'scale-110'}`}
                />
              </div>
@@ -888,6 +924,7 @@ function App() {
               <li><a onClick={() => navigate('/news')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Industry News</a></li>
               <li><a onClick={() => navigate('/grants')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Grants & Funding</a></li>
               <li><a onClick={() => navigate('/glossary')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Solar Glossary</a></li>
+              <li><a onClick={() => navigate('/sitemap')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Sitemap</a></li>
             </ul>
           </div>
 
@@ -975,6 +1012,17 @@ function App() {
       <div className="bg-brand-black min-h-screen text-slate-200">
         <Navbar />
         <Glossary onBack={() => navigate('/')} onNavigate={(path) => navigate(path === 'home' ? '/' : path)} />
+        <Footer />
+        <MobileStickyCTA />
+      </div>
+    )
+  }
+
+  if (view === 'sitemap') {
+    return (
+      <div className="bg-brand-black min-h-screen text-slate-200">
+        <Navbar />
+        <Sitemap onNavigate={(path) => navigate(path)} />
         <Footer />
         <MobileStickyCTA />
       </div>

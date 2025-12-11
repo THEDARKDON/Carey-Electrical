@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { ArrowLeft, Check, ShieldCheck, Zap, Star, ChevronDown, Phone, FileText, MapPin, ArrowRight } from 'lucide-react';
 import { Button, Reveal, SectionTitle, Card, useSEO } from './UIComponents';
 import { ServiceDetailData } from '../types';
-import { LOCATIONS } from '../constants';
+import { LOCATIONS, SERVICE_DETAILS } from '../constants';
 import * as Icons from 'lucide-react';
 
 interface ServiceDetailProps {
@@ -10,10 +10,15 @@ interface ServiceDetailProps {
   onBack: () => void;
   onCtaClick: () => void;
   onProductClick?: (id: string) => void;
+  onServiceClick?: (id: string) => void;
 }
 
-export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCtaClick, onProductClick }) => {
-  
+export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCtaClick, onProductClick, onServiceClick }) => {
+
+  const relatedServices = data.relatedServices
+    ? data.relatedServices.map(id => SERVICE_DETAILS[id]).filter(Boolean).slice(0, 3)
+    : [];
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [data]);
@@ -374,6 +379,48 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
            </div>
         </div>
       </section>
+
+      {/* Related Services Cross-Links */}
+      {relatedServices.length > 0 && (
+        <section className="py-20 bg-slate-950 border-t border-slate-900">
+          <div className="container mx-auto px-6">
+            <SectionTitle subtitle="Explore More" title="Related Services" center />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+              {relatedServices.map((service, idx) => (
+                <Reveal key={service.id} delay={idx * 100}>
+                  <a
+                    href={`#/services/${service.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (onServiceClick) onServiceClick(service.id);
+                      else window.location.hash = `/services/${service.id}`;
+                    }}
+                    className="group block bg-brand-black rounded-xl overflow-hidden border border-slate-800 hover:border-brand-green/50 transition-all"
+                  >
+                    <div className="h-40 overflow-hidden">
+                      <img
+                        src={service.heroImage}
+                        alt={service.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-white group-hover:text-brand-green transition-colors mb-2">
+                        {service.title}
+                      </h3>
+                      <p className="text-slate-400 text-sm line-clamp-2">{service.subtitle}</p>
+                      <span className="inline-flex items-center gap-1 mt-4 text-brand-green text-sm font-medium group-hover:gap-2 transition-all">
+                        Learn More <ArrowRight size={14} />
+                      </span>
+                    </div>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* SEO Cross-Links (Hub & Spoke) */}
       <section className="py-16 bg-brand-black border-t border-slate-900">
