@@ -622,7 +622,12 @@ export const BLOG_POSTS: BlogPost[] = [
   { id: '9', slug: '0-vat-battery-storage', title: '0% VAT on Battery Storage Extended', excerpt: 'Great news for homeowners! The government has extended the 0% VAT relief to include standalone battery storage systems.', date: 'Feb 15, 2024', image: '/img_9312.jpeg', category: 'Finance', readTime: '3 min read' },
   { id: '10', slug: 'heritage-roof-solar-tips', title: 'Installing Solar on Heritage & Clay Tile Roofs', excerpt: 'Period properties need extra care. Learn how we install solar on traditional clay tile roofs without compromising character.', date: 'Mar 1, 2025', image: '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', category: 'Planning', readTime: '6 min read' },
   { id: '11', slug: 'large-array-guide', title: 'Maximizing Solar: Guide to Large Residential Arrays', excerpt: 'Got lots of roof space? Discover how to maximize your solar investment with larger arrays and smart battery pairing.', date: 'Mar 5, 2025', image: '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg', category: 'Technology', readTime: '7 min read' },
-  { id: '12', slug: 'new-build-solar-planning', title: 'Planning Solar for New Build Properties', excerpt: 'Building a new home? Here\'s everything you need to know about integrating solar during the construction phase.', date: 'Mar 8, 2025', image: '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg', category: 'Planning', readTime: '8 min read' }
+  { id: '12', slug: 'new-build-solar-planning', title: 'Planning Solar for New Build Properties', excerpt: 'Building a new home? Here\'s everything you need to know about integrating solar during the construction phase.', date: 'Mar 8, 2025', image: '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg', category: 'Planning', readTime: '8 min read' },
+  { id: '13', slug: 'solar-panel-costs-reading', title: 'How Much Do Solar Panels Cost in Reading? (2025 Prices)', excerpt: 'Complete guide to solar panel installation costs in Reading, Caversham, Tilehurst and Earley. Local pricing from MCS certified installers.', date: 'Dec 10, 2025', image: '/img_0494.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '14', slug: 'solar-panel-costs-newbury', title: 'Solar Panel Installation Costs in Newbury - Complete Guide', excerpt: 'What do solar panels cost in Newbury and West Berkshire? Local pricing, grants, and ROI calculations for RG14 homeowners.', date: 'Dec 10, 2025', image: '/img_0875.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '15', slug: 'solar-worth-it-wokingham', title: 'Is Solar Worth It in Wokingham? ROI Calculator & Guide', excerpt: 'Calculate your solar ROI in Wokingham. We break down costs, savings, and payback periods for RG40 and RG41 postcodes.', date: 'Dec 10, 2025', image: '/img_8715.jpeg', category: 'Local Guides', readTime: '7 min read' },
+  { id: '16', slug: 'solar-panel-costs-bracknell', title: 'Solar Panels in Bracknell - Costs, Savings & Local Installers', excerpt: 'Everything you need to know about solar panel costs in Bracknell, Crowthorne and Sandhurst. 2025 pricing guide.', date: 'Dec 10, 2025', image: '/img_8050.jpeg', category: 'Local Guides', readTime: '6 min read' },
+  { id: '17', slug: 'solar-panel-costs-basingstoke', title: 'Solar Panel Costs in Basingstoke - 2025 Price Guide', excerpt: 'How much do solar panels cost in Basingstoke? Local installation prices, battery storage options, and available grants.', date: 'Dec 10, 2025', image: '/img_0876.jpeg', category: 'Local Guides', readTime: '6 min read' }
 ];
 
 export const BLOG_CONTENT: Record<string, BlogPostData> = {
@@ -677,7 +682,272 @@ export const BLOG_CONTENT: Record<string, BlogPostData> = {
     category: 'Technology',
     author: 'James Carey',
     heroImage: '/57eef691-a691-4489-9629-c5336d019a3c.jpg',
-    content: `<h2>The Battle for Storage Supremacy...</h2>` // Abbreviated for this snippet
+    content: `<h2>The Battle for Storage Supremacy...</h2>`
+  },
+  'solar-panel-costs-reading': {
+    id: '13',
+    title: 'How Much Do Solar Panels Cost in Reading? (2025 Prices)',
+    date: 'Dec 10, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0494.jpeg',
+    content: `
+      <h2>Solar Panel Prices in Reading: What to Expect</h2>
+      <p>Reading homeowners are increasingly turning to solar energy, and with good reason. The town enjoys excellent solar irradiance and has a mix of property types perfectly suited for solar installations. But how much will it actually cost?</p>
+
+      <p>Based on our installations across <strong>RG1, RG2, RG4, RG5, RG6, RG30, and RG31</strong> postcodes, here are the typical costs for a fully installed solar PV system in Reading:</p>
+
+      <h3>Reading Solar Panel Costs by System Size</h3>
+      <ul>
+        <li><strong>3kW System (8 panels):</strong> £5,500 - £6,500 - Ideal for smaller terraced homes in areas like Whitley or Coley</li>
+        <li><strong>4kW System (10 panels):</strong> £6,500 - £7,800 - Popular choice for semi-detached homes in Tilehurst and Earley</li>
+        <li><strong>5kW System (12 panels):</strong> £7,500 - £9,000 - Perfect for larger detached properties in Caversham Heights</li>
+        <li><strong>6kW+ System (15+ panels):</strong> £9,000 - £12,000 - Maximum generation for executive homes with large roof space</li>
+      </ul>
+
+      <h3>What Affects Solar Costs in Reading?</h3>
+      <p>Several factors influence the final price of your solar installation:</p>
+      <ul>
+        <li><strong>Roof Type:</strong> Standard concrete tiles are straightforward. Clay tiles in older properties around Palmer Park require more care</li>
+        <li><strong>Scaffolding:</strong> Three-storey Victorian terraces in the town centre may need additional access equipment</li>
+        <li><strong>Panel Choice:</strong> Premium all-black panels for aesthetic areas like Caversham cost 10-15% more</li>
+        <li><strong>Battery Storage:</strong> Adding a <a href="#/product/tesla-powerwall-3">Tesla Powerwall 3</a> adds £8,000-£10,000 but dramatically increases self-consumption</li>
+      </ul>
+
+      <h3>Why Reading is Ideal for Solar</h3>
+      <p>Reading benefits from being one of the sunniest towns in Berkshire. Properties in elevated areas like Emmer Green and Caversham Heights often have excellent south-facing aspects with minimal shading. The suburban nature of areas like <a href="#/location/woodley">Woodley</a>, <a href="#/location/earley">Earley</a>, and <a href="#/location/tilehurst">Tilehurst</a> means fewer tall buildings blocking sunlight.</p>
+
+      <h3>Savings for Reading Homeowners</h3>
+      <p>A typical 4kW system in Reading generates approximately 3,800 kWh per year. With current electricity prices around 24p/kWh, you could save £600-£900 annually. Adding battery storage pushes self-consumption from 30% to 70%+, potentially saving over £1,200 per year.</p>
+
+      <h3>Get a Free Quote for Your Reading Property</h3>
+      <p>We provide free, no-obligation quotes for homeowners across Reading and surrounding areas. Our team will assess your roof, calculate your potential generation, and provide transparent pricing.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Reading', url: '#/location/reading' },
+      { label: 'Domestic Solar Services', url: '#/services/domestic-solar' },
+      { label: 'Battery Storage Options', url: '#/services/battery-storage' }
+    ],
+    locationSlug: 'reading',
+    relatedLocations: ['caversham', 'tilehurst', 'woodley', 'earley'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-newbury': {
+    id: '14',
+    title: 'Solar Panel Installation Costs in Newbury - Complete Guide',
+    date: 'Dec 10, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0875.jpeg',
+    content: `
+      <h2>Solar Panel Costs in Newbury and West Berkshire</h2>
+      <p>As local solar installers based in Thatcham, we have completed hundreds of installations across Newbury and surrounding villages. Here is our honest guide to what you can expect to pay in 2025.</p>
+
+      <p>Newbury sits in West Berkshire, an area with excellent solar potential. The rolling countryside means many properties enjoy unobstructed southern aspects, and the diverse housing stock - from period cottages to modern estates - presents opportunities for all types of solar solutions.</p>
+
+      <h3>Newbury Solar Installation Prices</h3>
+      <ul>
+        <li><strong>3kW System:</strong> £5,200 - £6,200 - Suitable for cottages in Wash Common or Speen</li>
+        <li><strong>4kW System:</strong> £6,200 - £7,500 - Most popular choice for homes in Greenham and Donnington</li>
+        <li><strong>5kW System:</strong> £7,200 - £8,800 - Great for larger properties near the Racecourse</li>
+        <li><strong>6kW+ System:</strong> £8,500 - £11,500 - Maximum output for rural properties with extensive roof space</li>
+      </ul>
+
+      <h3>Local Factors That Affect Pricing</h3>
+      <p>Newbury has some specific considerations that can influence costs:</p>
+      <ul>
+        <li><strong>Listed Buildings:</strong> Properties in the town centre or near Highclere may need Listed Building Consent and heritage-sensitive installations</li>
+        <li><strong>Rural Properties:</strong> Homes in <a href="#/location/lambourn">Lambourn</a>, <a href="#/location/hungerford">Hungerford</a>, and surrounding villages may require slightly longer installation times</li>
+        <li><strong>Roof Age:</strong> Many period properties benefit from combining solar with a roof refresh - our <a href="#/services/integrated-solar">integrated in-roof systems</a> are ideal</li>
+      </ul>
+
+      <h3>West Berkshire Council Support</h3>
+      <p>West Berkshire declared a Climate Emergency and actively supports renewable energy. Most residential solar installations fall under Permitted Development, meaning no planning permission is required. We handle all necessary notifications.</p>
+
+      <h3>Your Return on Investment</h3>
+      <p>Newbury enjoys around 1,150 hours of sunshine annually. A well-positioned 4kW system generates approximately 3,600-4,000 kWh per year. Combined with <a href="#/product/myenergi-libbi">battery storage</a> and smart energy management, payback periods of 6-8 years are achievable.</p>
+
+      <h3>Why Choose a Local Installer</h3>
+      <p>Being based just 3 miles away in <a href="#/location/thatcham">Thatcham</a>, we offer rapid response times, local knowledge, and ongoing support. We understand West Berkshire planning, roof types, and the specific needs of properties from <a href="#/location/cold-ash">Cold Ash</a> to <a href="#/location/kingsclere">Kingsclere</a>.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Newbury', url: '#/location/newbury' },
+      { label: 'Request a Free Quote', url: '#/contact' },
+      { label: 'Our Solar Panel Services', url: '#/services/domestic-solar' }
+    ],
+    locationSlug: 'newbury',
+    relatedLocations: ['thatcham', 'hungerford', 'lambourn', 'cold-ash', 'hermitage'],
+    targetService: 'domestic-solar'
+  },
+  'solar-worth-it-wokingham': {
+    id: '15',
+    title: 'Is Solar Worth It in Wokingham? ROI Calculator & Guide',
+    date: 'Dec 10, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_8715.jpeg',
+    content: `
+      <h2>Calculating Your Solar ROI in Wokingham</h2>
+      <p>Wokingham Borough is one of the most affluent areas in Berkshire, with a high concentration of detached homes perfect for solar installations. But is solar actually worth the investment? Let us break down the numbers.</p>
+
+      <h3>Average Solar Costs in Wokingham</h3>
+      <p>Properties across <strong>RG40, RG41, and RG45</strong> postcodes typically see these installation costs:</p>
+      <ul>
+        <li><strong>4kW System:</strong> £6,800 - £8,200 - Standard for most Wokingham homes</li>
+        <li><strong>5kW System:</strong> £7,800 - £9,500 - Popular in Finchampstead and Crowthorne</li>
+        <li><strong>6kW System:</strong> £9,200 - £11,000 - For larger homes in Wokingham Without</li>
+      </ul>
+
+      <h3>Wokingham Solar Savings Breakdown</h3>
+      <p>Here is what a typical Wokingham household can expect:</p>
+      <ul>
+        <li><strong>Annual Generation (5kW):</strong> 4,200 kWh</li>
+        <li><strong>Self-Consumption (no battery):</strong> 30% = 1,260 kWh saved</li>
+        <li><strong>Export Value (SEG):</strong> 2,940 kWh x 15p = £441</li>
+        <li><strong>Direct Savings:</strong> 1,260 kWh x 24p = £302</li>
+        <li><strong>Total Annual Benefit:</strong> Approximately £743</li>
+      </ul>
+
+      <h3>Adding Battery Storage Changes Everything</h3>
+      <p>With a <a href="#/product/tesla-powerwall-3">Tesla Powerwall 3</a> or <a href="#/product/myenergi-libbi">Myenergi Libbi</a>, self-consumption jumps to 70-80%:</p>
+      <ul>
+        <li><strong>Self-Consumption (with battery):</strong> 75% = 3,150 kWh saved</li>
+        <li><strong>Direct Savings:</strong> 3,150 kWh x 24p = £756</li>
+        <li><strong>Export Value:</strong> 1,050 kWh x 15p = £158</li>
+        <li><strong>Total Annual Benefit:</strong> Over £900</li>
+      </ul>
+
+      <h3>Payback Period for Wokingham Properties</h3>
+      <p>Based on current energy prices:</p>
+      <ul>
+        <li><strong>Solar Only:</strong> 8-11 year payback</li>
+        <li><strong>Solar + Battery:</strong> 10-13 year payback (but higher annual savings thereafter)</li>
+      </ul>
+
+      <h3>Why Wokingham Properties Excel for Solar</h3>
+      <p>The suburban nature of <a href="#/location/wokingham">Wokingham</a>, <a href="#/location/crowthorne">Crowthorne</a>, and <a href="#/location/sandhurst">Sandhurst</a> means properties often have large, unshaded roofs. Many homes built in the 1970s-90s feature ideal roof pitches. The area also has high EV adoption, making solar-charged driving extremely cost-effective.</p>
+
+      <h3>Is It Worth It? Our Verdict</h3>
+      <p>For most Wokingham homeowners, solar offers genuine long-term value. With 25-year panel warranties and rising energy costs, the investment makes financial sense while reducing your carbon footprint. Combined with an <a href="#/product/myenergi-zappi">EV charger</a>, the savings multiply further.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Wokingham', url: '#/location/wokingham' },
+      { label: 'Battery Storage Options', url: '#/services/battery-storage' },
+      { label: 'Use Our Solar Calculator', url: '#/calculator' }
+    ],
+    locationSlug: 'wokingham',
+    relatedLocations: ['crowthorne', 'sandhurst', 'bracknell', 'earley'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-bracknell': {
+    id: '16',
+    title: 'Solar Panels in Bracknell - Costs, Savings & Local Installers',
+    date: 'Dec 10, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_8050.jpeg',
+    content: `
+      <h2>Solar Panel Installation Costs in Bracknell Forest</h2>
+      <p>Bracknell has transformed from a new town into a thriving community with excellent infrastructure for renewable energy. The mix of modern housing estates and established neighbourhoods makes it ideal for solar installations.</p>
+
+      <h3>What Solar Panels Cost in Bracknell</h3>
+      <p>Across <strong>RG12 and RG42</strong> postcodes, typical installation costs are:</p>
+      <ul>
+        <li><strong>3kW System:</strong> £5,400 - £6,400 - Ideal for apartments or smaller townhouses</li>
+        <li><strong>4kW System:</strong> £6,500 - £7,900 - Most popular for Bracknell family homes</li>
+        <li><strong>5kW System:</strong> £7,600 - £9,200 - Perfect for detached properties in Birch Hill or Hanworth</li>
+        <li><strong>6kW+ System:</strong> £9,000 - £11,500 - Maximum generation for larger homes</li>
+      </ul>
+
+      <h3>Bracknell's Solar Advantages</h3>
+      <p>Several factors make Bracknell particularly suited to solar:</p>
+      <ul>
+        <li><strong>Modern Housing Stock:</strong> Many homes built post-1960s have standardised roof designs, reducing installation complexity</li>
+        <li><strong>Grid Infrastructure:</strong> Excellent local grid capacity means straightforward connections</li>
+        <li><strong>Tech-Savvy Population:</strong> High demand for smart energy solutions and EV charging integration</li>
+      </ul>
+
+      <h3>Areas We Cover in Bracknell Forest</h3>
+      <p>We install solar across all Bracknell areas including:</p>
+      <ul>
+        <li>Bracknell Town Centre and Easthampstead</li>
+        <li><a href="#/location/crowthorne">Crowthorne</a> and <a href="#/location/sandhurst">Sandhurst</a></li>
+        <li>Warfield, Binfield, and Winkfield</li>
+        <li>Great Hollands and Wildridings</li>
+      </ul>
+
+      <h3>Battery Storage in Bracknell</h3>
+      <p>Many Bracknell residents commute to London or work in the Thames Valley tech corridor. This usage pattern - away during the day, home in the evening - makes <a href="#/services/battery-storage">battery storage</a> particularly valuable. Store daytime solar generation for evening use.</p>
+
+      <h3>EV Charging Integration</h3>
+      <p>With Bracknell's excellent road links to the M3 and M4, electric vehicle ownership is high. Combining solar with a <a href="#/product/myenergi-zappi">Myenergi Zappi charger</a> allows you to charge your EV with free solar electricity.</p>
+
+      <h3>Get Your Free Bracknell Quote</h3>
+      <p>We offer free site surveys and detailed quotes for all Bracknell Forest properties. Our team will assess your roof, calculate expected generation, and design a system matched to your energy usage.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Bracknell', url: '#/location/bracknell' },
+      { label: 'EV Charger Installation', url: '#/services/ev-charging' },
+      { label: 'View Our Portfolio', url: '#/portfolio' }
+    ],
+    locationSlug: 'bracknell',
+    relatedLocations: ['crowthorne', 'sandhurst', 'wokingham'],
+    targetService: 'domestic-solar'
+  },
+  'solar-panel-costs-basingstoke': {
+    id: '17',
+    title: 'Solar Panel Costs in Basingstoke - 2025 Price Guide',
+    date: 'Dec 10, 2025',
+    category: 'Local Guides',
+    author: 'James Carey',
+    heroImage: '/img_0876.jpeg',
+    content: `
+      <h2>Solar Installation Prices for Basingstoke Homeowners</h2>
+      <p>Basingstoke is Hampshire's largest town and a thriving hub for solar adoption. The combination of modern housing developments and established residential areas creates excellent opportunities for solar installations across all property types.</p>
+
+      <h3>Basingstoke Solar Panel Costs</h3>
+      <p>For properties across <strong>RG21, RG22, RG23, RG24, and RG25</strong> postcodes:</p>
+      <ul>
+        <li><strong>3kW System:</strong> £5,300 - £6,300 - Suitable for terraced homes in Brighton Hill or South Ham</li>
+        <li><strong>4kW System:</strong> £6,400 - £7,700 - Popular choice for Chineham and Popley</li>
+        <li><strong>5kW System:</strong> £7,400 - £9,000 - Great for Kempshott and Hatch Warren</li>
+        <li><strong>6kW+ System:</strong> £8,800 - £11,200 - For larger village properties in Sherfield or Bramley</li>
+      </ul>
+
+      <h3>Why Basingstoke is Great for Solar</h3>
+      <p>Hampshire enjoys some of the best solar irradiance in England. Basingstoke specifically benefits from:</p>
+      <ul>
+        <li><strong>Modern Housing:</strong> Post-war developments in Popley and Chineham have standardised, solar-friendly roofs</li>
+        <li><strong>Suburban Layout:</strong> Low-rise buildings mean minimal shading between properties</li>
+        <li><strong>Strong Grid:</strong> Industrial heritage means robust electrical infrastructure</li>
+      </ul>
+
+      <h3>Surrounding Villages We Serve</h3>
+      <p>Beyond Basingstoke town, we cover the surrounding Hampshire villages:</p>
+      <ul>
+        <li><a href="#/location/tadley">Tadley</a> and Baughurst</li>
+        <li><a href="#/location/kingsclere">Kingsclere</a> and Hannington</li>
+        <li><a href="#/location/overton">Overton</a> and Laverstoke</li>
+        <li><a href="#/location/whitchurch">Whitchurch</a> and Micheldever</li>
+      </ul>
+
+      <h3>Battery Storage for Commuters</h3>
+      <p>Many Basingstoke residents commute to London, Reading, or work locally in the business parks. A <a href="#/services/battery-storage">home battery system</a> stores solar energy generated while you are at work for use during peak evening hours when rates are highest.</p>
+
+      <h3>Hampshire Grants and Incentives</h3>
+      <p>While national grants have reduced, the 0% VAT on solar installations continues. Additionally, the <a href="#/blog/0-vat-battery-storage">0% VAT on battery storage</a> makes combined systems more affordable than ever.</p>
+
+      <h3>Request Your Free Survey</h3>
+      <p>We provide comprehensive site surveys across Basingstoke and North Hampshire. Our assessments include shading analysis, roof condition check, and detailed generation estimates tailored to your property.</p>
+    `,
+    relatedLinks: [
+      { label: 'Solar Installers in Basingstoke', url: '#/location/basingstoke' },
+      { label: 'Battery Storage Solutions', url: '#/services/battery-storage' },
+      { label: 'View 0% VAT Details', url: '#/blog/0-vat-battery-storage' }
+    ],
+    locationSlug: 'basingstoke',
+    relatedLocations: ['tadley', 'kingsclere', 'overton', 'whitchurch'],
+    targetService: 'domestic-solar'
   }
 };
 

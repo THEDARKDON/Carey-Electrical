@@ -88,8 +88,11 @@ export interface BlogPostData {
   category: string;
   author: string;
   heroImage: string;
-  content: string; // HTML string for rich text and internal linking
+  content: string;
   relatedLinks?: { label: string; url: string }[];
+  locationSlug?: string;
+  relatedLocations?: string[];
+  targetService?: string;
 }
 
 export interface LocationItem {
