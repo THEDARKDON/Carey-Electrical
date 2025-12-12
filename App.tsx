@@ -85,15 +85,43 @@ function App() {
   };
 
   // Contact Form Handler
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('submitting');
-    
-    // Simulate API call
-    setTimeout(() => {
+
+    const formData = new FormData(e.target as HTMLFormElement);
+    const submission = {
+      firstname: formData.get('firstname') as string,
+      lastname: formData.get('lastname') as string,
+      email: formData.get('email') as string,
+      service: formData.get('interest') as string,
+      message: formData.get('message') as string,
+    };
+
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/submit-contact`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify(submission),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
       setFormStatus('success');
       setContactMessage('');
-    }, 1500);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your form. Please try again or call us directly.');
+      setFormStatus('idle');
+    }
   };
 
   // Calculator Callback
