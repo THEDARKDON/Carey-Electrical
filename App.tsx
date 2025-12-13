@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Menu, X, ArrowRight, Instagram, Facebook, Mail, Phone, MapPin, ChevronRight, ShieldCheck, Home, Building2, BatteryCharging, Layers, WifiOff, ArrowUp, CheckCircle, Loader2, ChevronDown, Car, RefreshCw, Wrench, Hammer, HardHat, Feather, ZapOff, Building, Warehouse, SquareStack, LayoutGrid, Wheat } from 'lucide-react';
 import { Button, SectionTitle, Card, Reveal, TestimonialCard, StatCard, ParticleBackground, useSEO, Typewriter, Marquee } from './components/UIComponents';
 import { SolarCalculator } from './components/Calculator';
@@ -9,9 +9,8 @@ import { Blog } from './components/Blog';
 import { BlogPostDetail } from './components/BlogPostDetail';
 import { Portfolio } from './components/Portfolio';
 import { ProjectDetail } from './components/ProjectDetail';
-import { Locations } from './components/Locations';
 import { LiveMonitor } from './components/LiveMonitor';
-import { SmartEcosystem } from './components/Ecosystem'; 
+import { SmartEcosystem } from './components/Ecosystem';
 import { CostGuide } from './components/CostGuide';
 import { Grants } from './components/Grants';
 import { About } from './components/About';
@@ -19,6 +18,17 @@ import { Glossary } from './components/Glossary';
 import { Sitemap } from './components/Sitemap';
 import { NotFound } from './components/NotFound';
 import { BRAND, SERVICES, PROJECTS, SERVICE_DETAILS, PRODUCTS_CONTENT, TRUSTED_BRANDS, TESTIMONIALS, ACCREDITATIONS, LOCATION_CONTENT, BLOG_CONTENT, LOCATIONS } from './constants';
+
+const Locations = lazy(() => import('./components/Locations').then(m => ({ default: m.Locations })));
+
+const MapLoadingFallback = () => (
+  <div className="pt-32 pb-20 min-h-screen flex items-center justify-center bg-brand-black">
+    <div className="text-center">
+      <Loader2 className="w-12 h-12 text-brand-green animate-spin mx-auto mb-4" />
+      <p className="text-slate-400">Loading map...</p>
+    </div>
+  </div>
+);
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -387,7 +397,7 @@ function App() {
   );
 
   const Navbar = () => (
-    <nav role="navigation" aria-label="Main navigation" className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-brand-black/80 backdrop-blur-xl border-b border-white/5 py-4 shadow-glass' : 'bg-transparent py-8'}`}>
+    <nav role="navigation" aria-label="Main navigation" className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-brand-black/90 md:bg-brand-black/80 backdrop-blur-md md:backdrop-blur-xl border-b border-white/5 py-3 md:py-4 shadow-glass' : 'bg-transparent py-6 md:py-8'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }} className="flex items-center gap-2 group cursor-pointer" aria-label="Carey Electrical - Home">
           <img
@@ -407,7 +417,7 @@ function App() {
               Services <ChevronRight size={14} className="rotate-90" aria-hidden="true" />
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-64" role="menu" aria-label="Services submenu">
-              <div className="bg-brand-black border border-slate-700 rounded-xl p-2 shadow-2xl flex flex-col gap-1 max-h-80 overflow-y-auto custom-scrollbar">
+              <div className="bg-brand-black border border-slate-700 rounded-xl p-2 shadow-2xl flex flex-col gap-1 max-h-[60vh] overflow-y-auto custom-scrollbar">
                 {SERVICES.map(s => (
                   <a key={s.id} href={`#/services/${s.id}`} onClick={(e) => { e.preventDefault(); navigate(`/services/${s.id}`); }} className="text-left px-4 py-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-brand-green rounded-lg transition-colors flex items-center gap-3 w-full" role="menuitem">
                     {s.title}
@@ -498,8 +508,8 @@ function App() {
           <ParticleBackground />
         </div>
 
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-green/20 rounded-full blur-3xl animate-float -z-0 mix-blend-screen" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-glow/10 rounded-full blur-3xl animate-pulse-slow -z-0 mix-blend-screen" />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-green/20 rounded-full blur-3xl animate-float -z-0 mix-blend-screen hero-blur-orb hidden md:block" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-glow/10 rounded-full blur-3xl animate-pulse-slow -z-0 mix-blend-screen hero-blur-orb hidden md:block" />
 
         <div className="container mx-auto px-6 relative z-10 text-center">
           <div className="max-w-5xl mx-auto flex flex-col items-center">
@@ -515,25 +525,25 @@ function App() {
             </Reveal>
             
             <Reveal delay={100}>
-              <h1 className="text-5xl md:text-8xl font-extrabold text-white leading-tight mb-8 tracking-tight drop-shadow-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-extrabold text-white leading-tight mb-6 md:mb-8 tracking-tight drop-shadow-2xl">
                 Power Your Future <br className="hidden md:block"/> With <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green via-brand-glow to-teal-400 text-glow"><Typewriter text="Clean Energy" /></span>
               </h1>
             </Reveal>
             
             <Reveal delay={200}>
-              <p className="text-lg md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
-                We design and install high-performance Solar PV & Battery Storage systems. 
-                Certified experts serving {BRAND.location}. 
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed font-light px-2 sm:px-0">
+                We design and install high-performance Solar PV & Battery Storage systems.
+                Certified experts serving {BRAND.location}.
                 <span className="text-white font-medium"> Reduce bills. Gain independence.</span>
               </p>
             </Reveal>
             
             <Reveal delay={300}>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Button className="text-lg px-10 py-5" onClick={() => document.getElementById('calculator')?.scrollIntoView({behavior: 'smooth'})}>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4 sm:px-0">
+                <Button className="text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5" onClick={() => document.getElementById('calculator')?.scrollIntoView({behavior: 'smooth'})}>
                   Calculate Your Savings
                 </Button>
-                <Button variant="outline" className="text-lg px-10 py-5 bg-brand-black/40 backdrop-blur-sm" onClick={() => navigate('/cost-guide')}>
+                <Button variant="outline" className="text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 bg-brand-black/40 backdrop-blur-sm" onClick={() => navigate('/cost-guide')}>
                   View Cost Guide
                 </Button>
               </div>
@@ -626,79 +636,79 @@ function App() {
         <div className="container mx-auto px-6 relative z-20">
           <SectionTitle subtitle="Our Expertise" title="Complete Energy Solutions" center />
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[minmax(200px,auto)]">
-            
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[minmax(160px,auto)] md:auto-rows-[minmax(200px,auto)]">
+
             {/* ROW 1 */}
             <Reveal>
-              <BentoItem service={getService('domestic-solar')} className="md:col-span-2 md:row-span-2 min-h-[420px]" large />
+              <BentoItem service={getService('domestic-solar')} className="md:col-span-2 md:row-span-2 min-h-[200px] md:min-h-[420px]" large />
             </Reveal>
 
             <Reveal delay={100}>
-              <BentoItem service={getService('battery-storage')} className="md:col-span-2 min-h-[200px]" />
+              <BentoItem service={getService('battery-storage')} className="md:col-span-2 min-h-[160px] md:min-h-[200px]" />
             </Reveal>
 
             {/* ROW 2 */}
-            <Reveal delay={200}>
-               <BentoItem service={getService('ev-charging')} className="md:col-span-1 min-h-[200px]" />
+            <Reveal delay={150}>
+               <BentoItem service={getService('ev-charging')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
             </Reveal>
 
-            <Reveal delay={300}>
-               <BentoItem service={getService('integrated-solar')} className="md:col-span-1 min-h-[200px]" />
+            <Reveal delay={200}>
+               <BentoItem service={getService('integrated-solar')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
             </Reveal>
 
             {/* ROW 3 */}
+            <Reveal delay={250}>
+               <BentoItem service={getService('solar-carports')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
+            </Reveal>
+
+            <Reveal delay={300}>
+               <BentoItem service={getService('flat-roof-solar')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
+            </Reveal>
+
             <Reveal delay={350}>
-               <BentoItem service={getService('solar-carports')} className="md:col-span-1 min-h-[200px]" />
+               <BentoItem service={getService('solar-repairs')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
             </Reveal>
 
             <Reveal delay={400}>
-               <BentoItem service={getService('flat-roof-solar')} className="md:col-span-1 min-h-[200px]" />
+               <BentoItem service={getService('inverter-replacement')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
             </Reveal>
 
             <Reveal delay={450}>
-               <BentoItem service={getService('solar-repairs')} className="md:col-span-1 min-h-[200px]" />
+               <BentoItem service={getService('solar-removal')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
             </Reveal>
 
             <Reveal delay={500}>
-               <BentoItem service={getService('inverter-replacement')} className="md:col-span-1 min-h-[200px]" />
-            </Reveal>
-
-            <Reveal delay={550}>
-               <BentoItem service={getService('solar-removal')} className="md:col-span-1 min-h-[200px]" />
-            </Reveal>
-
-            <Reveal delay={600}>
-               <BentoItem service={getService('new-builds')} className="md:col-span-1 min-h-[200px]" />
+               <BentoItem service={getService('new-builds')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
             </Reveal>
 
             {/* ROW 4 */}
+            <Reveal delay={550}>
+               <BentoItem service={getService('bird-proofing')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
+            </Reveal>
+
+            <Reveal delay={600}>
+               <BentoItem service={getService('maintenance')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
+            </Reveal>
+
             <Reveal delay={650}>
-               <BentoItem service={getService('bird-proofing')} className="md:col-span-1 min-h-[200px]" />
+               <BentoItem service={getService('ground-mount')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
             </Reveal>
 
             <Reveal delay={700}>
-               <BentoItem service={getService('maintenance')} className="md:col-span-1 min-h-[200px]" />
-            </Reveal>
-
-            <Reveal delay={750}>
-               <BentoItem service={getService('ground-mount')} className="md:col-span-1 min-h-[200px]" />
-            </Reveal>
-
-            <Reveal delay={800}>
-               <BentoItem service={getService('off-grid')} className="md:col-span-1 min-h-[200px]" />
+               <BentoItem service={getService('off-grid')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
             </Reveal>
 
             {/* ROW 5 */}
+            <Reveal delay={750}>
+               <BentoItem service={getService('commercial-solar')} className="md:col-span-2 min-h-[160px] md:min-h-[200px]" />
+            </Reveal>
+
+            <Reveal delay={800}>
+               <BentoItem service={getService('agricultural-solar')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
+            </Reveal>
+
             <Reveal delay={850}>
-               <BentoItem service={getService('commercial-solar')} className="md:col-span-2 min-h-[200px]" />
-            </Reveal>
-
-            <Reveal delay={900}>
-               <BentoItem service={getService('agricultural-solar')} className="md:col-span-1 min-h-[200px]" />
-            </Reveal>
-
-            <Reveal delay={950}>
-               <BentoItem service={getService('commercial-ev')} className="md:col-span-1 min-h-[200px]" />
+               <BentoItem service={getService('commercial-ev')} className="md:col-span-1 min-h-[160px] md:min-h-[200px]" />
             </Reveal>
 
           </div>
@@ -1171,7 +1181,9 @@ function App() {
     return (
       <div className="bg-brand-black min-h-screen text-slate-200">
         <Navbar />
-        <Locations onBack={() => navigate('/')} onNavigate={(slug) => navigate(`/location/${slug}`)} />
+        <Suspense fallback={<MapLoadingFallback />}>
+          <Locations onBack={() => navigate('/')} onNavigate={(slug) => navigate(`/location/${slug}`)} />
+        </Suspense>
         <Footer />
         <MobileStickyCTA />
       </div>

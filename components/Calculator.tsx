@@ -1,77 +1,109 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { SectionTitle, Card, Reveal, SimpleBarChart, useSEO } from './UIComponents';
 import { Sun, Battery, PoundSterling, Zap, ArrowRight, PieChart, TrendingUp, Leaf, Wallet, BarChart3 } from 'lucide-react';
+
+function useDebounce<T>(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+}
 
 interface SolarCalculatorProps {
   onRequestQuote?: (data: { bill: number; systemSize: number; battery: number; savings: number }) => void;
 }
 
 export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote }) => {
-  // Inputs
   const [bill, setBill] = useState(200);
-  const [systemSize, setSystemSize] = useState(6); // kW
-  const [batterySize, setBatterySize] = useState(5); // kWh
+  const [systemSize, setSystemSize] = useState(6);
+  const [batterySize, setBatterySize] = useState(5);
   const [activeTab, setActiveTab] = useState<'breakdown' | 'environment'>('breakdown');
-  const [showFinance, setShowFinance] = useState(false); // New Toggle
+  const [showFinance, setShowFinance] = useState(false);
 
-  // Constants
-  const ELECTRICITY_IMPORT_RATE = 0.29; // £ per kWh
-  const ELECTRICITY_EXPORT_RATE = 0.15; // £ per kWh (SEG)
-  const ANNUAL_YIELD_PER_KW = 900; // kWh (UK Average)
+  const debouncedBill = useDebounce(bill, 150);
+  const debouncedSystemSize = useDebounce(systemSize, 150);
+  const debouncedBatterySize = useDebounce(batterySize, 150);
+
+  const ELECTRICITY_IMPORT_RATE = 0.29;
+  const ELECTRICITY_EXPORT_RATE = 0.15;
+  const ANNUAL_YIELD_PER_KW = 900;
   
-  // -- CALCULATIONS ENGINE --
+  const calculations = useMemo(() => {
+    const annualConsumptionkWh = (debouncedBill * 12) / ELECTRICITY_IMPORT_RATE;
+    const annualGenerationkWh = debouncedSystemSize * ANNUAL_YIELD_PER_KW;
+    const baseSelfConsumptionkWh = Math.min(annualGenerationkWh * 0.45, annualConsumptionkWh);
+    const batteryUsableCapacity = debouncedBatterySize * 0.9;
+    const batteryAnnualThroughput = Math.min(
+      batteryUsableCapacity * 250,
+      Math.max(0, annualGenerationkWh - baseSelfConsumptionkWh)
+    );
+    const totalSelfConsumedkWh = Math.min(baseSelfConsumptionkWh + batteryAnnualThroughput, annualConsumptionkWh);
+    const exportedkWh = Math.max(0, annualGenerationkWh - totalSelfConsumedkWh);
+    const annualBillSavings = totalSelfConsumedkWh * ELECTRICITY_IMPORT_RATE;
+    const annualExportIncome = exportedkWh * ELECTRICITY_EXPORT_RATE;
+    const totalAnnualBenefit = annualBillSavings + annualExportIncome;
+    const monthlyBenefit = totalAnnualBenefit / 12;
+    const independencePercentage = Math.min(100, Math.round((totalSelfConsumedkWh / annualConsumptionkWh) * 100));
+    const estimatedSystemCost = 3000 + (debouncedSystemSize * 950) + (debouncedBatterySize * 650);
+    const roiYears = estimatedSystemCost / totalAnnualBenefit;
+    const breakEvenYear = new Date().getFullYear() + Math.ceil(roiYears);
+    const financeTermYears = 10;
+    const interestRate = 0.079;
+    const monthlyFinanceCost = (estimatedSystemCost * (1 + (interestRate * financeTermYears))) / (financeTermYears * 12);
+    const cashflow = monthlyBenefit - monthlyFinanceCost;
 
-  // 1. Derive Annual Consumption from Monthly Bill
-  const annualConsumptionkWh = (bill * 12) / ELECTRICITY_IMPORT_RATE;
+    const cumulativeData: number[] = [];
+    let runningTotal = -estimatedSystemCost;
+    for (let i = 1; i <= 10; i++) {
+      const inflationMultiplier = Math.pow(1.05, i - 1);
+      runningTotal += (totalAnnualBenefit * inflationMultiplier);
+      cumulativeData.push(Math.round(runningTotal));
+    }
 
-  // 2. Calculate Total Generation
-  const annualGenerationkWh = systemSize * ANNUAL_YIELD_PER_KW;
+    return {
+      annualConsumptionkWh,
+      annualGenerationkWh,
+      totalSelfConsumedkWh,
+      exportedkWh,
+      annualBillSavings,
+      annualExportIncome,
+      totalAnnualBenefit,
+      monthlyBenefit,
+      independencePercentage,
+      estimatedSystemCost,
+      roiYears,
+      breakEvenYear,
+      monthlyFinanceCost,
+      cashflow,
+      cumulativeData
+    };
+  }, [debouncedBill, debouncedSystemSize, debouncedBatterySize, ELECTRICITY_IMPORT_RATE, ELECTRICITY_EXPORT_RATE, ANNUAL_YIELD_PER_KW]);
 
-  // 3. Calculate Self Consumption Ratio
-  const baseSelfConsumptionkWh = Math.min(annualGenerationkWh * 0.45, annualConsumptionkWh);
-  
-  const batteryUsableCapacity = batterySize * 0.9; // 90% Depth of Discharge
-  const batteryAnnualThroughput = Math.min(
-    batteryUsableCapacity * 250, // Approx cycles per year
-    Math.max(0, annualGenerationkWh - baseSelfConsumptionkWh) // Cannot store more than excess solar
-  );
-
-  // Total energy from system used in house
-  const totalSelfConsumedkWh = Math.min(baseSelfConsumptionkWh + batteryAnnualThroughput, annualConsumptionkWh);
-  
-  // 4. Calculate Export
-  const exportedkWh = Math.max(0, annualGenerationkWh - totalSelfConsumedkWh);
-
-  // 5. Financials
-  const annualBillSavings = totalSelfConsumedkWh * ELECTRICITY_IMPORT_RATE;
-  const annualExportIncome = exportedkWh * ELECTRICITY_EXPORT_RATE;
-  const totalAnnualBenefit = annualBillSavings + annualExportIncome;
-  const monthlyBenefit = totalAnnualBenefit / 12;
-
-  // 6. Grid Independence Score
-  const independencePercentage = Math.min(100, Math.round((totalSelfConsumedkWh / annualConsumptionkWh) * 100));
-
-  // 7. Costs & ROI (Estimated)
-  const estimatedSystemCost = 3000 + (systemSize * 950) + (batterySize * 650);
-  const roiYears = estimatedSystemCost / totalAnnualBenefit;
-  const breakEvenYear = new Date().getFullYear() + Math.ceil(roiYears);
-
-  // 8. Finance Calculation (Simple interest approximation for demo)
-  // Assuming 10 year term at 7.9% APR
-  const financeTermYears = 10;
-  const interestRate = 0.079;
-  const monthlyFinanceCost = (estimatedSystemCost * (1 + (interestRate * financeTermYears))) / (financeTermYears * 12);
-  const cashflow = monthlyBenefit - monthlyFinanceCost;
-
-  // 9. Cumulative Cashflow Data for Chart (10 Years)
-  const cumulativeData = [];
-  let runningTotal = -estimatedSystemCost;
-  for (let i = 1; i <= 10; i++) {
-    // Add annual benefit, assume 5% energy price inflation
-    const inflationMultiplier = Math.pow(1.05, i - 1);
-    runningTotal += (totalAnnualBenefit * inflationMultiplier);
-    cumulativeData.push(Math.round(runningTotal));
-  }
+  const {
+    annualConsumptionkWh,
+    annualGenerationkWh,
+    totalSelfConsumedkWh,
+    annualBillSavings,
+    annualExportIncome,
+    totalAnnualBenefit,
+    monthlyBenefit,
+    independencePercentage,
+    estimatedSystemCost,
+    roiYears,
+    breakEvenYear,
+    monthlyFinanceCost,
+    cashflow,
+    cumulativeData
+  } = calculations;
 
   // -- SEO SCHEMA --
   const calculatorSchema = {
@@ -147,18 +179,20 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
     return { backgroundSize: `${((value - min) * 100) / (max - min)}% 100%` };
   };
 
-  const recommendedSystemSize = Math.min(12, Math.ceil((annualConsumptionkWh / ANNUAL_YIELD_PER_KW) * 2) / 2);
+  const recommendedSystemSize = useMemo(() => {
+    return Math.min(12, Math.ceil((annualConsumptionkWh / ANNUAL_YIELD_PER_KW) * 2) / 2);
+  }, [annualConsumptionkWh, ANNUAL_YIELD_PER_KW]);
 
-  const handleRequestClick = () => {
+  const handleRequestClick = useCallback(() => {
     if (onRequestQuote) {
       onRequestQuote({
-        bill,
-        systemSize,
-        battery: batterySize,
+        bill: debouncedBill,
+        systemSize: debouncedSystemSize,
+        battery: debouncedBatterySize,
         savings: Math.round(totalAnnualBenefit)
       });
     }
-  };
+  }, [onRequestQuote, debouncedBill, debouncedSystemSize, debouncedBatterySize, totalAnnualBenefit]);
 
   return (
     <section id="calculator" className="py-20 md:py-32 relative overflow-hidden bg-brand-black/50">
@@ -293,7 +327,7 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onRequestQuote
                 
                 {batterySize === 0 && (
                    <div className="mt-4 p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-red-200">
-                     Without a battery, you may be exporting up to {Math.round((annualGenerationkWh * 0.55) / annualGenerationkWh * 100)}% of your free energy back to the grid for pennies!
+                     Without a battery, you may be exporting up to 55% of your free energy back to the grid for pennies!
                    </div>
                 )}
               </div>

@@ -107,7 +107,7 @@
         color: #f8fafc;
         overflow-x: hidden;
       }
-      
+
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 10px;
@@ -130,7 +130,7 @@
         border: 1px solid rgba(16, 185, 129, 0.1);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       }
-      
+
       .text-glow {
         text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
       }
@@ -143,8 +143,8 @@
 
       /* Custom Range Input Styling */
       input[type=range] {
-        -webkit-appearance: none; 
-        background: transparent; 
+        -webkit-appearance: none;
+        background: transparent;
         height: 28px; /* Hit area */
       }
       input[type=range]::-webkit-slider-thumb {
@@ -154,7 +154,7 @@
         border-radius: 50%;
         background: #10b981;
         cursor: pointer;
-        margin-top: -10px; 
+        margin-top: -10px;
         box-shadow: 0 0 15px rgba(16, 185, 129, 0.8);
         border: 2px solid #fff;
         transition: transform 0.2s;
@@ -209,6 +209,59 @@
       textarea:focus-visible {
         outline: 2px solid #10b981;
         outline-offset: 2px;
+      }
+
+      /* Mobile Performance Optimizations */
+      @media (max-width: 768px) {
+        .glass-panel {
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+        }
+
+        .animate-ken-burns {
+          animation: none !important;
+          transform: scale(1) !important;
+        }
+
+        .animate-float,
+        .animate-pulse-slow {
+          animation-duration: 8s !important;
+        }
+
+        .hero-blur-orb {
+          display: none !important;
+        }
+
+        .particle-bg {
+          display: none !important;
+        }
+      }
+
+      /* Prefers Reduced Motion - Accessibility */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+
+        .animate-ken-burns,
+        .animate-float,
+        .animate-pulse-slow,
+        .animate-ping,
+        .animate-bounce,
+        .animate-spin-slow,
+        .animate-scroll {
+          animation: none !important;
+        }
+      }
+
+      /* Safe area for mobile devices with notches */
+      .safe-area-bottom {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
       }
     </style>
   <script type="importmap">

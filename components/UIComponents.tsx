@@ -36,15 +36,15 @@ export const Button: React.FC<ButtonProps> = ({
 };
 
 export const SectionTitle: React.FC<{ subtitle: string; title: string; center?: boolean; className?: string }> = ({ subtitle, title, center, className = '' }) => (
-  <div className={`mb-16 ${center ? 'text-center' : ''} ${className}`}>
+  <div className={`mb-10 md:mb-16 ${center ? 'text-center' : ''} ${className}`}>
     <Reveal>
-      <span className="text-brand-green font-bold tracking-[0.2em] uppercase text-xs mb-3 block">
+      <span className="text-brand-green font-bold tracking-[0.15em] md:tracking-[0.2em] uppercase text-[10px] md:text-xs mb-2 md:mb-3 block">
         {subtitle}
       </span>
-      <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-tight">
+      <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
         {title}
       </h2>
-      <div className={`h-1.5 w-24 bg-gradient-to-r from-brand-green to-brand-glow mt-6 rounded-full ${center ? 'mx-auto' : ''} shadow-[0_0_15px_#10b981]`} />
+      <div className={`h-1 md:h-1.5 w-16 md:w-24 bg-gradient-to-r from-brand-green to-brand-glow mt-4 md:mt-6 rounded-full ${center ? 'mx-auto' : ''} shadow-[0_0_15px_#10b981]`} />
     </Reveal>
   </div>
 );
@@ -96,12 +96,24 @@ export const TestimonialCard: React.FC<{ name: string; location: string; quote: 
   </Card>
 );
 
-// Animation Component for scrolling reveal
+// Animation Component for scrolling reveal - optimized for mobile
 export const Reveal: React.FC<{ children: React.ReactNode; width?: "fit-content" | "100%"; delay?: number }> = ({ children, width = "100%", delay = 0 }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    setPrefersReducedMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }, []);
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
@@ -116,17 +128,21 @@ export const Reveal: React.FC<{ children: React.ReactNode; width?: "fit-content"
     return () => {
       if (ref.current) observer.unobserve(ref.current);
     }
-  }, []);
+  }, [prefersReducedMotion]);
+
+  const mobileDelay = isMobile ? Math.min(delay, 100) : delay;
+  const duration = isMobile ? 'duration-500' : 'duration-700';
+  const translateDistance = isMobile ? 'translate-y-4' : 'translate-y-8';
 
   return (
-    <div 
-      ref={ref} 
-      style={{ 
-        width, 
-        transitionDelay: `${delay}ms` 
+    <div
+      ref={ref}
+      style={{
+        width,
+        transitionDelay: `${mobileDelay}ms`
       }}
-      className={`transition-all duration-1000 ease-out transform ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+      className={`transition-all ${duration} ease-out transform ${
+        isVisible ? "opacity-100 translate-y-0" : `opacity-0 ${translateDistance}`
       }`}
     >
       {children}
@@ -172,16 +188,28 @@ export const CountUp: React.FC<{ end: number; duration?: number; suffix?: string
   return <span ref={ref}>{prefix}{count}{suffix}</span>;
 };
 
-// Particle Background Component
+// Particle Background Component - reduced on mobile
 export const ParticleBackground: React.FC = () => {
+  const [particleCount, setParticleCount] = useState(0);
+
   useEffect(() => {
-    // Simple CSS-only particle implementation for performance
+    const isMobile = window.innerWidth < 768;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      setParticleCount(0);
+    } else if (isMobile) {
+      setParticleCount(6);
+    } else {
+      setParticleCount(15);
+    }
   }, []);
 
+  if (particleCount === 0) return null;
+
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {[...Array(20)].map((_, i) => (
-        <div 
+    <div className="absolute inset-0 overflow-hidden pointer-events-none particle-bg">
+      {[...Array(particleCount)].map((_, i) => (
+        <div
           key={i}
           className="absolute bg-brand-green/20 rounded-full animate-float"
           style={{
@@ -189,9 +217,9 @@ export const ParticleBackground: React.FC = () => {
             height: Math.random() * 4 + 2 + 'px',
             top: Math.random() * 100 + '%',
             left: Math.random() * 100 + '%',
-            animationDuration: Math.random() * 10 + 5 + 's',
+            animationDuration: Math.random() * 10 + 8 + 's',
             animationDelay: Math.random() * 5 + 's',
-            opacity: Math.random() * 0.5
+            opacity: Math.random() * 0.4
           }}
         />
       ))}
@@ -224,12 +252,23 @@ export const Breadcrumbs: React.FC<{ items: { label: string; action?: () => void
   </nav>
 );
 
-// Typewriter Effect for Hero
+// Typewriter Effect for Hero - skip on mobile for faster loading
 export const Typewriter: React.FC<{ text: string; delay?: number }> = ({ text, delay = 50 }) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [skipAnimation, setSkipAnimation] = useState(false);
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (isMobile || prefersReducedMotion) {
+      setSkipAnimation(true);
+      setCurrentText(text);
+    }
+  }, [text]);
+
+  useEffect(() => {
+    if (skipAnimation) return;
     if (currentIndex < text.length) {
       const timeout = setTimeout(() => {
         setCurrentText(prev => prev + text[currentIndex]);
@@ -237,7 +276,7 @@ export const Typewriter: React.FC<{ text: string; delay?: number }> = ({ text, d
       }, delay);
       return () => clearTimeout(timeout);
     }
-  }, [currentIndex, delay, text]);
+  }, [currentIndex, delay, text, skipAnimation]);
 
   return <span>{currentText}</span>;
 };
