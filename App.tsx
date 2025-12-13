@@ -28,60 +28,66 @@ function App() {
   const [contactMessage, setContactMessage] = useState('');
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
-  // --- ROUTING LOGIC (HASH BASED) ---
-  
-  const parseUrl = () => {
-    // Get the hash, remove the '#' symbol
-    const hash = window.location.hash.substring(1); 
-    
-    if (hash === '/' || hash === '') return { view: 'home', params: '' };
-    if (hash === '/projects') return { view: 'portfolio', params: '' };
-    if (hash === '/news') return { view: 'blog', params: '' };
-    if (hash === '/locations') return { view: 'locations', params: '' };
-    if (hash === '/cost-guide') return { view: 'cost-guide', params: '' };
-    if (hash === '/grants') return { view: 'grants', params: '' };
-    if (hash === '/about') return { view: 'about', params: '' };
-    if (hash === '/glossary') return { view: 'glossary', params: '' };
-    if (hash === '/sitemap') return { view: 'sitemap', params: '' };
+  // --- ROUTING LOGIC (PATH AND HASH BASED) ---
 
-    // Dynamic Routes
-    if (hash.startsWith('/services/')) return { view: 'service', params: hash.split('/services/')[1] };
-    if (hash.startsWith('/location/')) return { view: 'location-detail', params: hash.split('/location/')[1] };
-    if (hash.startsWith('/product/')) return { view: 'product', params: hash.split('/product/')[1] };
-    if (hash.startsWith('/news/')) return { view: 'blog-post', params: hash.split('/news/')[1] };
-    if (hash.startsWith('/project/')) return { view: 'project-detail', params: hash.split('/project/')[1] };
-    
-    return { view: '404', params: '' }; // Fallback for unknown routes
+  const parseUrl = () => {
+    let path = window.location.hash.substring(1);
+
+    if (!path || path === '/') {
+      path = window.location.pathname;
+    }
+
+    if (path === '/' || path === '') return { view: 'home', params: '' };
+    if (path === '/projects') return { view: 'portfolio', params: '' };
+    if (path === '/news') return { view: 'blog', params: '' };
+    if (path === '/locations') return { view: 'locations', params: '' };
+    if (path === '/cost-guide') return { view: 'cost-guide', params: '' };
+    if (path === '/grants') return { view: 'grants', params: '' };
+    if (path === '/about') return { view: 'about', params: '' };
+    if (path === '/glossary') return { view: 'glossary', params: '' };
+    if (path === '/sitemap') return { view: 'sitemap', params: '' };
+
+    if (path.startsWith('/services/')) return { view: 'service', params: path.split('/services/')[1] };
+    if (path.startsWith('/location/')) return { view: 'location-detail', params: path.split('/location/')[1] };
+    if (path.startsWith('/product/')) return { view: 'product', params: path.split('/product/')[1] };
+    if (path.startsWith('/news/')) return { view: 'blog-post', params: path.split('/news/')[1] };
+    if (path.startsWith('/project/')) return { view: 'project-detail', params: path.split('/project/')[1] };
+
+    return { view: '404', params: '' };
   };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
-    
-    // Initial Load
+
     const { view, params } = parseUrl();
     setView(view);
     setParams(params);
 
-    // Hash Change Listener
-    const onHashChange = () => {
+    const onRouteChange = () => {
       const { view, params } = parseUrl();
       setView(view);
       setParams(params);
       window.scrollTo(0, 0);
     };
-    window.addEventListener('hashchange', onHashChange);
+
+    window.addEventListener('hashchange', onRouteChange);
+    window.addEventListener('popstate', onRouteChange);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('hashchange', onHashChange);
+      window.removeEventListener('hashchange', onRouteChange);
+      window.removeEventListener('popstate', onRouteChange);
     };
   }, []);
 
-  // Navigation Function
   const navigate = (path: string) => {
-    window.location.hash = path;
+    window.history.pushState({}, '', path);
+    const { view, params } = parseUrl();
+    setView(view);
+    setParams(params);
     setIsMenuOpen(false);
+    window.scrollTo(0, 0);
   };
 
   // Contact Form Handler
