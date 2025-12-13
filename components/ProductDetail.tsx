@@ -27,13 +27,13 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://careyelectrical.co.uk"
+            "item": "https://careyelectricalltd.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Products",
-            "item": "https://careyelectrical.co.uk/#/ecosystem"
+            "item": "https://careyelectricalltd.com/#/ecosystem"
           },
           {
             "@type": "ListItem",
@@ -64,7 +64,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
           "seller": {
             "@type": "Organization",
             "name": "Carey Electrical",
-            "url": "https://careyelectrical.co.uk"
+            "url": "https://careyelectricalltd.com"
           },
           "itemCondition": "https://schema.org/NewCondition"
         },

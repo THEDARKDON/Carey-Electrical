@@ -143,52 +143,52 @@ function App() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://careyelectrical.co.uk/#website",
-        "url": "https://careyelectrical.co.uk",
+        "@id": "https://careyelectricalltd.com/#website",
+        "url": "https://careyelectricalltd.com",
         "name": "Carey Electrical - Solar Panel Installers Berkshire",
         "description": "MCS certified solar panel installers serving Berkshire. Expert Solar PV, Battery Storage, and EV Charging installation.",
         "publisher": {
-          "@id": "https://careyelectrical.co.uk/#organization"
+          "@id": "https://careyelectricalltd.com/#organization"
         },
         "inLanguage": "en-GB",
         "potentialAction": {
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://careyelectrical.co.uk/#/glossary?search={search_term_string}"
+            "urlTemplate": "https://careyelectricalltd.com/#/glossary?search={search_term_string}"
           },
           "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "SiteNavigationElement",
-        "@id": "https://careyelectrical.co.uk/#navigation",
+        "@id": "https://careyelectricalltd.com/#navigation",
         "name": "Main Navigation",
         "hasPart": [
-          { "@type": "WebPage", "name": "Home", "url": "https://careyelectrical.co.uk/" },
-          { "@type": "WebPage", "name": "Solar Panel Installation", "url": "https://careyelectrical.co.uk/#/services/domestic-solar" },
-          { "@type": "WebPage", "name": "Battery Storage", "url": "https://careyelectrical.co.uk/#/services/battery-storage" },
-          { "@type": "WebPage", "name": "EV Charging", "url": "https://careyelectrical.co.uk/#/services/ev-charging" },
-          { "@type": "WebPage", "name": "Projects", "url": "https://careyelectrical.co.uk/#/projects" },
-          { "@type": "WebPage", "name": "Cost Guide", "url": "https://careyelectrical.co.uk/#/cost-guide" },
-          { "@type": "WebPage", "name": "Locations", "url": "https://careyelectrical.co.uk/#/locations" },
-          { "@type": "WebPage", "name": "News", "url": "https://careyelectrical.co.uk/#/news" }
+          { "@type": "WebPage", "name": "Home", "url": "https://careyelectricalltd.com/" },
+          { "@type": "WebPage", "name": "Solar Panel Installation", "url": "https://careyelectricalltd.com/#/services/domestic-solar" },
+          { "@type": "WebPage", "name": "Battery Storage", "url": "https://careyelectricalltd.com/#/services/battery-storage" },
+          { "@type": "WebPage", "name": "EV Charging", "url": "https://careyelectricalltd.com/#/services/ev-charging" },
+          { "@type": "WebPage", "name": "Projects", "url": "https://careyelectricalltd.com/#/projects" },
+          { "@type": "WebPage", "name": "Cost Guide", "url": "https://careyelectricalltd.com/#/cost-guide" },
+          { "@type": "WebPage", "name": "Locations", "url": "https://careyelectricalltd.com/#/locations" },
+          { "@type": "WebPage", "name": "News", "url": "https://careyelectricalltd.com/#/news" }
         ]
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://careyelectrical.co.uk/#organization",
+        "@id": "https://careyelectricalltd.com/#organization",
         "name": BRAND.name,
     "alternateName": "Carey Electrical Ltd",
     "description": "MCS certified solar panel installers and renewable energy specialists serving Berkshire and surrounding areas. Expert installation of Solar PV, Battery Storage, and EV Charging systems.",
-    "url": "https://careyelectrical.co.uk",
+    "url": "https://careyelectricalltd.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png",
+      "url": "https://careyelectricalltd.com/carey_electrical_logo_improved-removebg-preview.png",
       "width": "600",
       "height": "200"
     },
-    "image": "https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png",
+    "image": "https://careyelectricalltd.com/carey_electrical_logo_improved-removebg-preview.png",
     "telephone": BRAND.phone,
     "email": BRAND.email,
     "address": {
@@ -365,7 +365,7 @@ function App() {
       "organizer": {
         "@type": "Organization",
         "name": "Carey Electrical",
-        "url": "https://careyelectrical.co.uk"
+        "url": "https://careyelectricalltd.com"
       },
       "offers": {
         "@type": "Offer",

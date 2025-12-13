@@ -295,9 +295,9 @@ export const useSEO = (title: string, description: string, schema?: object, imag
     const fullTitle = `${title} | Carey Electrical`;
     document.title = fullTitle;
 
-    const defaultImage = 'https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png';
-    const ogImage = image ? (image.startsWith('http') ? image : `https://careyelectrical.co.uk${image}`) : defaultImage;
-    const baseUrl = 'https://careyelectrical.co.uk';
+    const defaultImage = 'https://careyelectricalltd.com/carey_electrical_logo_improved-removebg-preview.png';
+    const ogImage = image ? (image.startsWith('http') ? image : `https://careyelectricalltd.com${image}`) : defaultImage;
+    const baseUrl = 'https://careyelectricalltd.com';
     const hashPath = window.location.hash || '';
     const currentUrl = hashPath && hashPath !== '#/' ? `${baseUrl}/${hashPath}` : baseUrl + '/';
 
@@ -325,7 +325,7 @@ export const useSEO = (title: string, description: string, schema?: object, imag
       { property: 'og:image:alt', content: `${title} - Carey Electrical` },
       { property: 'og:site_name', content: 'Carey Electrical' },
       { property: 'og:locale', content: 'en_GB' },
-      { property: 'article:publisher', content: 'https://careyelectrical.co.uk' },
+      { property: 'article:publisher', content: 'https://careyelectricalltd.com' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: fullTitle },
       { name: 'twitter:description', content: description },

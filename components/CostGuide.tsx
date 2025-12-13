@@ -21,7 +21,7 @@ export const CostGuide: React.FC<CostGuideProps> = ({ onBack, onNavigate }) => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectrical.co.uk" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectricalltd.com" },
           { "@type": "ListItem", "position": 2, "name": "Cost Guide", "item": window.location.href }
         ]
       },
@@ -49,7 +49,7 @@ export const CostGuide: React.FC<CostGuideProps> = ({ onBack, onNavigate }) => {
           "name": "Carey Electrical",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png"
+            "url": "https://careyelectricalltd.com/carey_electrical_logo_improved-removebg-preview.png"
           }
         },
         "datePublished": "2025-01-01",

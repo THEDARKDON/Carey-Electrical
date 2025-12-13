@@ -21,7 +21,7 @@ export const Glossary: React.FC<GlossaryProps> = ({ onBack, onNavigate }) => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectrical.co.uk" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectricalltd.com" },
           { "@type": "ListItem", "position": 2, "name": "Glossary", "item": window.location.href }
         ]
       },

@@ -34,13 +34,13 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://careyelectrical.co.uk"
+            "item": "https://careyelectricalltd.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": "https://careyelectrical.co.uk/#/services"
+            "item": "https://careyelectricalltd.com/#/services"
           },
           {
             "@type": "ListItem",
@@ -58,8 +58,8 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
           "@type": "LocalBusiness",
           "name": "Carey Electrical",
           "telephone": "01635 783887",
-          "email": "info@careyelectrical.co.uk",
-          "url": "https://careyelectrical.co.uk",
+          "email": "info@careyelectricalltd.com",
+          "url": "https://careyelectricalltd.com",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Thatcham",

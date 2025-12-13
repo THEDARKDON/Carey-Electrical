@@ -21,7 +21,7 @@ export const Blog: React.FC<BlogProps> = ({ onBack, onNavigate }) => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectrical.co.uk" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://careyelectricalltd.com" },
           { "@type": "ListItem", "position": 2, "name": "News", "item": window.location.href }
         ]
       },
@@ -35,7 +35,7 @@ export const Blog: React.FC<BlogProps> = ({ onBack, onNavigate }) => {
           "name": "Carey Electrical",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png"
+            "url": "https://careyelectricalltd.com/carey_electrical_logo_improved-removebg-preview.png"
           }
         },
         "blogPost": BLOG_POSTS.slice(0, 10).map(post => ({

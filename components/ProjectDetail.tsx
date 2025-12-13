@@ -28,7 +28,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ data, onBack, onNa
       "name": "Carey Electrical",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://careyelectrical.co.uk/logo.png"
+        "url": "https://careyelectricalltd.com/logo.png"
       }
     },
     "description": `Case study of a ${data.systemSize} ${data.category} installation in ${data.location} by Carey Electrical.`

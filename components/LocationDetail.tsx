@@ -27,13 +27,13 @@ export const LocationDetail: React.FC<LocationDetailProps> = ({ data, onBack, on
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://careyelectrical.co.uk"
+            "item": "https://careyelectricalltd.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Locations",
-            "item": "https://careyelectrical.co.uk/#/locations"
+            "item": "https://careyelectricalltd.com/#/locations"
           },
           {
             "@type": "ListItem",
@@ -46,9 +46,9 @@ export const LocationDetail: React.FC<LocationDetailProps> = ({ data, onBack, on
       {
         "@type": "LocalBusiness",
         "name": `Carey Electrical - Solar Installers ${data.name}`,
-        "image": "https://careyelectrical.co.uk" + data.heroImage,
+        "image": "https://careyelectricalltd.com" + data.heroImage,
         "telephone": "01635 783887",
-        "email": "info@careyelectrical.co.uk",
+        "email": "info@careyelectricalltd.com",
         "url": window.location.href,
         "areaServed": {
           "@type": "City",

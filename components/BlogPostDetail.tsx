@@ -46,13 +46,13 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://careyelectrical.co.uk"
+            "item": "https://careyelectricalltd.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "News",
-            "item": "https://careyelectrical.co.uk/#/news"
+            "item": "https://careyelectricalltd.com/#/news"
           },
           {
             "@type": "ListItem",
@@ -74,14 +74,14 @@ export const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ data, onBack, on
         "author": {
           "@type": "Person",
           "name": data.author,
-          "url": "https://careyelectrical.co.uk"
+          "url": "https://careyelectricalltd.com"
         },
         "publisher": {
           "@type": "Organization",
           "name": "Carey Electrical",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://careyelectrical.co.uk/carey_electrical_logo_improved-removebg-preview.png",
+            "url": "https://careyelectricalltd.com/carey_electrical_logo_improved-removebg-preview.png",
             "width": 600,
             "height": 200
           }
