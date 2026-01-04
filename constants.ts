@@ -2293,7 +2293,9 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'How long does installation take?', answer: 'A typical residential system takes 1-2 days to install.' }
     ],
     galleryImages: ['/img_0493.jpeg', '/img_8048.jpeg', '/img_0494.jpeg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682.jpg', '/529d5e5e-5571-4a64-a3d1-b431abf65c50 copy.jpg', '/27162577-e234-4b8c-ade3-b26fda59906f copy.jpg'],
-    relatedServices: ['battery-storage', 'ev-charging', 'integrated-solar']
+    relatedServices: ['battery-storage', 'ev-charging', 'integrated-solar'],
+    relatedBlogPosts: ['is-solar-worth-it-berkshire', 'solar-panel-costs-reading', 'heritage-roof-solar-tips'],
+    relatedProjects: ['reading-premium-black', 'heritage-slate-install', 'dramatic-roof-install']
   },
   'integrated-solar': {
     id: 'integrated-solar',
@@ -2319,7 +2321,9 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Does it overheat?', answer: 'No, modern in-roof systems have engineered airflow channels to ensure panels stay cool and efficient.' },
       { question: 'Is it waterproof?', answer: 'Yes, the interlocking flashing kits are designed to be 100% weather-tight, tested to extreme conditions.' }
     ],
-    galleryImages: ['/img_8715.jpeg', '/img_8716.jpeg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg']
+    galleryImages: ['/img_8715.jpeg', '/img_8716.jpeg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898.jpg', '/a0581ab0-ce18-46e9-bc42-a93599cd0898 copy.jpg'],
+    relatedBlogPosts: ['in-roof-solar-guide', 'new-build-solar-planning', 'heritage-roof-solar-tips'],
+    relatedProjects: ['new-build-construction', 'integrated-slate-system']
   },
   'agricultural-solar': {
     id: 'agricultural-solar',
@@ -2351,7 +2355,9 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do you work with 3-phase?', answer: 'Yes, almost all our agricultural installs are 3-phase, ranging from 20kW to 200kW+.' },
       { question: 'Can you ground mount in a field?', answer: 'Yes, we offer pile-driven ground mount systems that don\'t require concrete foundations, preserving soil health.' }
     ],
-    galleryImages: ['/img_0366.jpeg', '/img_8716.jpeg', '/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg']
+    galleryImages: ['/img_0366.jpeg', '/img_8716.jpeg', '/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg'],
+    relatedBlogPosts: ['large-array-guide', 'is-solar-worth-it-berkshire'],
+    relatedProjects: ['outbuilding-workshop']
   },
   'solar-carports': {
     id: 'solar-carports',
@@ -2377,7 +2383,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Do I need planning permission?', answer: 'Often yes, as it is a permanent structure. We can provide elevation drawings to assist with your application.' },
       { question: 'How many panels fit?', answer: 'A double carport typically fits 12-15 panels, generating around 5-6kW.' }
     ],
-    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg']
+    galleryImages: ['/baea77fd-a9df-488b-9759-39748439a29a.jpg', '/baea77fd-a9df-488b-9759-39748439a29a copy.jpg', '/b6726c41-55cf-4466-b54f-31f8a8c7d682 copy.jpg'],
+    relatedBlogPosts: ['solar-carports-vs-roof', 'is-solar-worth-it-berkshire', 'large-array-guide']
   },
   'flat-roof-solar': {
     id: 'flat-roof-solar',
@@ -2579,7 +2586,9 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
         { question: 'Can I add a battery to existing panels?', answer: 'Yes, we can retrofit batteries to almost any existing solar system.' }
     ],
     galleryImages: ['/img_8050.jpeg', '/img_9312.jpeg', '/57eef691-a691-4489-9629-c5336d019a3c.jpg'],
-    relatedServices: ['domestic-solar', 'ev-charging', 'off-grid']
+    relatedServices: ['domestic-solar', 'ev-charging', 'off-grid'],
+    relatedBlogPosts: ['best-solar-batteries-2025', '0-vat-battery-storage', 'solar-worth-it-wokingham'],
+    relatedProjects: ['battery-hybrid-system', 'givenergy-powerstation']
   },
   'bird-proofing': {
     id: 'bird-proofing',
@@ -2711,7 +2720,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetailData> = {
       { question: 'Can I charge two cars?', answer: 'Yes, we can install dual chargers or load-balance two units so they don\'t overload your supply.' }
     ],
     galleryImages: ['/57eef691-a691-4489-9629-c5336d019a3c.jpg'],
-    relatedServices: ['domestic-solar', 'battery-storage', 'commercial-ev']
+    relatedServices: ['domestic-solar', 'battery-storage', 'commercial-ev'],
+    relatedBlogPosts: ['solar-carports-vs-roof', 'best-solar-batteries-2025', 'is-solar-worth-it-berkshire']
   },
   'inverter-replacement': {
     id: 'inverter-replacement',

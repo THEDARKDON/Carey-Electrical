@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { Menu, X, ArrowRight, Instagram, Facebook, Mail, Phone, MapPin, ChevronRight, ShieldCheck, Home, Building2, BatteryCharging, Layers, WifiOff, ArrowUp, CheckCircle, Loader2, ChevronDown, Car, RefreshCw, Wrench, Hammer, HardHat, Feather, ZapOff, Building, Warehouse, SquareStack, LayoutGrid, Wheat } from 'lucide-react';
+import { Menu, X, ArrowRight, Instagram, Facebook, Mail, Phone, MapPin, ChevronRight, ShieldCheck, Home, Building2, BatteryCharging, Layers, WifiOff, ArrowUp, CheckCircle, Loader2, ChevronDown, Car, RefreshCw, Wrench, Hammer, HardHat, Feather, ZapOff, Building, Warehouse, SquareStack, LayoutGrid, Wheat, Calendar } from 'lucide-react';
 import { Button, SectionTitle, Card, Reveal, TestimonialCard, StatCard, ParticleBackground, useSEO, Typewriter, Marquee } from './components/UIComponents';
 import { SolarCalculator } from './components/Calculator';
 import { ServiceDetail } from './components/ServiceDetail';
@@ -17,7 +17,7 @@ import { About } from './components/About';
 import { Glossary } from './components/Glossary';
 import { Sitemap } from './components/Sitemap';
 import { NotFound } from './components/NotFound';
-import { BRAND, SERVICES, PROJECTS, SERVICE_DETAILS, PRODUCTS_CONTENT, TRUSTED_BRANDS, TESTIMONIALS, ACCREDITATIONS, LOCATION_CONTENT, BLOG_CONTENT, LOCATIONS } from './constants';
+import { BRAND, SERVICES, PROJECTS, SERVICE_DETAILS, PRODUCTS_CONTENT, TRUSTED_BRANDS, TESTIMONIALS, ACCREDITATIONS, LOCATION_CONTENT, BLOG_CONTENT, LOCATIONS, BLOG_POSTS } from './constants';
 
 const Locations = lazy(() => import('./components/Locations').then(m => ({ default: m.Locations })));
 
@@ -923,6 +923,94 @@ function App() {
     </section>
   );
 
+  const PopularLocations = () => (
+    <section className="py-16 bg-slate-950 border-t border-slate-900">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-10">
+          <div>
+            <span className="text-brand-green text-sm font-bold uppercase tracking-wider">Service Areas</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mt-2">Solar Installers Near You</h2>
+          </div>
+          <Button variant="outline" className="hidden md:flex" onClick={() => navigate('/locations')}>
+            View All Areas <ArrowRight size={16} className="ml-2" />
+          </Button>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {['reading', 'newbury', 'basingstoke', 'wokingham', 'bracknell', 'windsor', 'maidenhead', 'oxford', 'winchester', 'henley-on-thames', 'ascot', 'thatcham'].map((slug) => {
+            const loc = LOCATIONS.find(l => l.slug === slug);
+            if (!loc) return null;
+            return (
+              <a
+                key={slug}
+                onClick={() => navigate(`/location/${slug}`)}
+                className="group px-4 py-3 bg-brand-black border border-slate-800 rounded-lg text-center cursor-pointer hover:border-brand-green/50 hover:bg-slate-900 transition-all"
+              >
+                <span className="text-white font-medium group-hover:text-brand-green transition-colors">{loc.name}</span>
+                <span className="block text-xs text-slate-500 mt-1">{loc.county}</span>
+              </a>
+            );
+          })}
+        </div>
+        <div className="md:hidden text-center mt-8">
+          <Button variant="outline" onClick={() => navigate('/locations')}>
+            View All {LOCATIONS.length} Areas
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+
+  const LatestNews = () => {
+    const recentPosts = BLOG_POSTS.slice(0, 3);
+    return (
+      <section className="py-20 bg-brand-black border-t border-slate-900">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
+            <SectionTitle subtitle="Industry Insights" title="Latest Solar News" className="mb-0" />
+            <Button variant="outline" className="hidden md:flex" onClick={() => navigate('/news')}>
+              View All Articles <ArrowRight size={16} className="ml-2" />
+            </Button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {recentPosts.map((post, idx) => (
+              <Reveal key={post.slug} delay={idx * 100}>
+                <a
+                  onClick={() => navigate(`/news/${post.slug}`)}
+                  className="group block bg-slate-900/50 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-green/50 transition-all cursor-pointer"
+                >
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 text-xs text-slate-500 mb-3">
+                      <Calendar size={12} />
+                      <span>{post.date}</span>
+                      <span className="px-2 py-0.5 bg-slate-800 rounded text-brand-green">{post.category}</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-white leading-tight group-hover:text-brand-green transition-colors mb-2 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-slate-400 text-sm line-clamp-2">{post.excerpt}</p>
+                  </div>
+                </a>
+              </Reveal>
+            ))}
+          </div>
+          <div className="md:hidden text-center mt-8">
+            <Button variant="outline" onClick={() => navigate('/news')}>
+              View All Articles
+            </Button>
+          </div>
+        </div>
+      </section>
+    );
+  };
+
   const Footer = () => (
     <footer className="bg-brand-black border-t border-slate-900 pt-20 pb-24 md:pb-10">
       <div className="container mx-auto px-6">
@@ -964,30 +1052,42 @@ function App() {
             <ul className="space-y-4 text-slate-400 text-sm">
               <li><a onClick={() => navigate('/about')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">About Us</a></li>
               <li><a onClick={() => navigate('/cost-guide')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Pricing Guide</a></li>
+              <li><a onClick={() => navigate('/calculator')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Solar Calculator</a></li>
               <li><a onClick={() => navigate('/projects')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Our Projects</a></li>
               <li><a onClick={() => navigate('/news')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Industry News</a></li>
+              <li><a onClick={() => navigate('/ecosystem')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Smart Ecosystem</a></li>
               <li><a onClick={() => navigate('/grants')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Grants & Funding</a></li>
               <li><a onClick={() => navigate('/glossary')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Solar Glossary</a></li>
               <li><a onClick={() => navigate('/sitemap')} className="hover:text-brand-green transition-colors cursor-pointer block py-1">Sitemap</a></li>
             </ul>
           </div>
 
-          {/* Column 4: Locations (Expanded) */}
+          {/* Column 4: Locations by County */}
           <div className="lg:col-span-4">
              <h4 className="text-white font-bold mb-6 text-lg">Areas We Cover</h4>
-             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-               {LOCATIONS.map(loc => (
-                 <a 
-                   key={loc.slug} 
-                   onClick={() => navigate(`/location/${loc.slug}`)} 
-                   className="text-slate-400 text-sm hover:text-brand-green transition-colors cursor-pointer truncate"
-                 >
-                   {loc.name}
-                 </a>
-               ))}
+             <div className="space-y-4">
+               {['Berkshire', 'Hampshire', 'Oxfordshire'].map(county => {
+                 const countyLocations = LOCATIONS.filter(l => l.county === county).slice(0, 6);
+                 return (
+                   <div key={county}>
+                     <span className="text-brand-green text-xs font-bold uppercase tracking-wider">{county}</span>
+                     <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1">
+                       {countyLocations.map(loc => (
+                         <a
+                           key={loc.slug}
+                           onClick={() => navigate(`/location/${loc.slug}`)}
+                           className="text-slate-400 text-sm hover:text-white transition-colors cursor-pointer"
+                         >
+                           {loc.name}
+                         </a>
+                       ))}
+                     </div>
+                   </div>
+                 );
+               })}
              </div>
              <a onClick={() => navigate('/locations')} className="text-brand-green text-xs font-bold uppercase tracking-wider mt-4 inline-block hover:underline cursor-pointer">
-               View Full Map &rarr;
+               View All {LOCATIONS.length} Areas &rarr;
              </a>
           </div>
         </div>
@@ -1204,6 +1304,8 @@ function App() {
           <SolarCalculator onRequestQuote={handleCalculatorQuote} />
           <Testimonials />
           <TrustedBrands />
+          <PopularLocations />
+          <LatestNews />
           <Contact />
         </main>
         <Footer />

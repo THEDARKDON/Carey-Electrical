@@ -67,6 +67,8 @@ export interface ServiceDetailData {
   galleryImages?: string[];
   faqs: { question: string; answer: string }[];
   relatedServices?: string[];
+  relatedBlogPosts?: string[];
+  relatedProjects?: string[];
 }
 
 export interface BlogPost {

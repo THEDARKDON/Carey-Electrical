@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { ArrowLeft, Check, MapPin, Zap, Phone, Sun, FileText, HelpCircle, ArrowRight } from 'lucide-react';
 import { Button, Reveal, SectionTitle, Card, useSEO } from './UIComponents';
 import { LocationPageData } from '../types';
-import { PROJECTS, LOCATIONS } from '../constants';
+import { PROJECTS, LOCATIONS, BLOG_POSTS, BLOG_CONTENT } from '../constants';
+import { Calendar, BookOpen } from 'lucide-react';
 
 interface LocationDetailProps {
   data: LocationPageData;
@@ -134,6 +135,16 @@ export const LocationDetail: React.FC<LocationDetailProps> = ({ data, onBack, on
 
   // Get other locations for internal linking (exclude current)
   const nearbyLocations = LOCATIONS.filter(l => l.slug !== data.slug).slice(0, 4);
+
+  // Find location-specific blog posts
+  const locationBlogPosts = BLOG_POSTS.filter(post => {
+    const content = BLOG_CONTENT[post.slug];
+    const locationSlug = content?.locationSlug;
+    const relatedLocations = content?.relatedLocations || [];
+    const titleMatch = post.title.toLowerCase().includes(data.name.toLowerCase()) ||
+                       post.slug.includes(data.slug);
+    return locationSlug === data.slug || relatedLocations.includes(data.slug) || titleMatch;
+  }).slice(0, 3);
 
   return (
     <div className="min-h-screen bg-brand-black pt-20">
@@ -295,6 +306,57 @@ export const LocationDetail: React.FC<LocationDetailProps> = ({ data, onBack, on
           </div>
         </div>
       </section>
+
+      {/* Location-Specific Blog Posts */}
+      {locationBlogPosts.length > 0 && (
+        <section className="py-20 bg-slate-950 border-t border-slate-900">
+          <div className="container mx-auto px-6">
+            <SectionTitle subtitle="Local Guides" title={`Solar Insights for ${data.name}`} center />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+              {locationBlogPosts.map((post, idx) => (
+                <Reveal key={post.slug} delay={idx * 100}>
+                  <a
+                    href={`#/news/${post.slug}`}
+                    onClick={(e) => { e.preventDefault(); window.location.hash = `/news/${post.slug}`; }}
+                    className="group block bg-brand-black rounded-xl overflow-hidden border border-slate-800 hover:border-brand-green/50 transition-all"
+                  >
+                    <div className="h-40 overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <div className="flex items-center gap-2 text-xs text-slate-500 mb-2">
+                        <Calendar size={12} />
+                        <span>{post.date}</span>
+                      </div>
+                      <h3 className="text-white font-bold leading-tight group-hover:text-brand-green transition-colors line-clamp-2 mb-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-slate-400 text-sm line-clamp-2">{post.excerpt}</p>
+                      <span className="inline-flex items-center gap-1 mt-3 text-brand-green text-sm font-medium group-hover:gap-2 transition-all">
+                        Read Guide <ArrowRight size={14} />
+                      </span>
+                    </div>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <a
+                href="#/news"
+                onClick={(e) => { e.preventDefault(); window.location.hash = '/news'; }}
+                className="inline-flex items-center gap-2 text-brand-green font-bold hover:gap-3 transition-all"
+              >
+                <BookOpen size={16} /> View All Articles
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* FAQ */}
       <section className="py-20 bg-slate-900">

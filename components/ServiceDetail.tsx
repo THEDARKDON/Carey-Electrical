@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { ArrowLeft, Check, ShieldCheck, Zap, Star, ChevronDown, Phone, FileText, MapPin, ArrowRight } from 'lucide-react';
 import { Button, Reveal, SectionTitle, Card, useSEO } from './UIComponents';
 import { ServiceDetailData } from '../types';
-import { LOCATIONS, SERVICE_DETAILS } from '../constants';
+import { LOCATIONS, SERVICE_DETAILS, BLOG_POSTS, PROJECTS } from '../constants';
+import { Calendar, Briefcase } from 'lucide-react';
 import * as Icons from 'lucide-react';
 
 interface ServiceDetailProps {
@@ -18,6 +19,14 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
   const relatedServices = data.relatedServices
     ? data.relatedServices.map(id => SERVICE_DETAILS[id]).filter(Boolean).slice(0, 3)
     : [];
+
+  const relatedBlogPosts = data.relatedBlogPosts
+    ? data.relatedBlogPosts.map(slug => BLOG_POSTS.find(p => p.slug === slug)).filter(Boolean).slice(0, 3)
+    : [];
+
+  const relatedProjects = data.relatedProjects
+    ? data.relatedProjects.map(slug => PROJECTS.find(p => p.slug === slug)).filter(Boolean).slice(0, 3)
+    : PROJECTS.filter(p => p.slug && p.category === (data.id.includes('battery') ? 'Battery Storage' : data.id.includes('commercial') ? 'Commercial' : 'Solar PV')).slice(0, 3);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -379,6 +388,95 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
            </div>
         </div>
       </section>
+
+      {/* Related Blog Posts */}
+      {relatedBlogPosts.length > 0 && (
+        <section className="py-20 bg-brand-black border-t border-slate-900">
+          <div className="container mx-auto px-6">
+            <SectionTitle subtitle="Learn More" title="Related Articles" center />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+              {relatedBlogPosts.map((post, idx) => (
+                <Reveal key={post!.slug} delay={idx * 100}>
+                  <a
+                    href={`#/news/${post!.slug}`}
+                    onClick={(e) => { e.preventDefault(); window.location.hash = `/news/${post!.slug}`; }}
+                    className="group block bg-slate-900/50 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-green/50 transition-all"
+                  >
+                    <div className="h-40 overflow-hidden">
+                      <img
+                        src={post!.image}
+                        alt={post!.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <div className="flex items-center gap-2 text-xs text-slate-500 mb-2">
+                        <Calendar size={12} />
+                        <span>{post!.date}</span>
+                        <span className="px-2 py-0.5 bg-slate-800 rounded text-brand-green">{post!.category}</span>
+                      </div>
+                      <h3 className="text-white font-bold leading-tight group-hover:text-brand-green transition-colors line-clamp-2">
+                        {post!.title}
+                      </h3>
+                      <span className="inline-flex items-center gap-1 mt-3 text-brand-green text-sm font-medium group-hover:gap-2 transition-all">
+                        Read Article <ArrowRight size={14} />
+                      </span>
+                    </div>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Featured Projects */}
+      {relatedProjects.length > 0 && (
+        <section className="py-20 bg-slate-950 border-t border-slate-900">
+          <div className="container mx-auto px-6">
+            <SectionTitle subtitle="Our Work" title="Featured Projects" center />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+              {relatedProjects.map((project, idx) => (
+                <Reveal key={project!.id} delay={idx * 100}>
+                  <a
+                    href={`#/project/${project!.slug}`}
+                    onClick={(e) => { e.preventDefault(); window.location.hash = `/project/${project!.slug}`; }}
+                    className="group block relative rounded-xl overflow-hidden h-64 border border-slate-800 hover:border-brand-green/50 transition-all"
+                  >
+                    <img
+                      src={project!.url}
+                      alt={project!.description}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Briefcase size={12} className="text-brand-green" />
+                        <span className="text-xs text-brand-green font-bold uppercase">{project!.location}</span>
+                      </div>
+                      <h3 className="text-white font-bold leading-tight group-hover:text-brand-green transition-colors">
+                        {project!.title || project!.description}
+                      </h3>
+                      <p className="text-slate-400 text-sm mt-1">{project!.systemSize}</p>
+                    </div>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <a
+                href="#/projects"
+                onClick={(e) => { e.preventDefault(); window.location.hash = '/projects'; }}
+                className="inline-flex items-center gap-2 text-brand-green font-bold hover:gap-3 transition-all"
+              >
+                View All Projects <ArrowRight size={16} />
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Related Services Cross-Links */}
       {relatedServices.length > 0 && (

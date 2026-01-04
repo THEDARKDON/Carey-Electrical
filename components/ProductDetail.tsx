@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { ArrowLeft, CheckCircle2, ShieldCheck, Zap, Maximize, Battery, Phone } from 'lucide-react';
 import { Button, Reveal, SectionTitle, Card, useSEO } from './UIComponents';
 import { ProductPageData } from '../types';
+import { SERVICE_DETAILS, BLOG_POSTS } from '../constants';
+import { ArrowRight, Wrench, BookOpen } from 'lucide-react';
 import * as Icons from 'lucide-react';
 
 interface ProductDetailProps {
@@ -99,6 +101,30 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
     const IconComponent = (Icons as any)[iconName];
     return IconComponent ? <IconComponent size={24} /> : <CheckCircle2 size={24} />;
   };
+
+  const getRelatedService = () => {
+    const category = data.category?.toLowerCase() || '';
+    const name = data.name.toLowerCase();
+    if (category.includes('battery') || name.includes('powerwall') || name.includes('libbi') || name.includes('givenergy')) {
+      return SERVICE_DETAILS['battery-storage'];
+    }
+    if (category.includes('ev') || name.includes('zappi') || name.includes('charger')) {
+      return SERVICE_DETAILS['ev-charging'];
+    }
+    if (category.includes('panel') || name.includes('jinko') || name.includes('solar')) {
+      return SERVICE_DETAILS['domestic-solar'];
+    }
+    return null;
+  };
+
+  const relatedService = getRelatedService();
+
+  const relatedBlogPosts = BLOG_POSTS.filter(post => {
+    const nameMatch = post.title.toLowerCase().includes(data.brand.toLowerCase()) ||
+                      post.title.toLowerCase().includes(data.name.split(' ')[0].toLowerCase());
+    const categoryMatch = data.category?.includes('Battery') && post.category === 'Technology';
+    return nameMatch || categoryMatch;
+  }).slice(0, 2);
 
   return (
     <div className="min-h-screen bg-brand-black pt-20">
@@ -199,6 +225,79 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ data, onBack, onNa
           </Reveal>
         </div>
       </section>
+
+      {/* Related Service Link */}
+      {relatedService && (
+        <section className="py-16 bg-slate-950 border-t border-slate-900">
+          <div className="container mx-auto px-6">
+            <Reveal>
+              <div className="bg-brand-black rounded-2xl border border-slate-800 p-8 flex flex-col md:flex-row items-center gap-8">
+                <div className="w-20 h-20 bg-slate-900 rounded-2xl flex items-center justify-center text-brand-green shrink-0">
+                  <Wrench size={32} />
+                </div>
+                <div className="flex-grow text-center md:text-left">
+                  <p className="text-sm text-slate-500 uppercase tracking-wider mb-1">This product is part of our</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{relatedService.title} Service</h3>
+                  <p className="text-slate-400">{relatedService.subtitle}</p>
+                </div>
+                <a
+                  href={`#/services/${relatedService.id}`}
+                  onClick={(e) => { e.preventDefault(); window.location.hash = `/services/${relatedService.id}`; }}
+                  className="px-6 py-3 bg-brand-green text-brand-black font-bold rounded-lg hover:bg-brand-green/90 transition-colors flex items-center gap-2 shrink-0"
+                >
+                  View Service <ArrowRight size={16} />
+                </a>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* Related Articles */}
+      {relatedBlogPosts.length > 0 && (
+        <section className="py-16 bg-brand-black border-t border-slate-900">
+          <div className="container mx-auto px-6">
+            <div className="flex items-center justify-between mb-8">
+              <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                <BookOpen size={20} className="text-brand-green" /> Related Articles
+              </h3>
+              <a
+                href="#/news"
+                onClick={(e) => { e.preventDefault(); window.location.hash = '/news'; }}
+                className="text-brand-green text-sm font-bold hover:underline flex items-center gap-1"
+              >
+                View All <ArrowRight size={14} />
+              </a>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {relatedBlogPosts.map((post, idx) => (
+                <Reveal key={post.slug} delay={idx * 100}>
+                  <a
+                    href={`#/news/${post.slug}`}
+                    onClick={(e) => { e.preventDefault(); window.location.hash = `/news/${post.slug}`; }}
+                    className="group flex gap-4 bg-slate-900/50 rounded-xl border border-slate-800 p-4 hover:border-brand-green/50 transition-all"
+                  >
+                    <div className="w-24 h-24 rounded-lg overflow-hidden shrink-0">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-center">
+                      <span className="text-xs text-slate-500 mb-1">{post.category}</span>
+                      <h4 className="text-white font-bold leading-tight group-hover:text-brand-green transition-colors line-clamp-2">
+                        {post.title}
+                      </h4>
+                    </div>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Footer */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-brand-black text-center">
