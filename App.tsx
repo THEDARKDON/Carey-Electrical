@@ -100,32 +100,21 @@ function App() {
     window.scrollTo(0, 0);
   };
 
-  // Contact Form Handler
+  // Contact Form Handler - Formspree Integration
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('submitting');
 
     const formData = new FormData(e.target as HTMLFormElement);
-    const submission = {
-      firstname: formData.get('firstname') as string,
-      lastname: formData.get('lastname') as string,
-      email: formData.get('email') as string,
-      service: formData.get('interest') as string,
-      message: formData.get('message') as string,
-    };
 
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/submit-contact`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-          },
-          body: JSON.stringify(submission),
-        }
-      );
+      const response = await fetch('https://formspree.io/f/mykzawvg', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
 
       if (!response.ok) {
         throw new Error('Failed to submit form');
