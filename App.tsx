@@ -101,11 +101,12 @@ function App() {
   };
 
   // Contact Form Handler - Formspree Integration
-  const handleFormSubmit = async (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus('submitting');
 
-    const formData = new FormData(e.target as HTMLFormElement);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     try {
       const response = await fetch('https://formspree.io/f/mykzawvg', {
@@ -116,15 +117,19 @@ function App() {
         },
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to submit form');
-      }
+      const data = await response.json();
 
-      setFormStatus('success');
-      setContactMessage('');
+      if (response.ok) {
+        setFormStatus('success');
+        setContactMessage('');
+        form.reset();
+      } else {
+        console.error('Formspree error:', data);
+        throw new Error(data.error || 'Failed to submit form');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('There was an error submitting your form. Please try again or call us directly.');
+      alert('There was an error submitting your form. Please try again or call us directly at 01189 594594.');
       setFormStatus('idle');
     }
   };
@@ -133,7 +138,9 @@ function App() {
   const handleCalculatorQuote = (data: any) => {
     const msg = `I used your ROI calculator. I have a monthly bill of £${data.bill} and I am interested in a ${data.systemSize}kW system with ${data.battery}kWh battery. Est. savings £${data.savings}/yr.`;
     setContactMessage(msg);
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
   // --- SEO FOR HOME ---
@@ -894,11 +901,11 @@ function App() {
                       rows={4}
                       className="w-full bg-brand-black/50 border border-slate-700 rounded-lg p-4 text-white focus:border-brand-green focus:ring-1 focus:ring-brand-green focus:outline-none transition-all placeholder:text-slate-600"
                       placeholder="Tell us about your project..."
-                      value={contactMessage}
-                      onChange={(e) => setContactMessage(e.target.value)}
+                      defaultValue={contactMessage}
+                      key={contactMessage}
                     ></textarea>
                   </div>
-                  <Button fullWidth className="py-5 text-lg mt-4" disabled={formStatus === 'submitting'}>
+                  <Button type="submit" fullWidth className="py-5 text-lg mt-4" disabled={formStatus === 'submitting'}>
                     {formStatus === 'submitting' ? (
                       <span className="flex items-center"><Loader2 className="animate-spin mr-2" aria-hidden="true" /> Sending...</span>
                     ) : 'Send Enquiry'}
