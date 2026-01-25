@@ -67,7 +67,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ data, onBack, onCt
           "@type": "LocalBusiness",
           "name": "Carey Electrical",
           "telephone": "01635 783887",
-          "email": "info@careyelectricalltd.com",
+          "email": "matt@careyelectricalltd.com",
           "url": "https://careyelectricalltd.com",
           "address": {
             "@type": "PostalAddress",

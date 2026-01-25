@@ -5,7 +5,7 @@ export const BRAND = {
   name: "Carey Electrical",
   tagline: "Power Your Future With Clean Energy",
   phone: "01635 783887",
-  email: "info@careyelectrical.co.uk",
+  email: "matt@careyelectricalltd.com",
   location: "Newbury & Surrounding Areas"
 };
 

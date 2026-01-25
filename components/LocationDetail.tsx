@@ -49,7 +49,7 @@ export const LocationDetail: React.FC<LocationDetailProps> = ({ data, onBack, on
         "name": `Carey Electrical - Solar Installers ${data.name}`,
         "image": "https://careyelectricalltd.com" + data.heroImage,
         "telephone": "01635 783887",
-        "email": "info@careyelectricalltd.com",
+        "email": "matt@careyelectricalltd.com",
         "url": window.location.href,
         "areaServed": {
           "@type": "City",
